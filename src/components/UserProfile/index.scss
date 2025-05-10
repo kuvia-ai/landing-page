@@ -1,0 +1,75 @@
+.kuvia-user-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .kuvia-user-profile-image {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      filter: grayscale(100%);
+      width: 170px;
+    }
+  }
+
+  .kuvia-user-profile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+    .kuvia-user-profile-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 10px 0 0 0;
+    }
+
+    .kuvia-user-profile-description {
+      font-size: 16px;
+      max-width: 170px;
+      margin: 0;
+    }
+
+    .kuvia-user-profile-linkedin {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      text-decoration: unset;
+
+      img {
+        width: 18px;
+        height: 18px;
+        border-radius: 2px;
+      }
+
+      p {
+        color: #0A66C2;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+@media (max-width: 576px){
+  .kuvia-user-profile-container {
+    &:hover {
+      scale: 1;
+    }
+  }
+}

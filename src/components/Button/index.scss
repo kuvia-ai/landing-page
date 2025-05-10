@@ -1,0 +1,23 @@
+.kuvia-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+
+  &--primary {
+    background-color: var(--secondary-dark);
+    color: var(--white);
+  }
+  
+  &--secondary {
+    background-color: var(--gray);
+    color: var(--secondary-dark);
+  }
+
+  &--tertiary {
+    background-color: var(--secondary-color);
+    opacity: 83%;
+    color: var(--white);
+  }
+}

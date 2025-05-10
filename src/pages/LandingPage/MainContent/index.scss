@@ -1,0 +1,179 @@
+@keyframes up-and-down {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fade-out-and-up {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+
+.kuvia-landing-page-main-content-container {
+  height: 100vh;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 60%,
+      rgba(214, 186, 210, 1) 100%);
+
+  .kuvia-landing-page-main-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .kuvia-landing-body {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .kuvia-landing-body-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-inline: auto;
+        margin: 0;
+        margin-top: 110px;
+
+        .kuvia-landing-body-left-content {
+          align-self: flex-start;
+          text-align: left;
+
+          .kuvia-landing-body-left-content-title {
+            font-size: 70px;
+            font-weight: 700;
+            line-height: 57.5px;
+            color: #030304;
+            margin-left: 20px;
+
+            .kuvia-landing-left-title-a {
+              font-size: 87px;
+              font-weight: 600;
+            }
+
+            span {
+              color: #d6bad2;
+            }
+          }
+
+          h1 {
+            width: 590px;
+            padding: 20px;
+            background-color: #303030;
+            color: white;
+            margin-top: 40px;
+          }
+
+          h2 {
+            margin-left: 20px;
+            margin-block: 0;
+            width: 605px;
+          }
+        }
+
+        .kuvia-landing-body-right-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex: 1;
+
+          .landing-image {
+            width: 65%;
+            align-self: center;
+          }
+        }
+      }
+    }
+
+    .kuvia-landing-read-more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      animation-name: up-and-down;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      justify-self: flex-end;
+      margin-bottom: 5px;
+
+      p {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      svg {
+        width: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .kuvia-landing-page-main-content-container {
+    height: 100dvh !important;
+
+    .kuvia-landing-body-content {
+      flex-direction: column !important;
+      margin-top: 60px !important;
+
+      .kuvia-landing-body-left-content {
+        margin: 0 !important;
+        text-align: center !important;
+
+        .kuvia-landing-body-left-content-title {
+          margin: 0 !important;
+          font-size: 60px !important;
+
+          .kuvia-landing-left-title-a {
+            font-size: 75px !important;
+          }
+        }
+
+        h1,
+        h2 {
+          width: auto !important;
+        }
+
+        h1 {
+          margin-top: 10px !important;
+          padding: 10px !important;
+          font-size: 22px;
+        }
+
+        h2 {
+          margin-inline: 10px !important;
+          font-size: 18px;
+        }
+      }
+
+      .kuvia-landing-body-right-content {
+        margin-top: 20px;
+
+        .landing-image {
+          width: 65% !important;
+        }
+      }
+    }
+  }
+}

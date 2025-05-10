@@ -1,0 +1,202 @@
+@keyframes loader {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    translate: 0 0px;
+  }
+
+  10% {
+    translate: 0 -5px;
+  }
+
+  20% {
+    translate: 0 0;
+  }
+}
+
+.processing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  overflow-y: auto;
+  height: 100vh;
+
+  .processing-page-navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    width: 100%;
+
+    .kuvia-logo {
+      margin-left: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .processing-page-content {
+    display: flex;
+    width: 100%;
+    height: 100dvh;
+    flex-direction: column;
+
+    .processing-page-images-layout {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 50px;
+      gap: 120px;
+
+      .patient-tissue-image-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 307px;
+        width: 415px;
+        background-color: rgb(248, 245, 245);
+        border-radius: 25px;
+        text-align: center;
+
+        img {
+          height: 90%;
+          aspect-ratio: 1/1;
+        }
+      }
+
+      .patient-tissue-unprocessed {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+
+        &.end {
+          justify-content: end;
+        }
+      }
+
+      .patient-tissue-processed {
+        display: flex;
+        gap: 12px;
+        flex-basis: 50%;
+      }
+
+      .heat-thermometer {
+        height: 100%;
+        width: 40px;
+        border-radius: 25px;
+        margin-inline: auto;
+        background: linear-gradient(0deg,
+            rgba(11, 0, 133, 1) 0%,
+            rgba(28, 18, 254, 1) 8%,
+            rgba(23, 253, 224, 1) 35%,
+            rgba(42, 255, 0, 1) 52%,
+            rgba(248, 244, 0, 1) 68%,
+            rgba(255, 26, 2, 1) 92%,
+            rgba(139, 1, 0, 1) 100%);
+      }
+
+      .heat-thermometer-labels {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 500;
+        color: #303030;
+
+        p {
+          margin-top: 5px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .patient-prediction {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 300px;
+      margin-top: 10px;
+      margin-inline: auto;
+      border-radius: 20px;
+      box-shadow: -3px 10px 15px rgb(228, 228, 228);
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .processing-page {
+    height: 100dvh !important;
+
+    .patient-search {
+      margin-top: 20px !important;
+      width: 90%;
+    }
+
+    .processing-page-content {
+      align-items: center;
+      gap: 10px;
+
+      .processing-page-images-layout {
+        flex-direction: column;
+        margin-top: 30px !important;
+        gap: 20px !important;
+        align-items: center;
+
+        .patient-tissue-image-card {
+          width: 85vw !important;
+          height: 200px !important;
+        }
+      }
+
+      .processing-loader {
+        width: 70%;
+      }
+
+      .patient-tissue-processed {
+        flex-direction: column;
+
+        .heat-thermometer-labels {
+          flex-direction: row !important;
+          text-align: center;
+          width: 110%;
+          margin-left: -15px;
+          align-items: center;
+          gap: 10px;
+
+          .heat-thermometer-left-label {
+            order: 0;
+          }
+
+          .heat-thermometer-right-label {
+            order: 2;
+          }
+
+          .heat-thermometer {
+            width: 100%;
+            height: 30px;
+            order: 1;
+            background: linear-gradient(90deg, rgb(11, 0, 133) 0%, rgb(28, 18, 254) 8%, rgb(23, 253, 224) 35%, rgb(42, 255, 0) 52%, rgb(248, 244, 0) 68%, rgb(255, 26, 2) 92%, rgb(139, 1, 0) 100%);
+          }
+        }
+      }
+    }
+
+    .patient-prediction {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
