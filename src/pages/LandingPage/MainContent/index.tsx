@@ -30,25 +30,9 @@ const MainContent: React.FC = () => {
         <Header />
         <div className="kuvia-landing-body">
           <div className="kuvia-landing-body-content">
-            <div className="kuvia-landing-body-left-content">
-              <header className="kuvia-landing-body-left-content-title">
-                KUV<span>I</span>
-                <span className="kuvia-landing-left-title-a">
-                  a
-                </span>
-              </header>
-              <h1>REDEFINING DIAGNOSTICS, SPREADING HEALTH</h1>
-              <h2>
-                AI Solution for biomarker detection in cancer: Powering MSI classification
-              </h2>
-            </div>
-            <div className="kuvia-landing-body-right-content">
-              <img
-                src={computadora}
-                alt="computadora"
-                className="landing-image"
-              />
-            </div>
+            <h2>
+              Redefining diagnostics, unlocking precision medicine with AI
+            </h2>
           </div>
         </div>
         <MotionDiv
