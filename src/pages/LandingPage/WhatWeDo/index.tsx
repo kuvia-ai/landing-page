@@ -32,17 +32,17 @@ interface UserProfile {
   userProfileLink: string;
 }
 
-const MoreContent: React.FC = () => {
+const WhatWeDo: React.FC = () => {
   const navigate = useNavigate();
   const { scrollY } = useScroll();
 
   const scaleTryDemoButton = useTransform(scrollY, [0, 480, 500], [0, 0, 1]);
 
-  const xBanner1 = useTransform(scrollY, [100, 500], [-500, 0]);
-  const opacityBanner1 = useTransform(scrollY, [100, 500], [0, 1]);
+  // const xBanner1 = useTransform(scrollY, [100, 500], [-500, 0]);
+  // const opacityBanner1 = useTransform(scrollY, [100, 500], [0, 1]);
 
-  const opacityCardGroup = useTransform(scrollY, [100, 500], [0, 1]);
-  const yCardGroup = useTransform(scrollY, [100, 500], [100, 0]);
+  // const opacityCardGroup = useTransform(scrollY, [100, 500], [0, 1]);
+  // const yCardGroup = useTransform(scrollY, [100, 500], [100, 0]);
 
   const xBanner2 = useTransform(scrollY, [600, 1000], [-500, 0]);
   const opacityBanner2 = useTransform(scrollY, [600, 1000], [0, 1]);
@@ -68,21 +68,21 @@ const MoreContent: React.FC = () => {
   const opacityUsersProfilesGroup = useTransform(scrollY, [1600, 2000], [0, 1]);
   const yUsersProfilesGroup = useTransform(scrollY, [1600, 2000], [100, 0]);
 
-  const importanceContent1: React.ReactNode[] = [
-    <p>
-      <b>Colorectal cancer</b> is the <b>third</b> most common type of cancer
-      and the <b>second</b> leading cause of cancer-related deaths
-    </p>,
-    <p>
-      <b>Microsatellite Instability (MSI)</b>, is a <b>genetic marker</b> that
-      indicates defects in the DNA repair process
-    </p>,
-    <p>
-      Patients with <b>MSI</b> are more likely to respond to{" "}
-      <b>immunotherapy</b> showing a <b>better prognosis</b> than conventional
-      treatments
-    </p>,
-  ];
+  // const importanceContent1: React.ReactNode[] = [
+  //   <p>
+  //     <b>Colorectal cancer</b> is the <b>third</b> most common type of cancer
+  //     and the <b>second</b> leading cause of cancer-related deaths
+  //   </p>,
+  //   <p>
+  //     <b>Microsatellite Instability (MSI)</b>, is a <b>genetic marker</b> that
+  //     indicates defects in the DNA repair process
+  //   </p>,
+  //   <p>
+  //     Patients with <b>MSI</b> are more likely to respond to{" "}
+  //     <b>immunotherapy</b> showing a <b>better prognosis</b> than conventional
+  //     treatments
+  //   </p>,
+  // ];
 
   const importanceContent2: ImportanceContent2Item[] = [
     {
@@ -139,7 +139,7 @@ const MoreContent: React.FC = () => {
   ];
 
   return (
-    <div className="kuvia-page-more-content">
+    <div className="kuvia-what-we-do-content">
       <div className="kuvia-page-more-demo-button">
         <Button
           text={"Try Demo"}
@@ -148,10 +148,10 @@ const MoreContent: React.FC = () => {
           motionStyle={{ scale: scaleTryDemoButton }}
         />
       </div>
-      <motion.div style={{ x: xBanner1, opacity: opacityBanner1 }}>
+      {/* <motion.div style={{ x: xBanner1, opacity: opacityBanner1 }}>
         <Banner text="WHY IS THIS IMPORTANT?" />
-      </motion.div>
-      <motion.div
+      </motion.div> */}
+      {/* <motion.div
         className="kuvia-card-group"
         style={{ y: yCardGroup, opacity: opacityCardGroup }}
       >
@@ -163,7 +163,21 @@ const MoreContent: React.FC = () => {
             height={"219px"}
           />
         ))}
-      </motion.div>
+      </motion.div> */}
+      <div className="kuvia-what-we-do-container">
+        <div className="kuvia-what-we-do-title">
+          What we do
+        </div>
+        <div className="kuvia-what-we-do-content">
+          <p>
+            At Kuvia, our mission is to harness the power of <br/>
+            artificial intelligence (AI) to transform cancer <br/>
+            diagnostics, <b>enabling faster and accessible</b><br/>
+            <b>biomarker detection</b> for better patient outcomes.
+          </p>
+          <Button type="disabled" text="Demo Coming soon" rounded style={{padding: "10px 30px"}}/>
+        </div>
+      </div>
       <motion.div style={{ x: xBanner2, opacity: opacityBanner2 }}>
         <Banner text="HOW DO WE WORK?" />
       </motion.div>
@@ -184,7 +198,7 @@ const MoreContent: React.FC = () => {
           <path d="M75.334 12.591C10.57-24.337-20.852 28.186 15.131 64.566l200.866 209.613c33.472 33.471 46.534 33.471 80.006 0L496.869 64.566c35.983-36.38 4.561-88.903-60.203-51.975L256 109.944 75.334 12.591z" />
         </svg>
         <div className="kuvia-demo-computer-image-container">
-            <img className="kuvia-demo-computer-image" src={kuviaNetImg} alt="PC" />
+          <img className="kuvia-demo-computer-image" src={kuviaNetImg} alt="PC" />
           <motion.div style={{ y: yWorkFlow, opacity: opacityWorkFlow }} className="kuvia-achievement-card">
             <Card
               key={"kuvia-achievement-card"}
@@ -279,4 +293,4 @@ const MoreContent: React.FC = () => {
   );
 };
 
-export default MoreContent;
+export default WhatWeDo;
