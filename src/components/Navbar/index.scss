@@ -2,15 +2,15 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 80px;
-  padding: 10px 20px;
-  border-radius: 10px;
+  gap: 70px;
+  padding: 15px 30px;
+  border-radius: 16px;
   background: linear-gradient(270deg, rgba(194, 194, 194, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
   backdrop-filter: blur(40px);
   box-shadow: 0px 2px 4px 0px #E5E5E529 inset;
 
   .kuvia-navbar-link {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
     color: var(--primary-dark);
     text-decoration: none;
