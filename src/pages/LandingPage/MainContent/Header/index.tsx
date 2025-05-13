@@ -12,7 +12,7 @@ const Header: React.FC = () => {
       </Link>
       <div className="kuvia-header-right-content">
         <Navbar />
-        <Button type="primary" text="Contact" />
+        <Button type="primary" text="Contact" bolded />
       </div>
     </div>
   );
