@@ -31,7 +31,7 @@ const MainContent: React.FC = () => {
         <div className="kuvia-landing-body">
           <div className="kuvia-landing-body-content">
             <h2>
-              Redefining diagnostics, unlocking precision medicine with AI
+              Redefining diagnostics,<br /> unlocking precision<br /> medicine with AI
             </h2>
           </div>
         </div>
