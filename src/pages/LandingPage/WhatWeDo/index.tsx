@@ -196,6 +196,7 @@ const WhatWeDo: React.FC = () => {
         </div>
       </div>
       <div className="kuvia-what-we-do-content-switch-container">
+        <img src={background} alt="background" className="kuvia-what-we-do-content-switch-background" />
         <ContentSwitch items={items} style={{ marginLeft: "120px" }} />
       </div>
       {/* <div style={{display: "flex", flexDirection: "column", gap: "20px"}}>
