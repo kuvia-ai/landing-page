@@ -40,6 +40,14 @@
     padding-block: 100px;
     height: fit-content;
 
+    .kuvia-what-we-do-content-switch-background {
+      position: absolute;
+      left: 0;
+      top: 70px;
+      width: 100%;
+      height: 100%;
+      opacity: 0.33;
+    }
   }
 
   .kuvia-page-more-demo-button {

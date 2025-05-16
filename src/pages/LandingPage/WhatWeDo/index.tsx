@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Banner from "../../../components/Banner";
 import Button from "../../../components/Button";
-import Card from "../../../components/Card";
+// import Card from "../../../components/Card";
 import IconCard from "../../../components/IconCard";
 import UserProfile from "../../../components/UserProfile/index";
 import ContentSwitch from "../../../components/ContentSwitch";
@@ -12,11 +12,12 @@ import tiempoIcon from "../../../icons/tiempo.png";
 import costosIcon from "../../../icons/costos.png";
 import accesibilidadIcon from "../../../icons/accesibilidad.png";
 import microscopioIcon from "../../../icons/microscopio.png";
-import kuviaNetImg from "../../../icons/computer-kuvia-red.png";
+// import kuviaNetImg from "../../../icons/computer-kuvia-red.png";
 import andreProfileImg from "../../../images/andre-profile.jpg";
 import oliProfileImg from "../../../images/oli-profile.png";
 import anaProfileImg from "../../../images/ana-profile.jpg";
 import martinaProfileImg from "../../../images/martina-profile.jpg";
+import background from "../../../images/8bdcd33d1e3faa0a0a26b63cc70e594ac8f472b0.png";
 import "./index.scss";
 
 interface ImportanceContent2Item {
@@ -154,7 +155,7 @@ const WhatWeDo: React.FC = () => {
     }
   ];
 
-  return (
+  return (  
     <div className="kuvia-what-we-do-content">
       <div className="kuvia-page-more-demo-button">
         <Button
@@ -198,7 +199,7 @@ const WhatWeDo: React.FC = () => {
         <ContentSwitch items={items} style={{ marginLeft: "120px" }} />
       </div>
       {/* <div style={{display: "flex", flexDirection: "column", gap: "20px"}}>
-<div className="k1">
+        <div className="k1">
           <div className="k2">Why does biomarker detection matter?</div>
           <div className="k3"></div>
         </div>
