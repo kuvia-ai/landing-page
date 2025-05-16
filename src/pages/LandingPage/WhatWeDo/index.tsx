@@ -290,7 +290,7 @@ const WhatWeDo: React.FC = () => {
           />
         </a>
       </div> */}
-      <motion.div style={{ x: xBanner3, opacity: opacityBanner3 }}>
+      {/* <motion.div style={{ x: xBanner3, opacity: opacityBanner3 }}>
         <Banner text="WHY ARE WE IMPORTANT?" />
       </motion.div>
       <motion.div
@@ -323,7 +323,7 @@ const WhatWeDo: React.FC = () => {
             profileLink={profile.userProfileLink}
           />
         ))}
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
