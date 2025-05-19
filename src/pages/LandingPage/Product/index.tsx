@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Button from "../../../components/Button";
 import IconCard from "../../../components/IconCard";
 import SliderControl from "../../../components/SliderControl";
 import img1 from "../../../images/8b4853150a4a459c5c95b89dcd5bfec767f533e4.png";
@@ -7,6 +8,7 @@ import img3 from "../../../images/b46389d234f9188270b2d15e49ed87c9bd1479ac.png";
 import img4 from "../../../images/524fcf1c3e0bd66f8f157db47552f93f8c477b3a.jpg";
 import img5 from "../../../images/334c8be3e0b1b66e94258d3aa5538b60a90ca373.png";
 import img6 from "../../../images/4a106794cb5068a86e57ab1796123d943532ef1f.png";
+import img7 from "../../../images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff54.png";
 import './index.scss';
 
 const Product: React.FC = () => {
@@ -87,6 +89,20 @@ const Product: React.FC = () => {
               <p>Endometrial cancer is the sixth most common cancer among women worldwide, with over 420,000 new cases reported in 2022.</p>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="kuvia-scalability">
+        <div className="kuvia-scalability-left-content">
+          <h1 className="kuvia-scalability-title">
+            Scalability
+          </h1>
+          <p className="kuvia-scalability-body">
+            We have developed a <b>scalable AI architecture</b> with the potential to be applied across a wide range of biomarkers and cancer types. Our current efforts are focused on expanding the platform beyond MSI, aiming to enable broader applications in precision medicine and accelerate access to personalized treatments.
+          </p>
+        </div>
+        <div className="kuvia-scalability-right-content">
+          <img src={img7} alt={img7} />
+          <Button type="tertiary" text="More info" style={{fontWeight: "900", paddingInline: "60px"}} />
         </div>
       </div>
     </div>
