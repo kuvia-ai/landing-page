@@ -2,7 +2,7 @@ import React from 'react';
 import "./index.scss";
 
 interface ButtonProps {
-  type: string;
+  type: "primary" | "secondary" | "tertiary" | "disabled";
   text: string;
   rounded?: boolean;
   bolded?: boolean;
