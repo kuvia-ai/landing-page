@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import MainContent from "./MainContent";
 import WhatWeDo from "./WhatWeDo";
 import WhyKuvia from "./WhyKuvia";
@@ -9,6 +10,16 @@ import ContactUs from './ContactUs';
 import './index.scss';
 
 const LandingPage: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   return (
     <div className="kuvia-landing-page">

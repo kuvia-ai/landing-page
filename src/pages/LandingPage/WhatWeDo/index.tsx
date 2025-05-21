@@ -156,7 +156,7 @@ const WhatWeDo: React.FC = () => {
   ];
 
   return (  
-    <div className="kuvia-what-we-do-content">
+    <div id="what-we-do" className="kuvia-what-we-do-content">
       <div className="kuvia-page-more-demo-button">
         <Button
           text={"Try Demo"}

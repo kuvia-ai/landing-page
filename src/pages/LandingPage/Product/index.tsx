@@ -50,7 +50,7 @@ const Product: React.FC = () => {
   }, [resetInterval])
 
   return (
-    <div className="kuvia-product">
+    <div id="product" className="kuvia-product">
       <div className="kuvia-how-it-works-container">
         <div className="kuvia-how-it-works-title">
           How it works

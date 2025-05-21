@@ -3,7 +3,7 @@ import "./index.scss";
 
 const WhyKuvia: React.FC = () => {
   return (
-    <div className="kuvia-why-kuvia">
+    <div id="why-kuvia" className="kuvia-why-kuvia">
       <div className="kuvia-why-kuvia-container">
         <div className="kuvia-why-kuvia-title">Why Kuvia?</div>
       <div className="kuvia-why-kuvia-description">
