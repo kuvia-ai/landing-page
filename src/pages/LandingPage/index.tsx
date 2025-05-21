@@ -4,6 +4,7 @@ import WhatWeDo from "./WhatWeDo";
 import WhyKuvia from "./WhyKuvia";
 import Product from './Product';
 import AboutUs from './AboutUs';
+import ContactUs from './ContactUs';
 
 import './index.scss';
 
@@ -16,6 +17,7 @@ const LandingPage: React.FC = () => {
       <WhyKuvia />
       <Product />
       <AboutUs />
+      <ContactUs />
     </div>
   );
 }
