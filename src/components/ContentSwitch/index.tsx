@@ -4,7 +4,7 @@ import "./index.scss";
 
 interface ContentSwitchItemProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
 }
 
 interface ContentSwitchProps {
