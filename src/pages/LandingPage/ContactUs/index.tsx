@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './index.scss';
 
 const ContactUs: React.FC = () => {
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -24,6 +25,11 @@ const ContactUs: React.FC = () => {
           console.log(error.text);
           alert('Failed to send message, please try again later.');
         })
+      .finally(() => {
+        if (formRef.current) {
+          formRef.current.reset();
+        }
+        })
   };
 
   const handleMailClick = () => {
@@ -40,7 +46,7 @@ const ContactUs: React.FC = () => {
       <h1>Let's connect!</h1>
       <p>Whether you want to collaborate, join our mission, or simply learn more -<br />we'd love to hear from you</p>
       <div className='kuvia-aboutus-contact-form'>
-        <form onSubmit={handleSubmit}>
+        <form ref={formRef} onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
           <input type="text" name='name' id='name' placeholder="Your name" required />
           <label htmlFor="emailFrom">Email</label>
