@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform, HTMLMotionProps } from "framer-motion";
+import background from './background.mp4'
 import computadora from "../../../icons/COMPUTADORA-02.png";
 import Header from "./Header";
 import "./index.scss";
@@ -23,6 +24,9 @@ const MainContent: React.FC = () => {
 
   return (
     <div className="kuvia-landing-page-main-content-container">
+      <video autoPlay loop muted id='kuvia-landing-page-main-content-video'>
+        <source src={background} type="video/mp4" />
+      </video>
       <MotionDiv
         className="kuvia-landing-page-main-content"
         style={{ y: yMainLandingContent, opacity: opacityMainLandingContent }}

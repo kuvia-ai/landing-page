@@ -24,11 +24,17 @@
 }
 
 .kuvia-landing-page-main-content-container {
-  height: 100vh;
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 1) 60%,
-      rgba(214, 186, 210, 1) 100%);
+  height: 100dvh;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
 
   .kuvia-landing-page-main-content {
     height: 100%;
