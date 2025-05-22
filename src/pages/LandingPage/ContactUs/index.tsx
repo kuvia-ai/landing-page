@@ -9,7 +9,6 @@ const ContactUs: React.FC = () => {
     event.preventDefault();
     // Handle form submission logic here
 
-
     emailjs.sendForm(
       process.env.REACT_APP_EMAILJS_SERVICE_ID || '',
       process.env.REACT_APP_EMAILJS_TEMPLATE_ID || '',
