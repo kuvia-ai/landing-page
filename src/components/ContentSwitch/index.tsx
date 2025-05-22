@@ -15,11 +15,26 @@ interface ContentSwitchProps {
 const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
   const [activeItem, setActiveItem] = useState<number>(0);
 
+  const handleItemClick = (index: number) => {
+    const switchContentBody = document.querySelector(".kuvia-content-switch-content-body");
+    if (switchContentBody) {
+      switchContentBody.scrollTo({
+        behavior: "smooth",
+        top: 0,
+      });
+      setActiveItem(index);
+    };
+  }
+
   return (
     <div className="kuvia-content-switch-container">
       <div className="kuvia-content-switch-items" style={style}>
         {items.map((item, index) => (
-          <ContentSwitchItem key={item.title} title={item.title} active={activeItem === index} onClick={() => setActiveItem(index)} />
+          <ContentSwitchItem
+            key={item.title}
+            title={item.title}
+            active={activeItem === index}
+            onClick={() => handleItemClick(index)} />
         ))}
       </div>
       <div className="kuvia-content-switch-content" style={{ height: `${items.length * 220 - 20}px` }}>
