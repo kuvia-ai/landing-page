@@ -1,0 +1,50 @@
+.kuvia-hamburger-menu {
+  display: flex;
+  position: sticky;
+  width: fit-content;
+  align-items: center;
+  gap: 20px;
+  top: 30px;
+  right: 60px;
+  margin-top: 20px;
+  margin-bottom: -80px;
+  margin-left: auto;
+  z-index: 10000;
+
+  .kuvia-hamburger-menu-navbar {
+    transition: width 0.5s ease-in-out;
+    overflow: hidden;
+
+    &.expand {
+      width: 710px;
+    }
+
+    &.collapse {
+      width: 0px;
+    }
+  }
+
+  .kuvia-hamburger-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 60px;
+    background-color: #E7E7E7;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px 0px #00000012;
+
+    &.spinLeft {
+      svg {
+        animation: spinLeft 0.5s ease-out;
+      }
+    }
+
+    &.spinRight {
+      svg {
+        animation: spinRight 0.5s ease-out;
+      }
+    }
+  }
+}
