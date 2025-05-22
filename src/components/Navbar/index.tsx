@@ -5,10 +5,22 @@ import "./index.scss";
 const Navbar: React.FC = () => {
   return (
     <nav className="kuvia-navbar">
-      <Link to="/#what-we-do" className="kuvia-navbar-link">What we do</Link>
-      <Link to="/#why-kuvia" className="kuvia-navbar-link">Why Kuvia</Link>
-      <Link to="/#product" className="kuvia-navbar-link">Product</Link>
-      <Link to="/#about-us" className="kuvia-navbar-link">About Us</Link>
+      <div className="kuvia-navbar-link">
+        <Link to="/#what-we-do">What we do</Link>
+        <div className="kuvia-navbar-link-underline"></div>
+      </div>
+      <div className="kuvia-navbar-link">
+        <Link to="/#why-kuvia">Why Kuvia</Link>
+        <div className="kuvia-navbar-link-underline"></div>
+      </div>
+      <div className="kuvia-navbar-link">
+        <Link to="/#product">Product</Link>
+        <div className="kuvia-navbar-link-underline"></div>
+      </div>
+      <div className="kuvia-navbar-link">
+        <Link to="/#about-us">About Us</Link>
+        <div className="kuvia-navbar-link-underline"></div>
+      </div>
     </nav>
   );
 };
