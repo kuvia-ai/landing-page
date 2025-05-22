@@ -1,20 +1,11 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom";
-import { motion, useScroll, useTransform, HTMLMotionProps } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import background from './background.mp4'
-import computadora from "../../../icons/COMPUTADORA-02.png";
 import Header from "./Header";
+import MotionDiv from "../../../components/MotionDiv";
 import "./index.scss";
 
-type MotionDivProps = HTMLMotionProps<"div"> & {
-  className?: string;
-};
-
-const MotionDiv = motion.div as React.FC<MotionDivProps>;
-
 const MainContent: React.FC = () => {
-  const navigate = useNavigate();
-
   const { scrollY } = useScroll();
 
   const yMainLandingContent = useTransform(scrollY, [0, 500], [0, -700]);

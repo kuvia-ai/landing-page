@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { useScroll, useTransform } from "framer-motion";
 import Navbar from '../../components/Navbar';
+import MotionDiv from '../MotionDiv';
 import './index.scss';
 
 const HamburgerMenu = () => {
   const [animate, setAnimate] = useState(false);
   const [expandHamburgerMenu, setExpandHamburgerMenu] = useState(false);
+
+  const { scrollY } = useScroll();
+
+  const opacityWhatWeDoContent = useTransform(scrollY, [450, 700], [0, 1]);
 
   const toggleMenu = () => {
     // Trigger animation
@@ -16,7 +22,7 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <div className={`kuvia-hamburger-menu ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`}>
+    <MotionDiv className={`kuvia-hamburger-menu ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`} style={{ opacity: opacityWhatWeDoContent, position: "sticky" }}>
       <div className={`kuvia-hamburger-menu-navbar ${expandHamburgerMenu ? 'expand' : 'collapse'}`}>
         <Navbar />
       </div>
@@ -131,7 +137,7 @@ const HamburgerMenu = () => {
           </svg>
         }
       </div>
-    </div>
+    </MotionDiv>
   );
 }
 

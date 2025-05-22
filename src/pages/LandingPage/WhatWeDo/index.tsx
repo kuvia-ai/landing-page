@@ -1,10 +1,17 @@
 import React from "react";
+import { useScroll, useTransform } from "framer-motion";
 import Button from "../../../components/Button";
 import ContentSwitch from "../../../components/ContentSwitch";
 import background from "../../../images/8bdcd33d1e3faa0a0a26b63cc70e594ac8f472b0.png";
+import MotionDiv from "../../../components/MotionDiv";
 import "./index.scss";
 
 const WhatWeDo: React.FC = () => {
+  const { scrollY } = useScroll();
+
+  const yWhatWeDoContent = useTransform(scrollY, [0, 700], [700, 0]);
+  const opacityWhatWeDoContent = useTransform(scrollY, [400, 700], [0, 1]);
+
   const items = [
     {
       title: "Why does biomarker detection matter?",
@@ -20,9 +27,11 @@ const WhatWeDo: React.FC = () => {
     }
   ];
 
-  return (  
-    <div className="kuvia-what-we-do-content">
-      <div className="kuvia-what-we-do-container">
+  return (
+    <div
+      className="kuvia-what-we-do-content"
+    >
+      <MotionDiv className="kuvia-what-we-do-container" style={{ y: yWhatWeDoContent, opacity: opacityWhatWeDoContent }}>
         <div className="kuvia-what-we-do-title">
           What<br/>we do
         </div>
@@ -35,7 +44,7 @@ const WhatWeDo: React.FC = () => {
           </p>
           <Button type="disabled" text="Demo Coming soon" rounded style={{ padding: "10px 30px" }} />
         </div>
-      </div>
+      </MotionDiv>
       <div className="kuvia-what-we-do-content-switch-container">
         <img src={background} alt="background" className="kuvia-what-we-do-content-switch-background" />
         <ContentSwitch items={items} style={{ marginLeft: "120px" }} />
