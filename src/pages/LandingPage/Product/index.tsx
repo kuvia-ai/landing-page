@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Button from "../../../components/Button";
 import IconCard from "../../../components/IconCard";
 import SliderControl from "../../../components/SliderControl";
+import { Link } from "react-router-dom";
 import img1 from "../../../images/8b4853150a4a459c5c95b89dcd5bfec767f533e4.png";
 import img2 from "../../../images/d13bba79fb798511a556e2707d87d3e8348f6afd.jpg";
 import img3 from "../../../images/b46389d234f9188270b2d15e49ed87c9bd1479ac.png";
@@ -102,7 +103,9 @@ const Product: React.FC = () => {
         </div>
         <div className="kuvia-scalability-right-content">
           <img src={img7} alt={img7} />
-          <Button type="tertiary" text="More info" style={{fontWeight: "900", paddingInline: "60px"}} />
+          <Link to="/#contact-us" className="kuvia-navbar-link">
+            <Button type="tertiary" text="More info" style={{ fontWeight: "900", paddingInline: "60px" }} />
+          </Link>
         </div>
       </div>
     </div>
