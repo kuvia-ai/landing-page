@@ -24,7 +24,7 @@ const WhatWeDo: React.FC = () => {
     <div className="kuvia-what-we-do-content">
       <div className="kuvia-what-we-do-container">
         <div className="kuvia-what-we-do-title">
-          What we do
+          What<br/>we do
         </div>
         <div className="kuvia-what-we-do-content">
           <p>
