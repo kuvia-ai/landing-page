@@ -61,7 +61,7 @@ const AboutUs: React.FC = () => {
   ];
 
   return (
-    <div id="about-us" className="kuvia-aboutus">
+    <div className="kuvia-aboutus">
       <div className="kuvia-aboutus-press">
         <h1>Press</h1>
         <div className="kuvia-aboutus-toggles">

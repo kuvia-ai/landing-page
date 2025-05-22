@@ -29,7 +29,7 @@ const ContactUs: React.FC = () => {
         if (formRef.current) {
           formRef.current.reset();
         }
-        })
+      })
   };
 
   const handleMailClick = () => {
@@ -42,7 +42,7 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <div id='contact-us' className="kuvia-aboutus-contact">
+    <div className="kuvia-aboutus-contact">
       <h1>Let's connect!</h1>
       <p>Whether you want to collaborate, join our mission, or simply learn more -<br />we'd love to hear from you</p>
       <div className='kuvia-aboutus-contact-form'>

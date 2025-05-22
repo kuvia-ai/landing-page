@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import MainContent from "./MainContent";
 import WhatWeDo from "./WhatWeDo";
@@ -7,14 +7,12 @@ import Product from './Product';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import HamburgerMenu from '../../components/HamburgerMenu';
+import Section from '../../components/Section';
 
 import './index.scss';
 
 const LandingPage: React.FC = () => {
-
   const location = useLocation();
-
-
 
   useEffect(() => {
     if (location.hash) {
@@ -25,16 +23,46 @@ const LandingPage: React.FC = () => {
     }
   }, [location]);
 
+  const pageSubsections = [
+    {
+      id: 'what-we-do',
+      component: <WhatWeDo />,
+    },
+    {
+      id: 'why-kuvia',
+      component: <WhyKuvia />,
+    },
+    {
+      id: 'product',
+      component: <Product />,
+    },
+    {
+      id: 'about-us',
+      component: <AboutUs />,
+    },
+    {
+      id: 'contact-us',
+      component: <ContactUs />,
+    },
+  ];
+
   return (
     <div className="kuvia-landing-page">
-      <MainContent ref={main} />
+      <Section
+        id=''
+      >
+        <MainContent />
+      </Section>
       <div className='kuvia-landing-page-content'>
         <HamburgerMenu />
-        <WhatWeDo />
-        <WhyKuvia />
-        <Product />
-        <AboutUs />
-        <ContactUs />
+        {pageSubsections.map((section) => (
+          <Section
+            key={section.id}
+            id={section.id}
+          >
+            {section.component}
+          </Section>
+        ))}
       </div>
     </div>
   );

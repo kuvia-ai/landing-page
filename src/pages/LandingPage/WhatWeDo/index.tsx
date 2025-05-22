@@ -156,15 +156,15 @@ const WhatWeDo: React.FC = () => {
   ];
 
   return (  
-    <div id="what-we-do" className="kuvia-what-we-do-content">
-      <div className="kuvia-page-more-demo-button">
+    <div className="kuvia-what-we-do-content">
+      {/* <div className="kuvia-page-more-demo-button">
         <Button
           text={"Try Demo"}
           onClick={() => navigate("/processing")}
           style={{ margin: "20px 20px 0 auto" }}
           motionStyle={{ scale: scaleTryDemoButton }}
         />
-      </div>
+      </div> */}
       {/* <motion.div style={{ x: xBanner1, opacity: opacityBanner1 }}>
         <Banner text="WHY IS THIS IMPORTANT?" />
       </motion.div> */}
