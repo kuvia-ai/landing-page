@@ -70,7 +70,7 @@ const AboutUs: React.FC = () => {
         </div>
         <Swiper
           spaceBetween={50}
-          slidesPerView={3}
+          slidesPerView="auto"
           className="kuvia-info-card-group"
         >
           {(pressSelection === "press-release" ? pressReleases : scientificPublications).map((press, index) => (
