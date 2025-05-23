@@ -67,6 +67,7 @@
             color: var(--primary-dark);
             box-shadow: 5px 5px 20px 0px #00000012;
             resize: vertical;
+            font-family: inherit;
 
             &:focus {
               outline: none;
