@@ -1,0 +1,27 @@
+.kuvia-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-inline: 20px;
+
+  .kuvia-header-logo {
+    margin-top: 16px;
+    margin-left: 80px;
+    top: 0;
+    left: 0;
+
+    img {
+      width: 170px;
+      filter: drop-shadow(0 0 5px white);
+    }
+  }
+
+  .kuvia-header-right-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 43px;
+  }
+}

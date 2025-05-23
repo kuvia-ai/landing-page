@@ -1,0 +1,40 @@
+.processing-loader {
+  width: 45%;
+  margin-inline: auto;
+
+  .processing-loader-label {
+    display: flex;
+    color: #303030;
+    font-weight: 600;
+    margin-left: 5px;
+
+    p {
+      margin: 0;
+    }
+
+    .processing-loader-first-dot {
+      animation: jump 1.2s linear infinite;
+    }
+
+    .processing-loader-second-dot {
+      animation: jump 1.2s linear infinite 0.3s;
+    }
+
+    .processing-loader-third-dot {
+      animation: jump 1.2s linear infinite 0.6s;
+    }
+  }
+
+  .processing-loader-container {
+    height: 25px;
+    border-radius: 12.5px;
+    box-shadow: -3px 10px 15px rgb(228, 228, 228);
+    overflow-x: hidden;
+
+    .processing-loader-progress {
+      height: 100%;
+      background-color: #303030;
+      animation: loader 4s ease-in;
+    }
+  }
+}

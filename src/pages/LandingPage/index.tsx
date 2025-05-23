@@ -1,0 +1,110 @@
+import React, { useEffect } from 'react';
+import { useScroll, useTransform, motion } from "framer-motion";
+import { useLocation } from 'react-router-dom';
+import MainContent from "./MainContent";
+import WhatWeDo from "./WhatWeDo";
+import WhyKuvia from "./WhyKuvia";
+import Product from './Product';
+import AboutUs from './AboutUs';
+import ContactUs from './ContactUs';
+import HamburgerMenu from '../../components/HamburgerMenu';
+import Section from '../../components/Section';
+
+import './index.scss';
+
+const LandingPage: React.FC = () => {
+  const location = useLocation();
+
+  const { scrollY } = useScroll();
+
+  const opacityBackToTopButton = useTransform(scrollY, [450, 700], [0, 1]);
+
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
+  const pageSubsections = [
+    {
+      id: 'what-we-do',
+      component: <WhatWeDo />,
+    },
+    {
+      id: 'why-kuvia',
+      component: <WhyKuvia />,
+    },
+    {
+      id: 'product',
+      component: <Product />,
+    },
+    {
+      id: 'about-us',
+      component: <AboutUs />,
+    },
+    {
+      id: 'contact-us',
+      component: <ContactUs />,
+    },
+  ];
+
+  return (
+    <div className="kuvia-landing-page">
+      <Section
+        id=''
+      >
+        <MainContent />
+      </Section>
+      <div className='kuvia-landing-page-content'>
+        <HamburgerMenu />
+        {pageSubsections.map((section) => (
+          <Section
+            key={section.id}
+            id={section.id}
+          >
+            {section.component}
+          </Section>
+        ))}
+        <motion.button
+          className='kuvia-back-to-top-button'
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          style={{ opacity: opacityBackToTopButton }}
+        >
+          <svg
+            fill="#000000"
+            height="20px"
+            width="20px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            viewBox="-35.84 -35.84 583.69 583.69"
+            xmlSpace="preserve"
+            stroke="#000000"
+            strokeWidth="19.45638"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g>
+                  <path
+                    d="M505.755,358.256L271.088,123.589c-8.341-8.341-21.824-8.341-30.165,0L6.256,358.256c-8.341,8.341-8.341,21.824,0,30.165
+          s21.824,8.341,30.165,0l219.584-219.584l219.584,219.584c4.16,4.16,9.621,6.251,15.083,6.251
+          c5.462,0,10.923-2.091,15.083-6.251C514.096,380.08,514.096,366.597,505.755,358.256z"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </motion.button>
+      </div>
+    </div>
+  );
+}
+
+export default LandingPage;

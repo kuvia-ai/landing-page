@@ -1,0 +1,16 @@
+.kuvia-slider-control {
+  display: flex;
+  gap: 14px;
+
+  .kuvia-slider-item {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #F3F3F6;
+    cursor: pointer;
+
+    &.active {
+      background-color: #D2D4DC;
+    }
+  }
+}

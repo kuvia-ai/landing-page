@@ -1,0 +1,21 @@
+.kuvia-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F5F5;
+  border-radius: 6px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.124);
+  color: #313131;
+  text-align: center;
+  text-wrap: wrap;
+
+  .kuvia-card-content {
+    margin-inline: 16px;
+    font-size: 18px;
+    line-height: 150%;
+
+    p {
+      margin: 0;
+    }
+  }
+}

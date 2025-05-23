@@ -1,0 +1,154 @@
+.kuvia-aboutus-contact {
+  min-height: 100dvh;
+  background: linear-gradient(180deg,
+      rgba(247, 247, 247, 1) 0%,
+      rgba(247, 247, 247, 1) 40%,
+      rgba(214, 186, 210, 1) 100%);
+  padding-top: 20px;
+
+  .kuvia-aboutus-contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 70px;
+      color: var(--primary-dark);
+      font-weight: 900;
+      margin: 0;
+      margin-bottom: 20px
+    }
+
+    p {
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--tertiary-gray);
+    }
+
+    .kuvia-aboutus-contact-form {
+      display: flex;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      margin-right: -54px;
+
+      .kuvia-aboutus-contact-form-content {
+        width: 600px;
+        background-color: var(--white);
+        box-shadow: 5px 5px 20px 0px #00000012;
+        padding: 20px 40px;
+        border-radius: 20px;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          label {
+            font-size: 24px;
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-align: left;
+            margin-left: 10px;
+          }
+
+          label::after {
+            content: " *";
+            color: orange;
+          }
+
+          input,
+          textarea {
+            padding: 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: var(--secondary-gray);
+            font-size: 20px;
+            color: var(--primary-dark);
+            box-shadow: 5px 5px 20px 0px #00000012;
+            resize: vertical;
+            font-family: inherit;
+
+            &:focus {
+              outline: none;
+              box-shadow: 0 0 0 2px var(--secondary-dark);
+            }
+          }
+
+          button {
+            padding-block: 12px;
+            border-radius: 10px;
+            font-size: 24px;
+            background-color: var(--secondary-dark);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+              background-color: var(--primary-dark);
+              transition-duration: .3s;
+              scale: 1.05;
+            }
+          }
+        }
+
+        .kuvia-aboutus-contact-form-loading {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 60px;
+          margin: 40px;
+        }
+
+        .kuvia-aboutus-contact-form-sent {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 40px;
+          margin-block: 40px;
+
+          h3 {
+            font-size: 42px;
+            color: var(--primary-dark);
+            font-weight: 900;
+            margin: 0;
+          }
+
+          p {
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--tertiary-gray);
+          }
+        }
+      }
+
+      .kuvia-aboutus-contact-socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        height: fit-content;
+        background-color: var(--tertiary-gray);
+        margin-top: 100px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        height: fit-content;
+        padding: 20px 10px;
+        box-shadow: 5px 5px 20px 0px #00000012;
+
+
+        svg {
+          color: var(--white);
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

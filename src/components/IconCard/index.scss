@@ -1,0 +1,85 @@
+.kuvia-icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  gap: 16px;
+  padding-top: 50px;
+  padding-left: 30px;
+
+  &--default {
+    background-color: var(--secondary-color);
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  .kuvia-icon-card-icon-container {
+    position: relative;
+
+    .kuvia-icon-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      width: 120px;
+      overflow: hidden;
+      border-radius: 50%;
+
+      img {
+        height: 120px;
+      }
+    }
+
+    .kuvia-icon-card-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
+      color: var(--white);
+      font-size: 24px;
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  .kuvia-icon-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-inline: 8px;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 700;
+    text-align: left;
+
+    .kuvia-icon-card-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--tertiary-dark);
+    }
+
+    .kuvia-icon-card-text {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--tertiary-gray);
+    }
+  }
+
+}
+
+.kuvia-icon-card:hover {
+  scale: 1.4;
+  background-color: var(--secondary-color);
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 1.82px 3.65px 0px #E5E5E529 inset;
+  z-index: 1000;
+}

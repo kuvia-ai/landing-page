@@ -1,0 +1,75 @@
+@keyframes spinLeft {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+    cursor: none;
+  }
+
+  to {
+    transform: rotate(-180deg);
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+@keyframes spinRight {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+    cursor: none;
+  }
+
+  to {
+    transform: rotate(180deg);
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+@keyframes expand {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes collapse {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.kuvia-landing-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+
+  .kuvia-landing-page-content {
+    position: static;
+  }
+
+  .kuvia-back-to-top-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    margin-top: -40px;
+    margin-left: auto;
+    background-color: #E7E7E7;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10000;
+  }
+}
