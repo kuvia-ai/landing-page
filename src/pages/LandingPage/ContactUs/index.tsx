@@ -28,7 +28,6 @@ const ContactUs: React.FC = () => {
     )
       .then(
         (result) => {
-          alert('Message sent successfully! We will get back to you soon.');
           setIsSent(true);
         })
       .catch(
@@ -37,9 +36,9 @@ const ContactUs: React.FC = () => {
           alert('Failed to send message, please try again later.');
         })
       .finally(() => {
+        setIsLoading(false);
         if (formRef.current) {
           formRef.current.reset();
-          setIsLoading(false);
         }
       })
   };
