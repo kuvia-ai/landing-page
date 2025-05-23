@@ -13,7 +13,6 @@ import './index.scss';
 
 const LandingPage: React.FC = () => {
   const location = useLocation();
-  
 
   useEffect(() => {
     if (location.hash) {
@@ -64,6 +63,35 @@ const LandingPage: React.FC = () => {
             {section.component}
           </Section>
         ))}
+        <button className='kuvia-back-to-top-button' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <svg
+            fill="#000000"
+            height="20px"
+            width="20px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            viewBox="-35.84 -35.84 583.69 583.69"
+            xmlSpace="preserve"
+            stroke="#000000"
+            strokeWidth="19.45638"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g>
+                  <path
+                    d="M505.755,358.256L271.088,123.589c-8.341-8.341-21.824-8.341-30.165,0L6.256,358.256c-8.341,8.341-8.341,21.824,0,30.165
+          s21.824,8.341,30.165,0l219.584-219.584l219.584,219.584c4.16,4.16,9.621,6.251,15.083,6.251
+          c5.462,0,10.923-2.091,15.083-6.251C514.096,380.08,514.096,366.597,505.755,358.256z"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
       </div>
     </div>
   );

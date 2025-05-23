@@ -54,4 +54,22 @@
   .kuvia-landing-page-content {
     position: static;
   }
+
+  .kuvia-back-to-top-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    margin-top: -40px;
+    margin-left: auto;
+    background-color: #E7E7E7;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10000;
+  }
 }
