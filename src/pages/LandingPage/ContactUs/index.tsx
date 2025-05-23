@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useScroll, useTransform, motion } from "framer-motion";
+import { TailSpin } from 'react-loader-spinner';
 import './index.scss';
 
 const ContactUs: React.FC = () => {
@@ -23,7 +24,7 @@ const ContactUs: React.FC = () => {
     )
       .then(
         (result) => {
-          alert('Message sent successfully!');
+          alert('Message sent successfully! We will get back to you soon.');
         })
       .catch(
         (error) => {
