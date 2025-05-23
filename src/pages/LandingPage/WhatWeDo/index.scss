@@ -6,27 +6,27 @@
 
   .kuvia-what-we-do-container {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
     margin-top: 200px;
 
     .kuvia-what-we-do-title {
       flex: none;
-      font-size: 80px;
+      font-size: 120px;
       font-weight: 900;
       text-align: center;
       margin-left: 120px;
     }
 
-    .kuvia-what-we-do-content {
+    p {
       font-size: 36px;
       font-weight: 500;
       text-align: left;
       line-height: 1.5;
       margin-right: 200px;
 
-      button {
-        margin-top: 50px;
+      b {
+        color: var(--quaternary-color);
       }
     }
   }
@@ -49,5 +49,4 @@
   }
 }
 
-@media (max-width: 576px) {
-}
+@media (max-width: 576px) {}

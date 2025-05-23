@@ -34,15 +34,12 @@ const WhatWeDo: React.FC = () => {
         <div className="kuvia-what-we-do-title">
           What<br />we do
         </div>
-        <div className="kuvia-what-we-do-content">
-          <p>
-            At Kuvia, our mission is to harness the power of <br />
-            artificial intelligence (AI) to transform cancer <br />
-            diagnostics, <b>enabling faster and accessible</b><br />
-            <b>biomarker detection</b> for better patient outcomes.
-          </p>
-          <Button type="disabled" text="Demo Coming soon" rounded style={{ padding: "10px 30px" }} />
-        </div>
+        <p>
+          At Kuvia, our mission is to harness the power of <br />
+          artificial intelligence (AI) to transform cancer <br />
+          diagnostics, <b>enabling faster and accessible</b><br />
+          <b>biomarker detection</b> for better patient outcomes.
+        </p>
       </motion.div>
       <div className="kuvia-what-we-do-content-switch-container">
         <img src={background} alt="background" className="kuvia-what-we-do-content-switch-background" />
