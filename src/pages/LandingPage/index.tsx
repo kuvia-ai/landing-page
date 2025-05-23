@@ -13,6 +13,7 @@ import './index.scss';
 
 const LandingPage: React.FC = () => {
   const location = useLocation();
+  
 
   useEffect(() => {
     if (location.hash) {

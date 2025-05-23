@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import Navbar from '../../components/Navbar';
-import MotionDiv from '../MotionDiv';
 import './index.scss';
 
 const HamburgerMenu = () => {
@@ -22,7 +21,10 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <MotionDiv className={`kuvia-hamburger-menu ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`} style={{ opacity: opacityWhatWeDoContent, position: "sticky" }}>
+    <motion.div
+      className={`kuvia-hamburger-menu ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`}
+      style={{ opacity: opacityWhatWeDoContent, position: "sticky" }}
+    >
       <div className={`kuvia-hamburger-menu-navbar ${expandHamburgerMenu ? 'expand' : 'collapse'}`}>
         <Navbar />
       </div>
@@ -137,7 +139,7 @@ const HamburgerMenu = () => {
           </svg>
         }
       </div>
-    </MotionDiv>
+    </motion.div>
   );
 }
 

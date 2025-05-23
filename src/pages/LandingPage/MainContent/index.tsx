@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import background from './background.mp4'
 import Header from "./Header";
-import MotionDiv from "../../../components/MotionDiv";
 import "./index.scss";
 
 const MainContent: React.FC = () => {
@@ -11,7 +10,7 @@ const MainContent: React.FC = () => {
   const { scrollY } = useScroll();
 
   const yMainLandingContent = useTransform(scrollY, [0, 500], [0, -700]);
-  const opacityMainLandingContent = useTransform(scrollY, [0, 500], [1, 0]);
+  const opacityMainLandingContent = useTransform(scrollY, [300, 400], [1, 0]);
 
   const opacityReadMore = useTransform(scrollY, [0, 500], [1, 0]);
 
@@ -20,7 +19,7 @@ const MainContent: React.FC = () => {
       <video autoPlay loop muted id='kuvia-landing-page-main-content-video'>
         <source src={background} type="video/mp4" />
       </video>
-      <MotionDiv
+      <motion.div
         className="kuvia-landing-page-main-content"
         style={{ y: yMainLandingContent, opacity: opacityMainLandingContent }}
       >
@@ -32,7 +31,7 @@ const MainContent: React.FC = () => {
             </h2>
           </div>
         </div>
-        <MotionDiv
+        <motion.div
           className="kuvia-landing-read-more"
           style={{ opacity: opacityReadMore }}
         >
@@ -48,8 +47,8 @@ const MainContent: React.FC = () => {
           >
             <path d="M75.334 12.591C10.57-24.337-20.852 28.186 15.131 64.566l200.866 209.613c33.472 33.471 46.534 33.471 80.006 0L496.869 64.566c35.983-36.38 4.561-88.903-60.203-51.975L256 109.944 75.334 12.591z" />
           </svg>
-        </MotionDiv>
-        <button
+        </motion.div>
+        <motion.button
           className='kuvia-landing-background-pause-button'
           onClick={() => {
             const video = document.getElementById('kuvia-landing-page-main-content-video') as HTMLVideoElement;
@@ -62,7 +61,9 @@ const MainContent: React.FC = () => {
                 setIsVideoPaused(true);
               }
             }
-          }}>
+          }}
+          style={{ opacity: opacityReadMore }}
+        >
           {!isVideoPaused ?
             <svg
               width="24px"
@@ -102,7 +103,7 @@ const MainContent: React.FC = () => {
               viewBox="0 0 32 32"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
-              style={{marginRight: "-3px"}}
+              style={{ marginRight: "-3px" }}
             >
               <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -113,8 +114,8 @@ const MainContent: React.FC = () => {
                 ></path>
               </g>
             </svg>}
-        </button>
-      </MotionDiv>
+        </motion.button>
+      </motion.div>
     </div >
   );
 };

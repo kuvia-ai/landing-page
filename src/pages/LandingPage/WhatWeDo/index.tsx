@@ -1,9 +1,8 @@
 import React from "react";
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import Button from "../../../components/Button";
 import ContentSwitch from "../../../components/ContentSwitch";
 import background from "../../../images/8bdcd33d1e3faa0a0a26b63cc70e594ac8f472b0.png";
-import MotionDiv from "../../../components/MotionDiv";
 import "./index.scss";
 
 const WhatWeDo: React.FC = () => {
@@ -23,7 +22,7 @@ const WhatWeDo: React.FC = () => {
     },
     {
       title: "What are the effects of limited access?",
-      description: <p><b>Delayed diagnostics. Suboptimal treatments. Avoidable outcomes.</b><br/><br/> Without timely access to biomarker testing, patients are frequently placed on standard treatments that may not align with their tumor’s biology. This one-size-fits-all approach reduces the likelihood of treatment success and can ultimately impact survival.</p>,
+      description: <p><b>Delayed diagnostics. Suboptimal treatments. Avoidable outcomes.</b><br /><br /> Without timely access to biomarker testing, patients are frequently placed on standard treatments that may not align with their tumor’s biology. This one-size-fits-all approach reduces the likelihood of treatment success and can ultimately impact survival.</p>,
     }
   ];
 
@@ -31,9 +30,9 @@ const WhatWeDo: React.FC = () => {
     <div
       className="kuvia-what-we-do-content"
     >
-      <MotionDiv className="kuvia-what-we-do-container" style={{ y: yWhatWeDoContent, opacity: opacityWhatWeDoContent }}>
+      <motion.div className="kuvia-what-we-do-container" style={{ y: yWhatWeDoContent, opacity: opacityWhatWeDoContent }}>
         <div className="kuvia-what-we-do-title">
-          What<br/>we do
+          What<br />we do
         </div>
         <div className="kuvia-what-we-do-content">
           <p>
@@ -44,7 +43,7 @@ const WhatWeDo: React.FC = () => {
           </p>
           <Button type="disabled" text="Demo Coming soon" rounded style={{ padding: "10px 30px" }} />
         </div>
-      </MotionDiv>
+      </motion.div>
       <div className="kuvia-what-we-do-content-switch-container">
         <img src={background} alt="background" className="kuvia-what-we-do-content-switch-background" />
         <ContentSwitch items={items} style={{ marginLeft: "120px" }} />

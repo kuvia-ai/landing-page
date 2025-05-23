@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { useScroll, useTransform } from "framer-motion";
-import MotionDiv from '../../../components/MotionDiv';
+import { useScroll, useTransform, motion } from "framer-motion";
 import './index.scss';
 
 const ContactUs: React.FC = () => {
@@ -49,7 +48,7 @@ const ContactUs: React.FC = () => {
 
   return (
     <div className="kuvia-aboutus-contact" >
-      <MotionDiv className="kuvia-aboutus-contact-container" style={{ y: yMainLandingContent, opacity: opacityMainLandingContent }}>
+      <motion.div className="kuvia-aboutus-contact-container" style={{ y: yMainLandingContent, opacity: opacityMainLandingContent }}>
         <h1>Let's connect!</h1>
         <p>Whether you want to collaborate, join our mission, or simply learn more -<br />we'd love to hear from you</p>
         <div className='kuvia-aboutus-contact-form'>
@@ -69,7 +68,7 @@ const ContactUs: React.FC = () => {
             <svg width="34" height="34" onClick={handleMailClick} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85" stroke-width="1.25" d="M1.333 4.667l5.444 3.81c.44.309.66.463.9.523.212.052.434.052.646 0 .24-.06.46-.214.9-.523l5.444-3.81M4.533 13.333h6.934c1.12 0 1.68 0 2.108-.218a2 2 0 00.874-.874c.218-.428.218-.987.218-2.108V5.867c0-1.12 0-1.68-.218-2.108a2 2 0 00-.874-.874c-.428-.218-.988-.218-2.108-.218H4.533c-1.12 0-1.68 0-2.108.218a2 2 0 00-.874.874c-.218.428-.218.988-.218 2.108v4.266c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874c.428.218.988.218 2.108.218z"></path></svg>
           </div>
         </div>
-      </MotionDiv>
+      </motion.div>
     </div>
   );
 }
