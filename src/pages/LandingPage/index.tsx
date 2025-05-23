@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useScroll, useTransform, motion } from "framer-motion";
 import { useLocation } from 'react-router-dom';
 import MainContent from "./MainContent";
 import WhatWeDo from "./WhatWeDo";
@@ -13,6 +14,11 @@ import './index.scss';
 
 const LandingPage: React.FC = () => {
   const location = useLocation();
+
+  const { scrollY } = useScroll();
+
+  const opacityBackToTopButton = useTransform(scrollY, [450, 700], [0, 1]);
+
 
   useEffect(() => {
     if (location.hash) {
@@ -63,7 +69,11 @@ const LandingPage: React.FC = () => {
             {section.component}
           </Section>
         ))}
-        <button className='kuvia-back-to-top-button' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <motion.button
+          className='kuvia-back-to-top-button'
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          style={{ opacity: opacityBackToTopButton }}
+        >
           <svg
             fill="#000000"
             height="20px"
@@ -91,7 +101,7 @@ const LandingPage: React.FC = () => {
               </g>
             </g>
           </svg>
-        </button>
+        </motion.button>
       </div>
     </div>
   );

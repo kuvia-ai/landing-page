@@ -9,7 +9,7 @@ const HamburgerMenu = () => {
 
   const { scrollY } = useScroll();
 
-  const opacityWhatWeDoContent = useTransform(scrollY, [450, 700], [0, 1]);
+  const opacityHamburgerMenu = useTransform(scrollY, [450, 700], [0, 1]);
 
   const toggleMenu = () => {
     // Trigger animation
@@ -23,7 +23,7 @@ const HamburgerMenu = () => {
   return (
     <motion.div
       className={`kuvia-hamburger-menu ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`}
-      style={{ opacity: opacityWhatWeDoContent, position: "sticky" }}
+      style={{ opacity: opacityHamburgerMenu, position: "sticky" }}
     >
       <div className={`kuvia-hamburger-menu-navbar ${expandHamburgerMenu ? 'expand' : 'collapse'}`}>
         <Navbar />
