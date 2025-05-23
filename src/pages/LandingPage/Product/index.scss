@@ -1,11 +1,11 @@
 .kuvia-product {
   background-color: var(--background-color);
+  padding-top: 150px;
 
   .kuvia-how-it-works-container {
     margin-left: 100px;
 
     .kuvia-how-it-works-title {
-      margin-top: 150px;
       font-size: 90px;
       font-weight: 900;
       color: var(--secondary-dark);
@@ -13,7 +13,8 @@
 
     .kuvia-how-it-works-cards-group {
       display: flex;
-      gap: 5px;
+      justify-content: space-between;
+      margin-right: 120px;
       margin-top: 100px;
     }
   }
@@ -23,7 +24,7 @@
     background-color: var(--white);
     margin-inline: auto;
     width: 90%;
-    height: 850px;
+    height: 750px;
     border-radius: 20px;
     overflow: hidden;
     margin-top: 200px;
@@ -35,7 +36,7 @@
       justify-content: space-between;
       gap: 50px;
       width: 50%;
-      padding-top: 90px;
+      padding-top: 50px;
       padding-left: 60px;
 
 
@@ -51,15 +52,15 @@
         line-height: 1.37;
         color: var(--primary-black);
         max-width: 560px;
-        margin-top: 50px;
-        margin-left: 20px;
+        margin-top: 30px;
+        margin-left: 10px;
       }
 
       .kuvia-our-product-left-content-footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
 
         .kuvia-our-product-left-content-footer-text {
           font-weight: 500;
@@ -170,7 +171,7 @@
         object-fit: contain;
       }
 
-      .kuvia-button {
+      a {
         position: absolute
       }
     }

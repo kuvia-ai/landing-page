@@ -77,15 +77,15 @@ const Product: React.FC = () => {
           <p className="kuvia-our-product-right-content-title">Clinical context for MSI</p>
           <div className="kuvia-our-product-right-content-body">
             <img src={img6} alt={img6} />
-            <div className="kuvia-our-product-right-content-tag" style={{ top: "60px", left: "-70px" }}>
+            <div className="kuvia-our-product-right-content-tag" style={{ top: "40px", left: "-70px" }}>
               <h1>#2 & #3</h1>
               <p>In 2023, colorectal cancer was the world’s second leading cause of cancer-related deaths and the third most frequently diagnosed cancer.</p>
             </div>
-            <div className="kuvia-our-product-right-content-tag" style={{ top: "265px", right: "-80px" }}>
+            <div className="kuvia-our-product-right-content-tag" style={{ top: "230px", right: "-80px" }}>
               <h1>MSI Rates</h1>
               <p>Approximately 10–15% of colorectal cancers, and 20% to 30% of endometrial carcinomas exhibit high microsatellite instability (MSI-H) or are mismatch repair deficient (dMMR), with higher rates observed in early-stage tumors.</p>
             </div>
-            <div className="kuvia-our-product-right-content-tag" style={{ bottom: "150px", left: "105px" }}>
+            <div className="kuvia-our-product-right-content-tag" style={{ bottom: "100px", left: "105px" }}>
               <h1>#6</h1>
               <p>Endometrial cancer is the sixth most common cancer among women worldwide, with over 420,000 new cases reported in 2022.</p>
             </div>
