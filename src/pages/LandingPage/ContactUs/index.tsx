@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useScale } from '../../../context/AppContext';
 import emailjs from '@emailjs/browser';
 import { useScroll, useTransform, motion } from "framer-motion";
 import { TailSpin } from 'react-loader-spinner';
@@ -9,9 +10,10 @@ const ContactUs: React.FC = () => {
   const [isSent, setIsSent] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const { scrollY } = useScroll();
+  const { scaleRatio } = useScale();
 
-  const yMainLandingContent = useTransform(scrollY, [7300, 7700], [700, 0]);
-  const opacityMainLandingContent = useTransform(scrollY, [7500, 7700], [0, 1]);
+  const yMainLandingContent = useTransform(scrollY, [7300 * scaleRatio, 7700 * scaleRatio], [700, 0]);
+  const opacityMainLandingContent = useTransform(scrollY, [7500 * scaleRatio, 7700 * scaleRatio], [0, 1]);
 
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

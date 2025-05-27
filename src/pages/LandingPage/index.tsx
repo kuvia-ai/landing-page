@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useScale } from '../../context/AppContext';
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useLocation } from 'react-router-dom';
 import MainContent from "./MainContent";
@@ -16,8 +17,9 @@ const LandingPage: React.FC = () => {
   const location = useLocation();
 
   const { scrollY } = useScroll();
+  const { scaleRatio } = useScale();
 
-  const opacityBackToTopButton = useTransform(scrollY, [450, 700], [0, 1]);
+  const opacityBackToTopButton = useTransform(scrollY, [450 * scaleRatio, 700 * scaleRatio], [0, 1]);
 
 
   useEffect(() => {

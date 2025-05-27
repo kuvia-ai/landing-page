@@ -1,15 +1,16 @@
 import React from "react";
+import { useScale } from "../../../context/AppContext";
 import { useScroll, useTransform, motion } from "framer-motion";
-import Button from "../../../components/Button";
 import ContentSwitch from "../../../components/ContentSwitch";
 import background from "../../../images/8bdcd33d1e3faa0a0a26b63cc70e594ac8f472b0.png";
 import "./index.scss";
 
 const WhatWeDo: React.FC = () => {
   const { scrollY } = useScroll();
+  const { scaleRatio } = useScale();
 
-  const yWhatWeDoContent = useTransform(scrollY, [0, 700], [700, 0]);
-  const opacityWhatWeDoContent = useTransform(scrollY, [400, 700], [0, 1]);
+  const yWhatWeDoContent = useTransform(scrollY, [0, 700 * scaleRatio], [700, 0]);
+  const opacityWhatWeDoContent = useTransform(scrollY, [400 * scaleRatio, 700 * scaleRatio], [0, 1]);
 
   const items = [
     {
@@ -43,7 +44,7 @@ const WhatWeDo: React.FC = () => {
       </motion.div>
       <div className="kuvia-what-we-do-content-switch-container">
         <img src={background} alt="background" className="kuvia-what-we-do-content-switch-background" />
-        <ContentSwitch items={items} style={{ marginLeft: "120px" }} />
+        <ContentSwitch items={items} style={{marginLeft: "auto"}}/>
       </div>
     </div>
   );

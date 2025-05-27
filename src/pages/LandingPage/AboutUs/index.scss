@@ -11,7 +11,7 @@
       font-weight: 900;
       margin: 0;
     }
-    
+
     .kuvia-aboutus-toggles {
       display: flex;
       gap: 8px;
@@ -46,7 +46,7 @@
         display: flex;
         flex-direction: column;
         height: 660px;
-        width: 550px !important;
+        width: 550px;
         border-radius: 30px;
         overflow: hidden;
         background-color: var(--white);
@@ -92,7 +92,6 @@
   }
 
   .kuvia-aboutus-team {
-
     h1 {
       font-size: 80px;
       color: var(--primary-dark);
@@ -106,6 +105,77 @@
       justify-content: space-between;
       margin-right: 120px;
       padding-bottom: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .kuvia-aboutus {
+    padding-top: 96px;
+    padding-left: 96px;
+
+    .kuvia-aboutus-press {
+      h1 {
+        font-size: 64px;
+      }
+
+      .kuvia-aboutus-toggles {
+        gap: 6px;
+        margin: 40px 96px 64px 0;
+
+        button {
+          padding-block: 10px;
+          border-radius: 24px;
+          font-size: 22px;
+        }
+      }
+
+      .kuvia-info-card-group {
+        padding-right: 96px;
+        padding-bottom: 184px;
+
+        .kuvia-info-card {
+          height: 528px;
+          width: 440px;
+          border-radius: 24px;
+          box-shadow: 4px 4px 16px 0px #00000012;
+
+          img {
+            height: 240px;
+          }
+
+          .kuvia-info-card-content {
+            padding: 40px 36px;
+            gap: 18px;
+
+            .kuvia-info-card-content-tag {
+              padding: 6px 12px;
+              border-radius: 14px;
+            }
+
+            .kuvia-info-card-content-description {
+              font-size: 19px;
+              margin-top: 18px;
+            }
+
+            .kuvia-info-card-content-date {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .kuvia-aboutus-team {
+      h1 {
+        font-size: 64px;
+        margin-bottom: 64px;
+      }
+
+      .kuvia-aboutus-team-profile-group {
+        margin-right: 96px;
+        padding-bottom: 160px;
+      }
     }
   }
 }

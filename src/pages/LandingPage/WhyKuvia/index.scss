@@ -38,7 +38,7 @@
     justify-content: center;
     gap: 120px;
     margin-top: 50px;
-    width: 100%;
+    margin-inline: auto;
 
     .kuvia-why-kuvia-content-background {
       position: relative;
@@ -54,6 +54,43 @@
       border-radius: 20px;
       backdrop-filter: blur(45.319271087646484px);
       box-shadow: 0px 1.75px 3.49px 0px #E5E5E529 inset;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .kuvia-why-kuvia {
+    padding-top: 96px;
+
+    .kuvia-why-kuvia-container {
+      gap: 190px;
+
+      .kuvia-why-kuvia-title {
+        font-size: 112px;
+        margin-left: 96px;
+      }
+
+      .kuvia-why-kuvia-description {
+        font-size: 29px;
+        margin-right: 32px;
+      }
+    }
+
+    .kuvia-why-kuvia-content {
+      gap: 96px;
+      margin-top: 40px;
+
+      .kuvia-why-kuvia-content-background {
+        width: 612px;
+      }
+
+      .kuvia-why-kuvia-content-item {
+        font-size: 22px;
+        padding: 12px 20px;
+        border-radius: 16px;
+        backdrop-filter: blur(36px);
+        box-shadow: 0px 1.4px 2.8px 0px #E5E5E529;
+      }
     }
   }
 }

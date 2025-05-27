@@ -48,3 +48,26 @@
     }
   }
 }
+
+@media screen and (max-width: 1440px) {
+  .kuvia-hamburger-menu {
+    gap: 16px;
+    top: 24px;
+    right: 48px;
+    margin-top: 16px;
+    margin-bottom: -64px;
+
+    .kuvia-hamburger-menu-navbar {
+      &.expand {
+        width: 568px;
+      }
+    }
+
+    .kuvia-hamburger-menu-button {
+      width: 60px;
+      height: 48px;
+      border-radius: 16px;
+      box-shadow: 4px 4px 16px 0px #00000012;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useScale } from "../../context/AppContext";
 import ContentSwitchItem from "./Switch";
 import "./index.scss";
 
@@ -14,6 +15,8 @@ interface ContentSwitchProps {
 
 const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
   const [activeItem, setActiveItem] = useState<number>(0);
+  const { scaleRatio } = useScale();
+  const itemHeight = 220 * scaleRatio; // Adjust height based on scale ratio
 
   const handleItemClick = (index: number) => {
     const switchContentBody = document.querySelector(".kuvia-content-switch-content-body");
@@ -37,7 +40,7 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
             onClick={() => handleItemClick(index)} />
         ))}
       </div>
-      <div className="kuvia-content-switch-content" style={{ height: `${items.length * 220 - 20}px` }}>
+      <div className="kuvia-content-switch-content" style={{ height: `${items.length * itemHeight - 20}px` }}>
         <div className="kuvia-content-switch-content-body">
           <div className="kuvia-content-switch-content-title">{items[activeItem].title}</div>
           <div className="kuvia-content-switch-content-description">{items[activeItem].description}</div>
