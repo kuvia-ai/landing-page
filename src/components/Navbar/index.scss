@@ -40,3 +40,23 @@
     }
   }
 }
+
+@media (max-width: 1440px) {
+  .kuvia-navbar {
+    gap: 56px;
+    padding: 12px 24px;
+    border-radius: 13px;
+
+    .kuvia-navbar-link {
+      a {
+        font-size: 18px;
+      }
+    }
+
+    .kuvia-navbar-link:hover {
+      .kuvia-navbar-link-underline {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

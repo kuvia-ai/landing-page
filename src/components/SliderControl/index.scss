@@ -14,3 +14,14 @@
     }
   }
 }
+
+@media screen and (max-width: 1440px) {
+  .kuvia-slider-control {
+    gap: 11px;
+
+    .kuvia-slider-item {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

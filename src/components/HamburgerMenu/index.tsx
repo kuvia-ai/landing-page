@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useScale } from '../../context/AppContext';
 import { useScroll, useTransform, motion } from "framer-motion";
 import Navbar from '../../components/Navbar';
 import './index.scss';
@@ -8,8 +9,9 @@ const HamburgerMenu = () => {
   const [expandHamburgerMenu, setExpandHamburgerMenu] = useState(false);
 
   const { scrollY } = useScroll();
+  const { scaleRatio } = useScale();
 
-  const opacityHamburgerMenu = useTransform(scrollY, [450, 700], [0, 1]);
+  const opacityHamburgerMenu = useTransform(scrollY, [450 * scaleRatio, 700 * scaleRatio], [0, 1]);
 
   const toggleMenu = () => {
     // Trigger animation

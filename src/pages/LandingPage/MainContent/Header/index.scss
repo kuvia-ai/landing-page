@@ -25,3 +25,25 @@
     margin-right: 43px;
   }
 }
+
+@media (max-width: 1440px) {
+  .kuvia-header {
+    margin-top: 26px;
+    margin-inline: 16px;
+
+    .kuvia-header-logo {
+      margin-top: 13px;
+      margin-left: 64px;
+
+      img {
+        width: 136px;
+        filter: drop-shadow(0 0 4px white);
+      }
+    }
+
+    .kuvia-header-right-content {
+      gap: 10px;
+      margin-right: 34px;
+    }
+  }
+}

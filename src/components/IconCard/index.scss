@@ -83,3 +83,52 @@
   box-shadow: 0px 1.82px 3.65px 0px #E5E5E529 inset;
   z-index: 1000;
 }
+
+@media screen and (max-width: 1440px) {
+  .kuvia-icon-card {
+    width: 240px;
+    height: 320px;
+    border-radius: 16px;
+    gap: 13px;
+    padding-top: 40px;
+    padding-left: 24px;
+
+    .kuvia-icon-card-icon-container {
+      .kuvia-icon-card-icon {
+        height: 96px;
+        width: 96px;
+
+        img {
+          height: 96px;
+        }
+      }
+
+      .kuvia-icon-card-badge {
+        top: -8px;
+        right: -8px;
+        font-size: 19px;
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    .kuvia-icon-card-content {
+      gap: 13px;
+      margin-inline: 6px;
+      font-size: 14px;
+
+      .kuvia-icon-card-title {
+        font-size: 18px;
+      }
+
+      .kuvia-icon-card-text {
+        font-size: 19px;
+      }
+    }
+  }
+
+  .kuvia-icon-card:hover {
+    backdrop-filter: blur(24px);
+    box-shadow: 0px 1.46px 2.92px 0px #E5E5E529;
+  }
+}

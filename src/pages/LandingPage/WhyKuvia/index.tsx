@@ -1,7 +1,10 @@
+import { useScale } from "../../../context/AppContext";
 import background from "../../../images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff59.png";
 import "./index.scss";
 
 const WhyKuvia: React.FC = () => {
+  const { scaleRatio } = useScale();
+
   return (
     <div className="kuvia-why-kuvia">
       <div className="kuvia-why-kuvia-container">
@@ -12,10 +15,10 @@ const WhyKuvia: React.FC = () => {
       </div>
       <div className="kuvia-why-kuvia-content">
         <img src={background} alt="background" className="kuvia-why-kuvia-content-background" />
-        <div className="kuvia-why-kuvia-content-item" style={{ top: "230px", left: "305px" }}>Enhances accessibility</div>
-        <div className="kuvia-why-kuvia-content-item" style={{ top: "50px", left: "380px" }}>Reduces time to diagnosis</div>
-        <div className="kuvia-why-kuvia-content-item" style={{ top: "20px", left: "917px" }}>Reduces costs</div>
-        <div className="kuvia-why-kuvia-content-item" style={{ bottom: "80px", right: "232px" }}>Empowers clinical decision-making</div>
+        <div className="kuvia-why-kuvia-content-item" style={{ top: `${230 * scaleRatio}px`, left: `-${146 * scaleRatio}px` }}>Enhances accessibility</div>
+        <div className="kuvia-why-kuvia-content-item" style={{ top: `${50 * scaleRatio}px`, left: `-${75 * scaleRatio}px` }}>Reduces time to diagnosis</div>
+        <div className="kuvia-why-kuvia-content-item" style={{ top: `${20 * scaleRatio}px`, right: `${65 * scaleRatio}px` }}>Reduces costs</div>
+        <div className="kuvia-why-kuvia-content-item" style={{ bottom: `${80 * scaleRatio}px`, right: `-${220 * scaleRatio}px` }}>Empowers clinical decision-making</div>
       </div>
     </div>
   );

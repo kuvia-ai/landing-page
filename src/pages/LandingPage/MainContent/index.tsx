@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useScale } from '../../../context/AppContext';
 import { motion, useScroll, useTransform } from "framer-motion";
 import background from './background.mp4'
 import Header from "./Header";
@@ -8,9 +9,10 @@ const MainContent: React.FC = () => {
   const [isVideoPaused, setIsVideoPaused] = useState(false);
 
   const { scrollY } = useScroll();
+  const { scaleRatio } = useScale();
 
-  const yMainLandingContent = useTransform(scrollY, [0, 500], [0, -700]);
-  const opacityMainLandingContent = useTransform(scrollY, [300, 400], [1, 0]);
+  const yMainLandingContent = useTransform(scrollY, [0, 500 * scaleRatio], [0, -700]);
+  const opacityMainLandingContent = useTransform(scrollY, [300 * scaleRatio, 400 * scaleRatio], [1, 0]);
 
   const opacityReadMore = useTransform(scrollY, [0, 500], [1, 0]);
 
