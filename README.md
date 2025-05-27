@@ -1,1 +1,1 @@
-# kuvia Landing Page
+# Kuvia Landing Page
