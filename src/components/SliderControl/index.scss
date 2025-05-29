@@ -11,6 +11,8 @@
 
     &.active {
       background-color: #D2D4DC;
+      cursor: not-allowed;
+      pointer-events: none;
     }
   }
 }
