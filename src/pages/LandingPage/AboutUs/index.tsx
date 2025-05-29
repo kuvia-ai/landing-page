@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel } from 'swiper/modules';
 import pressReleaseData from "../../../assets/pressReleasesData.json";
 import scientificPublicationData from "../../../assets/scientificPublicationsData.json";
 import UserProfile from "../../../components/UserProfile";
@@ -10,6 +11,7 @@ import martinaProfileImg from "../../../images/martina-profile.jpg";
 
 import "./index.scss";
 import 'swiper/css';
+import 'swiper/css/mousewheel';
 
 interface UserProfile {
   userImg: string;
@@ -69,9 +71,15 @@ const AboutUs: React.FC = () => {
           <button className={`${pressSelection === "scientific-publications" ? 'active' : 'inactive'}`} onClick={() => { setPressSelection("scientific-publications") }}>Scientific Publications</button>
         </div>
         <Swiper
+          modules={[Mousewheel]}
           spaceBetween={50}
           slidesPerView="auto"
           className="kuvia-info-card-group"
+          mousewheel={{
+            forceToAxis: true,
+            thresholdDelta: 5,
+            sensitivity: 100,
+          }}
         >
           {(pressSelection === "press-release" ? pressReleases : scientificPublications).map((press, index) => (
             <SwiperSlide key={index} className="kuvia-info-card" onClick={() => { window.open(press.URL, "_blank") }}>

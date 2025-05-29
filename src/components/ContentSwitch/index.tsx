@@ -40,7 +40,7 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
             onClick={() => handleItemClick(index)} />
         ))}
       </div>
-      <div className="kuvia-content-switch-content" style={{ height: `${items.length * itemHeight - 20}px` }}>
+      <div className="kuvia-content-switch-content" style={{ height: `${items.length * itemHeight - 20 * scaleRatio}px` }}>
         <div className="kuvia-content-switch-content-body">
           <div className="kuvia-content-switch-content-title">{items[activeItem].title}</div>
           <div className="kuvia-content-switch-content-description">{items[activeItem].description}</div>

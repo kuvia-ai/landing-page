@@ -23,8 +23,8 @@
     display: flex;
     background-color: var(--white);
     margin-inline: auto;
-    width: 90%;
-    height: 750px;
+    max-width: 1450px;
+    height: 650px;
     border-radius: 20px;
     overflow: hidden;
     margin-top: 200px;
@@ -36,18 +36,18 @@
       justify-content: space-between;
       gap: 50px;
       width: 50%;
-      padding-top: 50px;
-      padding-left: 60px;
+      padding-top: 30px;
+      padding-left: 40px;
 
 
       .kuvia-our-product-left-content-title {
-        font-size: 80px;
+        font-size: 78px;
         font-weight: 900;
         color: var(--secondary-dark);
       }
 
       .kuvia-our-product-left-content-body {
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 400;
         line-height: 1.37;
         color: var(--primary-black);
@@ -60,7 +60,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
 
         .kuvia-our-product-left-content-footer-text {
           font-weight: 500;
@@ -72,6 +72,8 @@
     }
 
     .kuvia-our-product-right-content {
+      display: flex;
+      flex-direction: column;
       width: 50%;
       background-color: var(--tertiary-color);
       padding-top: 40px;
@@ -86,41 +88,62 @@
       .kuvia-our-product-right-content-body {
         position: relative;
         width: 70%;
-        height: 100%;
+        height: 80%;
         margin-inline: auto;
         margin-top: 40px;
-
+        flex: 1;
 
         img {
           border-radius: 20px;
           overflow: hidden;
           width: 100%;
           height: 100%;
-
+          object-fit: fill;
         }
 
-        .kuvia-our-product-right-content-tag {
+        .kuvia-our-product-tags-container {
           display: flex;
           flex-direction: column;
-          gap: 5px;
+          width: 100%;
+          height: 100%;
           position: absolute;
-          width: 360px;
-          background-color: var(--secondary-color);
-          padding: 15px 25px;
-          border-radius: 20px;
-          backdrop-filter: blur(39.97038269042969px);
-          box-shadow: 0px 1.54px 3.08px 0px #E5E5E529 inset;
-          color: var(--white);
+          top: 0;
+          left: 0;
+          justify-content: space-evenly;
 
-          h1 {
-            font-size: 30px;
-            font-weight: 900;
-            margin: 0;
-          }
+          .kuvia-our-product-right-content-tag {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 400px;
+            background-color: var(--secondary-color);
+            padding: 15px 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(39.97038269042969px);
+            box-shadow: 0px 1.54px 3.08px 0px #E5E5E529 inset;
+            color: var(--white);
+            align-self: center;
 
-          p {
-            font-size: 16px;
-            font-weight: 600;
+            h1 {
+              font-size: 30px;
+              font-weight: 900;
+              margin: 0;
+            }
+
+            p {
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            &.left-align {
+              align-self: flex-start;
+              margin-left: -15%;
+            }
+
+            &.right-align {
+              align-self: flex-end;
+              margin-right: -15%;
+            }
           }
         }
       }
@@ -129,9 +152,10 @@
 
   .kuvia-scalability {
     display: flex;
+    height: 100dvh;
     background-color: var(--secondary-dark);
     justify-content: space-between;
-    padding-bottom: 180px;
+    align-items: center;
 
     .kuvia-scalability-left-content {
       display: flex;
@@ -144,7 +168,6 @@
         font-size: 80px;
         font-weight: 900;
         margin: 0;
-        margin-top: 120px;
       }
 
       .kuvia-scalability-body {
@@ -163,7 +186,6 @@
       align-items: center;
       justify-content: center;
       margin-right: 120px;
-      margin-top: 190px;
       position: relative;
 
       img {
@@ -196,29 +218,30 @@
     }
 
     .kuvia-our-product {
-      height: 600px;
+      max-width: 1150px;
+      height: 520px;
       border-radius: 16px;
       margin-top: 160px;
       margin-bottom: 120px;
 
       .kuvia-our-product-left-content {
         gap: 40px;
-        padding-top: 40px;
-        padding-left: 48px;
+        padding-top: 24px;
+        padding-left: 32px;
 
         .kuvia-our-product-left-content-title {
-          font-size: 64px;
+          font-size: 62px;
         }
 
         .kuvia-our-product-left-content-body {
-          font-size: 29px;
+          font-size: 24px;
           max-width: 448px;
           margin-top: 24px;
           margin-left: 8px;
         }
 
         .kuvia-our-product-left-content-footer {
-          margin-bottom: 40px;
+          margin-bottom: 24px;
 
           .kuvia-our-product-left-content-footer-text {
             font-size: 14px;
@@ -243,20 +266,24 @@
             border-radius: 16px;
           }
 
-          .kuvia-our-product-right-content-tag {
-            gap: 4px;
-            width: 288px;
-            padding: 12px 20px;
-            border-radius: 16px;
-            backdrop-filter: blur(32px);
-            box-shadow: 0px 2px 2px 0px #E5E5E529;
+          .kuvia-our-product-tags-container {
+            height: 100%;
 
-            h1 {
-              font-size: 24px;
-            }
+            .kuvia-our-product-right-content-tag {
+              gap: 4px;
+              width: 320px;
+              padding: 12px 20px;
+              border-radius: 16px;
+              backdrop-filter: blur(32px);
+              box-shadow: 0px 2px 2px 0px #E5E5E529;
 
-            p {
-              font-size: 13px;
+              h1 {
+                font-size: 24px;
+              }
+
+              p {
+                font-size: 13px;
+              }
             }
           }
         }
@@ -264,15 +291,12 @@
     }
 
     .kuvia-scalability {
-      padding-bottom: 144px;
-
       .kuvia-scalability-left-content {
         gap: 32px;
         padding-left: 96px;
 
         .kuvia-scalability-title {
           font-size: 64px;
-          margin-top: 96px;
         }
 
         .kuvia-scalability-body {
@@ -283,7 +307,6 @@
 
       .kuvia-scalability-right-content {
         margin-right: 96px;
-        margin-top: 152px;
 
         img {
           width: 368px;
