@@ -23,7 +23,7 @@ const WhatWeDo: React.FC = () => {
     },
     {
       title: "What are the effects of limited access?",
-      description: <p><b>Delayed diagnostics. Suboptimal treatments. Avoidable outcomes.</b><br /><br /> Without timely access to biomarker testing, patients are frequently placed on standard treatments that may not align with their tumor’s biology. This one-size-fits-all approach reduces the likelihood of treatment success and can ultimately impact survival.</p>,
+      description: <p><b>Delayed diagnostics. Suboptimal treatments. Avoidable outcomes.</b><br /><br /> Without timely access to biomarker testing, patients frequently receive standard treatments that may not align with their tumor’s biology. This one-size-fits-all approach reduces the likelihood of treatment success and can ultimately impact survival.</p>,
     }
   ];
 
