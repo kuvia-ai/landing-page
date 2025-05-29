@@ -152,9 +152,10 @@
 
   .kuvia-scalability {
     display: flex;
+    height: 100dvh;
     background-color: var(--secondary-dark);
     justify-content: space-between;
-    padding-bottom: 180px;
+    align-items: center;
 
     .kuvia-scalability-left-content {
       display: flex;
@@ -167,7 +168,6 @@
         font-size: 80px;
         font-weight: 900;
         margin: 0;
-        margin-top: 120px;
       }
 
       .kuvia-scalability-body {
@@ -186,7 +186,6 @@
       align-items: center;
       justify-content: center;
       margin-right: 120px;
-      margin-top: 190px;
       position: relative;
 
       img {
@@ -292,15 +291,12 @@
     }
 
     .kuvia-scalability {
-      padding-bottom: 144px;
-
       .kuvia-scalability-left-content {
         gap: 32px;
         padding-left: 96px;
 
         .kuvia-scalability-title {
           font-size: 64px;
-          margin-top: 96px;
         }
 
         .kuvia-scalability-body {
@@ -311,7 +307,6 @@
 
       .kuvia-scalability-right-content {
         margin-right: 96px;
-        margin-top: 152px;
 
         img {
           width: 368px;
