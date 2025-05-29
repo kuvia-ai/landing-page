@@ -12,7 +12,7 @@ export const ScaleProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      setScaleRatio(width < 1440 ? 0.8 : 1);
+      setScaleRatio(width <= 1440 ? 0.8 : 1);
     };
 
     handleResize();
