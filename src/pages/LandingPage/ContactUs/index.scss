@@ -1,9 +1,13 @@
 .kuvia-aboutus-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(180deg,
       rgba(247, 247, 247, 1) 0%,
       rgba(247, 247, 247, 1) 40%,
       rgba(214, 186, 210, 1) 100%);
   padding-top: 20px;
+  height: 100dvh;
 
   .kuvia-aboutus-contact-container {
     display: flex;
@@ -168,7 +172,6 @@
 
       .kuvia-aboutus-contact-form {
         margin-top: 32px;
-        margin-bottom: 16px;
         margin-right: -43px;
 
         .kuvia-aboutus-contact-form-content {
