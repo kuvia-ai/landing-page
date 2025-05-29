@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
-import { useScale } from '../../../context/AppContext';
+// import { useScale } from '../../../context/AppContext';
+// import { useScroll, useTransform } from "framer-motion";
 import emailjs from '@emailjs/browser';
-import { useScroll, useTransform, motion } from "framer-motion";
 import { TailSpin } from 'react-loader-spinner';
 import './index.scss';
 
@@ -9,11 +9,11 @@ const ContactUs: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
-  const { scrollY } = useScroll();
-  const { scaleRatio } = useScale();
+  // const { scrollY } = useScroll();
+  // const { scaleRatio } = useScale();
 
-  const yMainLandingContent = useTransform(scrollY, [7300 * scaleRatio, 7700 * scaleRatio], [700, 0]);
-  const opacityMainLandingContent = useTransform(scrollY, [7500 * scaleRatio, 7700 * scaleRatio], [0, 1]);
+  // const yMainLandingContent = useTransform(scrollY, [7300 * scaleRatio, 7700 * scaleRatio], [700, 0]);
+  // const opacityMainLandingContent = useTransform(scrollY, [7500 * scaleRatio, 7700 * scaleRatio], [0, 1]);
 
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -56,7 +56,7 @@ const ContactUs: React.FC = () => {
 
   return (
     <div className="kuvia-aboutus-contact" >
-      <motion.div className="kuvia-aboutus-contact-container" style={{ y: yMainLandingContent, opacity: opacityMainLandingContent }}>
+      <div className="kuvia-aboutus-contact-container">
         <h1>Let's connect!</h1>
         <p>Whether you want to collaborate, join our mission, or simply learn more -<br />we'd love to hear from you</p>
         <div className='kuvia-aboutus-contact-form'>
@@ -125,7 +125,7 @@ const ContactUs: React.FC = () => {
             <svg width="34" height="34" onClick={handleMailClick} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85" stroke-width="1.25" d="M1.333 4.667l5.444 3.81c.44.309.66.463.9.523.212.052.434.052.646 0 .24-.06.46-.214.9-.523l5.444-3.81M4.533 13.333h6.934c1.12 0 1.68 0 2.108-.218a2 2 0 00.874-.874c.218-.428.218-.987.218-2.108V5.867c0-1.12 0-1.68-.218-2.108a2 2 0 00-.874-.874c-.428-.218-.988-.218-2.108-.218H4.533c-1.12 0-1.68 0-2.108.218a2 2 0 00-.874.874c-.218.428-.218.988-.218 2.108v4.266c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874c.428.218.988.218 2.108.218z"></path></svg>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
