@@ -5,11 +5,11 @@
   justify-content: center;
   width: 100%;
   background-color: var(--secondary-dark);
-  padding-top: 120px;
+  padding-top: 100px;
+  gap: 20px;
 
   .kuvia-why-kuvia-container {
     display: flex;
-    gap: 265px;
 
     .kuvia-why-kuvia-title {
       color: var(--background-color);
@@ -19,6 +19,7 @@
     }
 
     .kuvia-why-kuvia-description {
+      width: 65%;
       color: var(--background-color);
       font-size: 36px;
       font-weight: 400;
@@ -60,11 +61,10 @@
 
 @media screen and (max-width: 1440px) {
   .kuvia-why-kuvia {
-    padding-top: 96px;
+    padding-top: 80px;
+    gap: 16px;
 
     .kuvia-why-kuvia-container {
-      gap: 190px;
-
       .kuvia-why-kuvia-title {
         font-size: 112px;
         margin-left: 96px;
