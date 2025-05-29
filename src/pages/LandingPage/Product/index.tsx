@@ -80,17 +80,19 @@ const Product: React.FC = () => {
           <p className="kuvia-our-product-right-content-title">Clinical context for MSI</p>
           <div className="kuvia-our-product-right-content-body">
             <img src={img6} alt={img6} />
-            <div className="kuvia-our-product-right-content-tag" style={{ top: `${40 * scaleRatio}px`, left: `-${70 * scaleRatio}px` }}>
-              <h1>#2 & #3</h1>
-              <p>In 2023, colorectal cancer was the world’s second leading cause of cancer-related deaths and the third most frequently diagnosed cancer.</p>
-            </div>
-            <div className="kuvia-our-product-right-content-tag" style={{ top: `${230 * scaleRatio}px`, right: `-${80 * scaleRatio}px` }}>
-              <h1>MSI Rates</h1>
-              <p>Approximately 10–15% of colorectal cancers, and 20% to 30% of endometrial carcinomas exhibit high microsatellite instability (MSI-H) or are mismatch repair deficient (dMMR), with higher rates observed in early-stage tumors.</p>
-            </div>
-            <div className="kuvia-our-product-right-content-tag" style={{ bottom: `${100 * scaleRatio}px`, left: `${105 * scaleRatio}px` }}>
-              <h1>#6</h1>
-              <p>Endometrial cancer is the sixth most common cancer among women worldwide, with over 420,000 new cases reported in 2022.</p>
+            <div className="kuvia-our-product-tags-container">
+              <div className="kuvia-our-product-right-content-tag left-align" style={{ top: `2%`, left: `-${70 * scaleRatio}px` }}>
+                <h1>#2 & #3</h1>
+                <p>In 2023, colorectal cancer was the world’s second leading cause of cancer-related deaths and the third most frequently diagnosed cancer.</p>
+              </div>
+              <div className="kuvia-our-product-right-content-tag right-align" style={{ top: `30%`, right: `-${80 * scaleRatio}px` }}>
+                <h1>MSI Rates</h1>
+                <p>Approximately 10–15% of colorectal cancers, and 20% to 30% of endometrial carcinomas exhibit high microsatellite instability (MSI-H) or are mismatch repair deficient (dMMR), with higher rates observed in early-stage tumors.</p>
+              </div>
+              <div className="kuvia-our-product-right-content-tag" style={{ bottom: `2%`, left: `${105 * scaleRatio}px` }}>
+                <h1>#6</h1>
+                <p>Endometrial cancer is the sixth most common cancer among women worldwide, with over 420,000 new cases reported in 2022.</p>
+              </div>
             </div>
           </div>
         </div>
