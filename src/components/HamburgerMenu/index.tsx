@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useScale } from '../../context/AppContext';
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion } from 'framer-motion';
 import Navbar from '../../components/Navbar';
 import './index.scss';
 
@@ -9,9 +8,12 @@ const HamburgerMenu = () => {
   const [expandHamburgerMenu, setExpandHamburgerMenu] = useState(false);
 
   const { scrollY } = useScroll();
-  const { scaleRatio } = useScale();
 
-  const opacityHamburgerMenu = useTransform(scrollY, [450 * scaleRatio, 700 * scaleRatio], [0, 1]);
+  const opacityHamburgerMenu = useTransform(
+    scrollY,
+    [450, 700],
+    [0, 1]
+  );
 
   const toggleMenu = () => {
     // Trigger animation
@@ -25,50 +27,84 @@ const HamburgerMenu = () => {
   return (
     <motion.div
       className={`kuvia-hamburger-menu ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`}
-      style={{ opacity: opacityHamburgerMenu, position: "sticky" }}
+      style={{ opacity: opacityHamburgerMenu, position: 'sticky' }}
     >
-      <div className={`kuvia-hamburger-menu-navbar ${expandHamburgerMenu ? 'expand' : 'collapse'}`}>
+      <div
+        className={`kuvia-hamburger-menu-navbar ${expandHamburgerMenu ? 'expand' : 'collapse'}`}
+      >
         <Navbar />
       </div>
       <div
         className={`kuvia-hamburger-menu-button ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`}
         onClick={toggleMenu}
       >
-        {!expandHamburgerMenu ?
+        {!expandHamburgerMenu ? (
           <svg
             fill="#000000"
-            width="37px"
-            height="32px"
+            width="32px"
+            height="27px"
             viewBox="0 0 64 64"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             style={{
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "2"
+              fillRule: 'evenodd',
+              clipRule: 'evenodd',
+              strokeLinejoin: 'round',
+              strokeMiterlimit: '2',
             }}
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
             <g id="SVGRepo_iconCarrier">
               <g transform="matrix(1,0,0,1,-1024,-192)">
-                <rect id="Icons" x="0" y="0" width="1280" height="800" style={{ fill: "none" }}></rect>
+                <rect
+                  id="Icons"
+                  x="0"
+                  y="0"
+                  width="1280"
+                  height="800"
+                  style={{ fill: 'none' }}
+                ></rect>
                 <g id="Icons1">
                   <g id="Strike"></g>
                   <g id="H1"></g>
                   <g id="H2"></g>
                   <g id="H3"></g>
                   <g id="list-ul"></g>
-                  <g id="hamburger-1" transform="matrix(1.50868,0,0,1.01217,6.67804,191.698)">
+                  <g
+                    id="hamburger-1"
+                    transform="matrix(1.50868,0,0,1.01217,6.67804,191.698)"
+                  >
                     <g transform="matrix(0.149202,0,0,0.173437,664.206,42.142)">
-                      <rect x="103.288" y="8.535" width="212.447" height="34.133" style={{ fillRule: "nonzero" }}></rect>
+                      <rect
+                        x="103.288"
+                        y="8.535"
+                        width="212.447"
+                        height="34.133"
+                        style={{ fillRule: 'nonzero' }}
+                      ></rect>
                     </g>
                     <g transform="matrix(0.149202,0,0,0.173437,664.345,27.4)">
-                      <rect x="103.288" y="8.535" width="212.447" height="34.133" style={{ fillRule: "nonzero" }}></rect>
+                      <rect
+                        x="103.288"
+                        y="8.535"
+                        width="212.447"
+                        height="34.133"
+                        style={{ fillRule: 'nonzero' }}
+                      ></rect>
                     </g>
                     <g transform="matrix(0.149202,0,0,0.173437,664.345,12.658)">
-                      <rect x="103.288" y="8.535" width="212.447" height="34.133" style={{ fillRule: "nonzero" }}></rect>
+                      <rect
+                        x="103.288"
+                        y="8.535"
+                        width="212.447"
+                        height="34.133"
+                        style={{ fillRule: 'nonzero' }}
+                      ></rect>
                     </g>
                   </g>
                   <g id="hamburger-2"> </g>
@@ -123,7 +159,8 @@ const HamburgerMenu = () => {
               </g>
             </g>
           </svg>
-          : <svg
+        ) : (
+          <svg
             fill="#000000"
             width="22px"
             height="22px"
@@ -131,7 +168,11 @@ const HamburgerMenu = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
             <g id="SVGRepo_iconCarrier">
               <path
                 d="M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z"
@@ -139,10 +180,10 @@ const HamburgerMenu = () => {
               ></path>
             </g>
           </svg>
-        }
+        )}
       </div>
     </motion.div>
   );
-}
+};
 
 export default HamburgerMenu;

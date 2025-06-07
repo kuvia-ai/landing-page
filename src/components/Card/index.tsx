@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss'
+import './index.scss';
 
 interface CardProps {
   content: React.ReactNode;
@@ -7,14 +7,12 @@ interface CardProps {
   height?: string;
 }
 
-const Card: React.FC<CardProps> = ({ content, width, height}) => {
+const Card: React.FC<CardProps> = ({ content, width, height }) => {
   return (
-    <div className='kuvia-card' style={{ width: width, height: height }}>
-      <div className='kuvia-card-content'>
-        {content}
-      </div>
+    <div className="kuvia-card" style={{ width: width, height: height }}>
+      <div className="kuvia-card-content">{content}</div>
     </div>
-  )
-}
+  );
+};
 
 export default Card;

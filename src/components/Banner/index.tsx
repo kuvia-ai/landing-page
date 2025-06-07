@@ -5,12 +5,12 @@ interface BannerProps {
   text: string;
 }
 
-const Banner: React.FC<BannerProps> = ({text}) => {
+const Banner: React.FC<BannerProps> = ({ text }) => {
   return (
-    <div className='kuvia-banner'>
+    <div className="kuvia-banner">
       <p>{text}</p>
     </div>
-  )
-}
+  );
+};
 
 export default Banner;

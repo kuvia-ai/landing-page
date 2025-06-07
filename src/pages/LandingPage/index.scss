@@ -62,11 +62,11 @@
     position: sticky;
     bottom: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     margin-top: -40px;
     margin-left: auto;
-    background-color: #E7E7E7;
+    background-color: #e7e7e7;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -74,14 +74,14 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
-  .kuvia-landing-page {
-    .kuvia-back-to-top-button {
-      bottom: 16px;
-      right: 16px;
-      width: 32px;
-      height: 32px;
-      margin-top: -32px;
-    }
-  }
-}
+// @media screen and (max-width: 1440px) {
+//   .kuvia-landing-page {
+//     .kuvia-back-to-top-button {
+//       bottom: 16px;
+//       right: 16px;
+//       width: 32px;
+//       height: 32px;
+//       margin-top: -32px;
+//     }
+//   }
+// }

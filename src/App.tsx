@@ -12,6 +12,6 @@ const App: React.FC = () => {
       </Container>
     </ScaleProvider>
   );
-}
+};
 
 export default App;

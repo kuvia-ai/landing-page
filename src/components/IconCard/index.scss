@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  min-height: 300px;
   border-radius: 20px;
   gap: 16px;
-  padding-block: 50px;
-  padding-inline: 25px;
+  padding-block: 30px;
+  padding-inline: 20px;
 
   &--default {
     background-color: var(--secondary-color);
@@ -24,8 +24,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 120px;
-      width: 120px;
+      height: 110px;
+      width: 110px;
       overflow: hidden;
       border-radius: 50%;
 
@@ -43,10 +43,10 @@
       justify-content: center;
       background-color: var(--primary-color);
       color: var(--white);
-      font-size: 24px;
+      font-size: 18px;
       border-radius: 50%;
-      width: 42px;
-      height: 42px;
+      width: 36px;
+      height: 36px;
     }
   }
 
@@ -62,73 +62,72 @@
 
     .kuvia-icon-card-title {
       font-size: 22px;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--tertiary-dark);
     }
 
     .kuvia-icon-card-text {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 500;
       line-height: 1.5;
       color: var(--tertiary-gray);
     }
   }
-
 }
 
 .kuvia-icon-card:hover {
-  scale: 1.4;
+  scale: 1.2;
   background-color: var(--secondary-color);
   backdrop-filter: blur(30px);
-  box-shadow: 0px 1.82px 3.65px 0px #E5E5E529 inset;
+  box-shadow: 0px 1.82px 3.65px 0px #e5e5e529 inset;
   z-index: 1000;
 }
 
-@media screen and (max-width: 1440px) {
-  .kuvia-icon-card {
-    width: 240px;
-    height: 320px;
-    border-radius: 16px;
-    gap: 13px;
-    padding-block: 40px;
-    padding-inline: 20px;
+// @media screen and (max-width: 1440px) {
+//   .kuvia-icon-card {
+//     width: 240px;
+//     min-height: 320px;
+//     border-radius: 16px;
+//     gap: 13px;
+//     padding-block: 40px;
+//     padding-inline: 20px;
 
-    .kuvia-icon-card-icon-container {
-      .kuvia-icon-card-icon {
-        height: 96px;
-        width: 96px;
+//     .kuvia-icon-card-icon-container {
+//       .kuvia-icon-card-icon {
+//         height: 96px;
+//         width: 96px;
 
-        img {
-          height: 96px;
-        }
-      }
+//         img {
+//           height: 96px;
+//         }
+//       }
 
-      .kuvia-icon-card-badge {
-        top: -8px;
-        right: -8px;
-        font-size: 19px;
-        width: 34px;
-        height: 34px;
-      }
-    }
+//       .kuvia-icon-card-badge {
+//         top: -8px;
+//         right: -8px;
+//         font-size: 19px;
+//         width: 34px;
+//         height: 34px;
+//       }
+//     }
 
-    .kuvia-icon-card-content {
-      gap: 13px;
-      margin-left: 6px;
-      font-size: 14px;
+//     .kuvia-icon-card-content {
+//       gap: 13px;
+//       margin-left: 6px;
+//       font-size: 14px;
 
-      .kuvia-icon-card-title {
-        font-size: 18px;
-      }
+//       .kuvia-icon-card-title {
+//         font-size: 18px;
+//       }
 
-      .kuvia-icon-card-text {
-        font-size: 19px;
-      }
-    }
-  }
+//       .kuvia-icon-card-text {
+//         font-size: 19px;
+//       }
+//     }
+//   }
 
-  .kuvia-icon-card:hover {
-    backdrop-filter: blur(24px);
-    box-shadow: 0px 1.46px 2.92px 0px #E5E5E529;
-  }
-}
+//   .kuvia-icon-card:hover {
+//     backdrop-filter: blur(24px);
+//     box-shadow: 0px 1.46px 2.92px 0px #e5e5e529;
+//   }
+// }

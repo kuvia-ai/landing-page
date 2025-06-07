@@ -6,7 +6,9 @@ interface ScaleContextType {
 
 const ScaleContext = createContext<ScaleContextType>({ scaleRatio: 1 });
 
-export const ScaleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const ScaleProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [scaleRatio, setScaleRatio] = useState<number>(1);
 
   useEffect(() => {
