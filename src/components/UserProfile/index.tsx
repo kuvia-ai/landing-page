@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkedinIcon from "../../icons/linkedinIcon.png";
+import LinkedinIcon from '../../icons/linkedinIcon.png';
 import './index.scss';
 
 interface UserProfileProps {
@@ -9,7 +9,12 @@ interface UserProfileProps {
   profileLink: string;
 }
 
-const UserProfile: React.FC<UserProfileProps> = ({ profileImage, profileTitle, profileDescription, profileLink }) => {
+const UserProfile: React.FC<UserProfileProps> = ({
+  profileImage,
+  profileTitle,
+  profileDescription,
+  profileLink,
+}) => {
   return (
     <div className="kuvia-user-profile-container">
       <div className="kuvia-user-profile-image">
@@ -18,13 +23,18 @@ const UserProfile: React.FC<UserProfileProps> = ({ profileImage, profileTitle, p
       <div className="kuvia-user-profile-content">
         <p className="kuvia-user-profile-title">{profileTitle}</p>
         <p className="kuvia-user-profile-description">{profileDescription}</p>
-        <a className="kuvia-user-profile-linkedin" href={profileLink} target='_blank' rel="noreferrer">
+        <a
+          className="kuvia-user-profile-linkedin"
+          href={profileLink}
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={LinkedinIcon} alt="Linkedin" />
           <p>LinkedIn</p>
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default UserProfile;

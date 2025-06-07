@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import searchIcon from "../../icons/lupa.png";
-import xIcon from "../../icons/x.png";
-import "./index.scss";
+import React, { useState } from 'react';
+import searchIcon from '../../icons/lupa.png';
+import xIcon from '../../icons/x.png';
+import './index.scss';
 
 interface PatientOption {
   patient_name: string;
@@ -14,22 +14,25 @@ interface SearchPatientProps {
 
 const options: PatientOption[] = [
   {
-    patient_name: "Patient A",
+    patient_name: 'Patient A',
   },
   {
-    patient_name: "Patient B",
+    patient_name: 'Patient B',
   },
   {
-    patient_name: "Patient C",
+    patient_name: 'Patient C',
   },
   {
-    patient_name: "Patient D",
+    patient_name: 'Patient D',
   },
 ];
 
-const SearchPatient: React.FC<SearchPatientProps> = ({ setSelectedPatient, setIsPredictionComplete }) => {
+const SearchPatient: React.FC<SearchPatientProps> = ({
+  setSelectedPatient,
+  setIsPredictionComplete,
+}) => {
   const [showOptions, setShowOptions] = useState(false);
-  const [patientSearch, setPatientSearch] = useState("");
+  const [patientSearch, setPatientSearch] = useState('');
 
   const filteredOptions = options.filter((option) =>
     option.patient_name.includes(patientSearch)
@@ -54,7 +57,7 @@ const SearchPatient: React.FC<SearchPatientProps> = ({ setSelectedPatient, setIs
   }
 
   function handleDeleteSearch() {
-    setPatientSearch("");
+    setPatientSearch('');
   }
 
   return (
@@ -83,9 +86,12 @@ const SearchPatient: React.FC<SearchPatientProps> = ({ setSelectedPatient, setIs
         </div>
       </div>
       <div className={`patient-options `}>
-        <ul className={`${showOptions ? "expanded" : ""}`}>
+        <ul className={`${showOptions ? 'expanded' : ''}`}>
           {filteredOptions.map((patient) => (
-            <li key={patient.patient_name} onClick={(event) => handleOptionClick(patient.patient_name)}>
+            <li
+              key={patient.patient_name}
+              onClick={(event) => handleOptionClick(patient.patient_name)}
+            >
               {patient.patient_name}
             </li>
           ))}

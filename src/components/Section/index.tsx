@@ -13,7 +13,11 @@ const Section: React.FC<SectionProps> = ({ id, children }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id;
-          window.history.replaceState(null, '', `${!sectionId ? '/' : `#${sectionId}`}`);
+          window.history.replaceState(
+            null,
+            '',
+            `${!sectionId ? '/' : `#${sectionId}`}`
+          );
         }
       },
       {

@@ -12,12 +12,25 @@ interface IconCardProps {
   iconHeight?: string;
 }
 
-const IconCard: React.FC<IconCardProps> = ({ icon, type = 'default', title, text, displayBadge = false, badgeCount, iconWidth, iconHeight }) => {
+const IconCard: React.FC<IconCardProps> = ({
+  icon,
+  type = 'default',
+  title,
+  text,
+  displayBadge = false,
+  badgeCount,
+  iconWidth,
+  iconHeight,
+}) => {
   return (
     <div className={`kuvia-icon-card  kuvia-icon-card--${type}`}>
       <div className="kuvia-icon-card-icon-container">
         <div className="kuvia-icon-card-icon">
-          <img src={icon} alt={icon} style={{ width: iconWidth, height: iconHeight }} />
+          <img
+            src={icon}
+            alt={icon}
+            style={{ width: iconWidth, height: iconHeight }}
+          />
         </div>
         <div className="kuvia-icon-card-badge">{badgeCount}</div>
       </div>
@@ -26,7 +39,7 @@ const IconCard: React.FC<IconCardProps> = ({ icon, type = 'default', title, text
         <p className="kuvia-icon-card-text">{text}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default IconCard;

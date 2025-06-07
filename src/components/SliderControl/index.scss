@@ -6,24 +6,24 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #F3F3F6;
+    background-color: #f3f3f6;
     cursor: pointer;
 
     &.active {
-      background-color: #D2D4DC;
+      background-color: #d2d4dc;
       cursor: not-allowed;
       pointer-events: none;
     }
   }
 }
 
-@media screen and (max-width: 1440px) {
-  .kuvia-slider-control {
-    gap: 11px;
+// @media screen and (max-width: 1440px) {
+//   .kuvia-slider-control {
+//     gap: 11px;
 
-    .kuvia-slider-item {
-      width: 10px;
-      height: 10px;
-    }
-  }
-}
+//     .kuvia-slider-item {
+//       width: 10px;
+//       height: 10px;
+//     }
+//   }
+// }

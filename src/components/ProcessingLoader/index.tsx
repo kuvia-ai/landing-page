@@ -1,11 +1,11 @@
 import React from 'react';
-import "./index.scss"
+import './index.scss';
 
 interface ProcessingLoaderProps {
   style?: React.CSSProperties;
 }
 
-const ProcessingLoader: React.FC<ProcessingLoaderProps> = ({style}) => {
+const ProcessingLoader: React.FC<ProcessingLoaderProps> = ({ style }) => {
   return (
     <div className="processing-loader" style={style}>
       <div className="processing-loader-label">
@@ -18,7 +18,7 @@ const ProcessingLoader: React.FC<ProcessingLoaderProps> = ({style}) => {
         <div className="processing-loader-progress"></div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProcessingLoader;

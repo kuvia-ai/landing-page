@@ -1,8 +1,8 @@
 .kuvia-button {
-  padding: 15px 30px;
+  padding: 14px 24px;
   border: none;
   border-radius: 16px;
-  font-size: 24px;
+  font-size: 16px;
   width: fit-content;
   cursor: pointer;
 
@@ -25,7 +25,7 @@
     background-color: var(--secondary-color);
     color: var(--white);
     backdrop-filter: blur(45.528621673583984px);
-    box-shadow: 0px 1.75px 3.51px 0px #E5E5E529 inset;
+    box-shadow: 0px 1.75px 3.51px 0px #e5e5e529 inset;
 
     &:hover {
       background-color: #eddde3cc;
@@ -50,14 +50,14 @@
   }
 }
 
-@media (max-width: 1440px) {
-  .kuvia-button {
-    padding: 12px 24px;
-    border-radius: 13px;
-    font-size: 18px;
+// @media (max-width: 1440px) {
+//   .kuvia-button {
+//     padding: 12px 24px;
+//     border-radius: 13px;
+//     font-size: 18px;
 
-    &--rounded {
-      border-radius: 26px;
-    }
-  }
-}
+//     &--rounded {
+//       border-radius: 26px;
+//     }
+//   }
+// }

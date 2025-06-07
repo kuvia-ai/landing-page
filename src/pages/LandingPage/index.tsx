@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useScale } from '../../context/AppContext';
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
-import MainContent from "./MainContent";
-import WhatWeDo from "./WhatWeDo";
-import WhyKuvia from "./WhyKuvia";
+import MainContent from './MainContent';
+import WhatWeDo from './WhatWeDo';
+import WhyKuvia from './WhyKuvia';
 import Product from './Product';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
@@ -19,8 +19,11 @@ const LandingPage: React.FC = () => {
   const { scrollY } = useScroll();
   const { scaleRatio } = useScale();
 
-  const opacityBackToTopButton = useTransform(scrollY, [450 * scaleRatio, 700 * scaleRatio], [0, 1]);
-
+  const opacityBackToTopButton = useTransform(
+    scrollY,
+    [450 * scaleRatio, 700 * scaleRatio],
+    [0, 1]
+  );
 
   useEffect(() => {
     if (location.hash) {
@@ -56,30 +59,25 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="kuvia-landing-page">
-      <Section
-        id=''
-      >
+      <Section id="">
         <MainContent />
       </Section>
-      <div className='kuvia-landing-page-content'>
+      <div className="kuvia-landing-page-content">
         <HamburgerMenu />
         {pageSubsections.map((section) => (
-          <Section
-            key={section.id}
-            id={section.id}
-          >
+          <Section key={section.id} id={section.id}>
             {section.component}
           </Section>
         ))}
         <motion.button
-          className='kuvia-back-to-top-button'
+          className="kuvia-back-to-top-button"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           style={{ opacity: opacityBackToTopButton }}
         >
           <svg
             fill="#000000"
-            height="20px"
-            width="20px"
+            height="16px"
+            width="16px"
             version="1.1"
             id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +88,11 @@ const LandingPage: React.FC = () => {
             strokeWidth="19.45638"
           >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
             <g id="SVGRepo_iconCarrier">
               <g>
                 <g>
@@ -107,6 +109,6 @@ const LandingPage: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default LandingPage;

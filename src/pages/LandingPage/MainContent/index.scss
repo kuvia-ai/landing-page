@@ -42,18 +42,18 @@
         text-align: left;
 
         h2 {
-          font-size: 54px;
+          font-size: 42px;
           margin-left: 90px;
-          background: linear-gradient(270deg, rgba(194, 194, 194, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+          background: linear-gradient(
+            270deg,
+            rgba(194, 194, 194, 0.3) 0%,
+            rgba(255, 255, 255, 0.3) 100%
+          );
           backdrop-filter: blur(40px);
-          box-shadow: 0px 2px 4px 0px #E5E5E529 inset;
-          padding: 50px;
+          box-shadow: 0px 2px 4px 0px #e5e5e529 inset;
+          padding: 40px;
           border-radius: 30px;
           overflow: hidden;
-          // text-shadow:
-          //   0 0 10px rgba(255, 255, 255, 0.5),
-          //   0 0 10px rgba(255, 255, 255, 0.4),
-          //   0 0 20px rgba(255, 255, 255, 0.3);
         }
       }
     }
@@ -63,7 +63,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      gap: 15px;
+      gap: 10px;
       animation-name: up-and-down;
       animation-duration: 1.5s;
       animation-iteration-count: infinite;
@@ -72,7 +72,7 @@
 
       p {
         margin: 0;
-        font-size: 28px;
+        font-size: 22px;
         font-weight: 700;
         text-shadow:
           0 0 10px rgba(255, 255, 255, 0.5),
@@ -81,7 +81,7 @@
       }
 
       svg {
-        width: 24px;
+        width: 16px;
       }
     }
 
@@ -94,46 +94,46 @@
       right: 20px;
       border-radius: 50%;
       border: none;
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       cursor: pointer;
       background-color: #d9d9d9cc;
     }
   }
 }
 
-@media (max-width: 1440px) {
-  .kuvia-landing-page-main-content-container {
-    .kuvia-landing-page-main-content {
-      .kuvia-landing-body {
-        .kuvia-landing-body-content {
-          h2 {
-            font-size: 43px;
-            margin-left: 72px;
-            padding: 40px;
-            border-radius: 24px;
-          }
-        }
-      }
+// @media (max-width: 1440px) {
+//   .kuvia-landing-page-main-content-container {
+//     .kuvia-landing-page-main-content {
+//       .kuvia-landing-body {
+//         .kuvia-landing-body-content {
+//           h2 {
+//             font-size: 43px;
+//             margin-left: 72px;
+//             padding: 40px;
+//             border-radius: 24px;
+//           }
+//         }
+//       }
 
-      .kuvia-landing-read-more {
-        gap: 10px;
+//       .kuvia-landing-read-more {
+//         gap: 10px;
 
-        p {
-          font-size: 22px;
-        }
+//         p {
+//           font-size: 22px;
+//         }
 
-        svg {
-          width: 19px;
-        }
-      }
+//         svg {
+//           width: 19px;
+//         }
+//       }
 
-      .kuvia-landing-background-pause-button {
-        bottom: 16px;
-        right: 16px;
-        width: 32px;
-        height: 32px;
-      }
-    }
-  }
-}
+//       .kuvia-landing-background-pause-button {
+//         bottom: 16px;
+//         right: 16px;
+//         width: 32px;
+//         height: 32px;
+//       }
+//     }
+//   }
+// }

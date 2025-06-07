@@ -1,10 +1,9 @@
 .kuvia-aboutus {
   background-color: var(--background-color);
-  padding-top: 120px;
+  padding-top: 80px;
   padding-left: 120px;
 
   .kuvia-aboutus-press {
-
     h1 {
       font-size: 80px;
       color: var(--primary-dark);
@@ -14,15 +13,18 @@
 
     .kuvia-aboutus-toggles {
       display: flex;
+      justify-content: center;
       gap: 8px;
-      margin: 50px 120px 80px 0;
+      margin: 30px 0 50px 0;
+      padding-right: 120px;
+      margin-inline: auto;
 
       button {
+        width: 600px;
         padding-block: 12px;
         border: none;
         border-radius: 30px;
-        font-size: 28px;
-        flex: 1;
+        font-size: 20px;
 
         &.active {
           background-color: var(--secondary-dark);
@@ -40,21 +42,20 @@
 
     .kuvia-info-card-group {
       padding-right: 120px;
-      padding-bottom: 230px;
 
       .kuvia-info-card {
         display: flex;
         flex-direction: column;
-        height: 660px;
-        width: 550px;
-        border-radius: 30px;
+        height: 530px;
+        width: 450px;
+        border-radius: 20px;
         overflow: hidden;
         background-color: var(--white);
         box-shadow: 5px 5px 20px 0px #00000012;
         cursor: pointer;
 
         img {
-          height: 300px;
+          height: 200px;
           width: 100%;
           object-fit: cover;
         }
@@ -64,8 +65,7 @@
           flex-direction: column;
           justify-content: space-between;
           flex: 1;
-          padding: 50px 45px;
-          gap: 22px;
+          padding: 30px;
 
           .kuvia-info-card-content-tag {
             width: fit-content;
@@ -73,17 +73,18 @@
             color: var(--white);
             background-color: var(--secondary-dark);
             border-radius: 18px;
+            font-size: 14px;
           }
 
           .kuvia-info-card-content-description {
-            font-size: 24px;
+            font-size: 18px;
             line-height: 1.5;
             color: var(--primary-gray);
-            margin-top: 22px;
+            margin-top: 35px;
           }
 
           .kuvia-info-card-content-date {
-            font-size: 20px;
+            font-size: 16px;
             color: var(--secondary-dark);
           }
         }
@@ -92,6 +93,8 @@
   }
 
   .kuvia-aboutus-team {
+    margin-top: 180px;
+
     h1 {
       font-size: 80px;
       color: var(--primary-dark);
@@ -102,80 +105,81 @@
 
     .kuvia-aboutus-team-profile-group {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       margin-right: 120px;
-      padding-bottom: 200px;
+      flex-wrap: wrap;
+      row-gap: 50px;
     }
   }
 }
 
-@media screen and (max-width: 1440px) {
-  .kuvia-aboutus {
-    padding-top: 96px;
-    padding-left: 96px;
+// @media screen and (max-width: 1440px) {
+//   .kuvia-aboutus {
+//     padding-top: 96px;
+//     padding-left: 96px;
 
-    .kuvia-aboutus-press {
-      h1 {
-        font-size: 64px;
-      }
+//     .kuvia-aboutus-press {
+//       h1 {
+//         font-size: 64px;
+//       }
 
-      .kuvia-aboutus-toggles {
-        gap: 6px;
-        margin: 40px 96px 64px 0;
+//       .kuvia-aboutus-toggles {
+//         gap: 6px;
+//         margin: 40px 96px 64px 0;
 
-        button {
-          padding-block: 10px;
-          border-radius: 24px;
-          font-size: 22px;
-        }
-      }
+//         button {
+//           padding-block: 10px;
+//           border-radius: 24px;
+//           font-size: 22px;
+//         }
+//       }
 
-      .kuvia-info-card-group {
-        padding-right: 96px;
-        padding-bottom: 184px;
+//       .kuvia-info-card-group {
+//         padding-right: 96px;
+//         padding-bottom: 184px;
 
-        .kuvia-info-card {
-          height: 528px;
-          width: 440px;
-          border-radius: 24px;
-          box-shadow: 4px 4px 16px 0px #00000012;
+//         .kuvia-info-card {
+//           height: 528px;
+//           width: 440px;
+//           border-radius: 24px;
+//           box-shadow: 4px 4px 16px 0px #00000012;
 
-          img {
-            height: 240px;
-          }
+//           img {
+//             height: 240px;
+//           }
 
-          .kuvia-info-card-content {
-            padding: 40px 36px;
-            gap: 18px;
+//           .kuvia-info-card-content {
+//             padding: 40px 36px;
+//             gap: 18px;
 
-            .kuvia-info-card-content-tag {
-              padding: 6px 12px;
-              border-radius: 14px;
-            }
+//             .kuvia-info-card-content-tag {
+//               padding: 6px 12px;
+//               border-radius: 14px;
+//             }
 
-            .kuvia-info-card-content-description {
-              font-size: 19px;
-              margin-top: 18px;
-            }
+//             .kuvia-info-card-content-description {
+//               font-size: 19px;
+//               margin-top: 18px;
+//             }
 
-            .kuvia-info-card-content-date {
-              font-size: 16px;
-            }
-          }
-        }
-      }
-    }
+//             .kuvia-info-card-content-date {
+//               font-size: 16px;
+//             }
+//           }
+//         }
+//       }
+//     }
 
-    .kuvia-aboutus-team {
-      h1 {
-        font-size: 64px;
-        margin-bottom: 64px;
-      }
+//     .kuvia-aboutus-team {
+//       h1 {
+//         font-size: 64px;
+//         margin-bottom: 64px;
+//       }
 
-      .kuvia-aboutus-team-profile-group {
-        margin-right: 96px;
-        padding-bottom: 160px;
-      }
-    }
-  }
-}
+//       .kuvia-aboutus-team-profile-group {
+//         margin-right: 96px;
+//         padding-bottom: 160px;
+//       }
+//     }
+//   }
+// }

@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./index.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './index.scss';
 
 const Navbar: React.FC = () => {
   return (

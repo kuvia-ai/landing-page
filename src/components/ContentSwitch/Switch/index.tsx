@@ -1,4 +1,4 @@
-import "./index.scss";
+import './index.scss';
 
 interface ContentSwitchItemProps {
   title: string;
@@ -6,10 +6,18 @@ interface ContentSwitchItemProps {
   onClick: () => void;
 }
 
-const ContentSwitchItem = ({ title, active, onClick }: ContentSwitchItemProps) => {
+const ContentSwitchItem = ({
+  title,
+  active,
+  onClick,
+}: ContentSwitchItemProps) => {
   return (
     <div className="kuvia-content-switch-item" onClick={onClick}>
-      <div className={`kuvia-content-switch-item-content ${active ? "active" : ""}`}  >{title}</div>
+      <div
+        className={`kuvia-content-switch-item-content ${active ? 'active' : ''}`}
+      >
+        <p>{title}</p>
+      </div>
       {active && <div className="kuvia-content-switch-item-circle" />}
     </div>
   );

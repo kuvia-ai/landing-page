@@ -1,7 +1,7 @@
 .kuvia-banner {
   width: 352px;
   height: 64px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   margin-top: 62px;
@@ -17,17 +17,17 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
-  .kuvia-banner {
-    width: 282px;
-    height: 51px;
-    margin-top: 50px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+// @media screen and (max-width: 1440px) {
+//   .kuvia-banner {
+//     width: 282px;
+//     height: 51px;
+//     margin-top: 50px;
+//     border-top-right-radius: 5px;
+//     border-bottom-right-radius: 5px;
 
-    p {
-      font-size: 19px;
-      margin-left: 12px;
-    }
-  }
-}
+//     p {
+//       font-size: 19px;
+//       margin-left: 12px;
+//     }
+//   }
+// }
