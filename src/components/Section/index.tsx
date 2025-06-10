@@ -1,11 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
+import { AppContext } from '../../context/AppContext';
 
 interface SectionProps {
   id: string;
   children: React.ReactNode;
+  intersectionThreshold?: number;
 }
 
-const Section: React.FC<SectionProps> = ({ id, children }) => {
+const Section: React.FC<SectionProps> = ({ id, children, intersectionThreshold }) => {
+  const { setSection } = useContext(AppContext);
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -13,6 +16,8 @@ const Section: React.FC<SectionProps> = ({ id, children }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id;
+          setSection(sectionId);
+          // Update the URL hash without scrolling
           window.history.replaceState(
             null,
             '',
@@ -21,7 +26,7 @@ const Section: React.FC<SectionProps> = ({ id, children }) => {
         }
       },
       {
-        threshold: 0.2, // Customize as needed
+        threshold: intersectionThreshold, // Customize as needed
       }
     );
 

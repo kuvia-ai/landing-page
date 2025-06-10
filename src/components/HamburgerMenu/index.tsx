@@ -9,11 +9,7 @@ const HamburgerMenu = () => {
 
   const { scrollY } = useScroll();
 
-  const opacityHamburgerMenu = useTransform(
-    scrollY,
-    [450, 700],
-    [0, 1]
-  );
+  const opacityHamburgerMenu = useTransform(scrollY, [450, 700], [0, 1]);
 
   const toggleMenu = () => {
     // Trigger animation

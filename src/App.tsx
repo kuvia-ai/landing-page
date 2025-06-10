@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.scss';
-import { ScaleProvider } from './context/AppContext';
+import { AppContextProvider } from './context/AppContext';
 import Container from './components/Container';
 import ApplicationRoutes from './routes';
 
 const App: React.FC = () => {
   return (
-    <ScaleProvider>
+    <AppContextProvider>
       <Container>
         <ApplicationRoutes />
       </Container>
-    </ScaleProvider>
+    </AppContextProvider>
   );
 };
 

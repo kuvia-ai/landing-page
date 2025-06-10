@@ -6,16 +6,16 @@
     margin-left: 100px;
 
     .kuvia-how-it-works-title {
-      font-size: 80px;
+      font-size: 72px;
       font-weight: 900;
       color: var(--secondary-dark);
     }
 
     .kuvia-how-it-works-cards-group {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       margin-top: 60px;
-      margin-right: 120px;
+      margin-right: 100px;
     }
   }
 
@@ -27,7 +27,7 @@
     height: 650px;
     border-radius: 20px;
     overflow: hidden;
-    margin-top: 60px;
+    margin-top: 120px;
     margin-bottom: 80px;
 
     .kuvia-our-product-left-content {
@@ -40,7 +40,7 @@
       padding-left: 40px;
 
       .kuvia-our-product-left-content-title {
-        font-size: 70px;
+        font-size: 64px;
         font-weight: 900;
         color: var(--secondary-dark);
       }
@@ -151,30 +151,33 @@
     display: flex;
     height: 100dvh;
     background-color: var(--secondary-dark);
-    justify-content: center;
-    
+    align-items: center;
+
     .kuvia-scalability-content {
       display: flex;
+      flex-direction: row;
       align-items: center;
-      gap: 120px;
-      margin-top: -100px;
+      row-gap: 50px;
+      margin-inline: auto;
+      justify-content: space-evenly;
+      padding-inline: 100px;
+      flex-wrap: wrap;
 
       .kuvia-scalability-left-content {
         display: flex;
         flex-direction: column;
         color: var(--background-color);
         gap: 40px;
-        padding-left: 120px;
+        width: max(590px, 50%);
 
         .kuvia-scalability-title {
-          font-size: 80px;
+          font-size: 72px;
           font-weight: 900;
           margin: 0;
         }
 
         .kuvia-scalability-body {
           font-size: 26px;
-          max-width: 590px;
           line-height: 1.37;
 
           b {
@@ -188,7 +191,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 120px;
       position: relative;
 
       img {

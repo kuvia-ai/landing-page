@@ -38,34 +38,43 @@ const LandingPage: React.FC = () => {
     {
       id: 'what-we-do',
       component: <WhatWeDo />,
+      intersectionThreshold: 0.6,
     },
     {
       id: 'why-kuvia',
       component: <WhyKuvia />,
+      intersectionThreshold: 0.6,
     },
     {
       id: 'product',
       component: <Product />,
+      intersectionThreshold: 0.2,
     },
     {
       id: 'about-us',
       component: <AboutUs />,
+      intersectionThreshold: 0.2,
     },
     {
       id: 'contact-us',
       component: <ContactUs />,
+      intersectionThreshold: 0.2,
     },
   ];
 
   return (
     <div className="kuvia-landing-page">
-      <Section id="">
+      <Section id="" intersectionThreshold={0.6}>
         <MainContent />
       </Section>
       <div className="kuvia-landing-page-content">
         <HamburgerMenu />
         {pageSubsections.map((section) => (
-          <Section key={section.id} id={section.id}>
+          <Section
+            key={section.id}
+            id={section.id}
+            intersectionThreshold={section.intersectionThreshold}
+          >
             {section.component}
           </Section>
         ))}

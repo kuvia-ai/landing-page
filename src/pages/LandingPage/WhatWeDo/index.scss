@@ -1,6 +1,6 @@
 .kuvia-what-we-do-content {
   position: static;
-  height: 100dvh;
+  height: max(790px, 100dvh);
   z-index: -3;
 
   .kuvia-what-we-do-container {
@@ -14,18 +14,18 @@
 
     .kuvia-what-we-do-title-container {
       display: flex;
-      gap: 200px;
+      gap: 180px;
 
       .kuvia-what-we-do-title {
         flex: none;
-        font-size: 80px;
+        font-size: 72px;
         font-weight: 900;
         text-align: left;
         line-height: 1;
       }
 
       .kuvia-what-we-do-description {
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 500;
         text-align: left;
         line-height: 1.8;

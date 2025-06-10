@@ -8,7 +8,7 @@ import './index.scss';
 const WhatWeDo: React.FC = () => {
   const { scrollY } = useScroll();
 
-  const yWhatWeDoContent = useTransform(scrollY, [0, 700], [700, 0]);
+  const yWhatWeDoContent = useTransform(scrollY, [20, 700], [700, 0]);
   const opacityWhatWeDoContent = useTransform(scrollY, [400, 500], [0, 1]);
 
   const items = [
