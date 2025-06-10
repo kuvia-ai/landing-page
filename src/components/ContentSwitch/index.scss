@@ -1,10 +1,12 @@
 .kuvia-content-switch-container {
   display: flex;
+  height: fit-content;
 
   .kuvia-content-switch-items {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 24px;
   }
 
   .kuvia-content-switch-content {

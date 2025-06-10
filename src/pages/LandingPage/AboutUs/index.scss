@@ -1,11 +1,11 @@
 .kuvia-aboutus {
   background-color: var(--background-color);
   padding-top: 80px;
-  padding-left: 120px;
+  padding-left: 100px;
 
   .kuvia-aboutus-press {
     h1 {
-      font-size: 80px;
+      font-size: 72px;
       color: var(--primary-dark);
       font-weight: 900;
       margin: 0;
@@ -16,15 +16,15 @@
       justify-content: center;
       gap: 8px;
       margin: 30px 0 50px 0;
-      padding-right: 120px;
+      padding-right: 100px;
       margin-inline: auto;
 
       button {
         width: 600px;
-        padding-block: 12px;
+        padding-block: 10px;
         border: none;
         border-radius: 30px;
-        font-size: 20px;
+        font-size: 18px;
 
         &.active {
           background-color: var(--secondary-dark);
@@ -41,13 +41,13 @@
     }
 
     .kuvia-info-card-group {
-      padding-right: 120px;
+      padding-right: 100px;
 
       .kuvia-info-card {
         display: flex;
         flex-direction: column;
-        height: 530px;
-        width: 450px;
+        height: 500px;
+        width: 420px;
         border-radius: 20px;
         overflow: hidden;
         background-color: var(--white);
@@ -55,7 +55,7 @@
         cursor: pointer;
 
         img {
-          height: 200px;
+          height: 180px;
           width: 100%;
           object-fit: cover;
         }
@@ -77,14 +77,14 @@
           }
 
           .kuvia-info-card-content-description {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.5;
             color: var(--primary-gray);
             margin-top: 35px;
           }
 
           .kuvia-info-card-content-date {
-            font-size: 16px;
+            font-size: 14px;
             color: var(--secondary-dark);
           }
         }
@@ -94,9 +94,10 @@
 
   .kuvia-aboutus-team {
     margin-top: 180px;
+    margin-right: 100px;
 
     h1 {
-      font-size: 80px;
+      font-size: 72px;
       color: var(--primary-dark);
       font-weight: 900;
       margin: 0;
@@ -106,7 +107,6 @@
     .kuvia-aboutus-team-profile-group {
       display: flex;
       justify-content: space-evenly;
-      margin-right: 120px;
       flex-wrap: wrap;
       row-gap: 50px;
     }

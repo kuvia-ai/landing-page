@@ -6,25 +6,14 @@ const WhyKuvia: React.FC = () => {
   return (
     <div className="kuvia-why-kuvia">
       <div className="kuvia-why-kuvia-container">
-        <div className="kuvia-why-kuvia-title">
-          Why
-          <br />
-          Kuvia?
-        </div>
-        <div className="kuvia-why-kuvia-description">
-          <p>
-            Kuvia is helping lead a new wave of healthtech innovation, using AI
-            to detect biomarkers directly from digitized tissue images{' '}
-            <span
-              style={{ color: 'var(--quaternary-color)', fontWeight: 'bold' }}
-            >
-              in just 5 seconds
-            </span>
-            . While designed for scalability worldwide, Kuvia is actively
-            driving this transformation in Latin America, making precision
-            medicine <b>faster</b> and more <b>accessible</b>
-          </p>
-        </div>
+        <div className="kuvia-why-kuvia-title">Why Kuvia?</div>
+        <p className="kuvia-why-kuvia-description">
+          Kuvia is helping lead a new wave of healthtech innovation, using AI to
+          detect biomarkers directly from digitized tissue images{' '}
+          <b>in just 5 seconds</b>. While designed for scalability worldwide,
+          Kuvia is actively driving this transformation in Latin America, making
+          precision medicine <b>faster</b> and more <b>accessible</b>
+        </p>
       </div>
       <div className="kuvia-why-kuvia-content">
         <img
