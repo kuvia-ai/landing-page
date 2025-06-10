@@ -23,6 +23,12 @@
       transition-duration: 0.3s;
     }
 
+    &--active {
+      a {
+        font-weight: 700;
+      }
+    }
+
     .kuvia-navbar-link-underline {
       width: 100%;
       margin-top: 2px;
@@ -31,6 +37,10 @@
       left: 0;
       transform: scaleX(0);
       transition: transform 0.3s ease-in-out;
+
+      &--active {
+        transform: scaleX(1);
+      }
     }
   }
 

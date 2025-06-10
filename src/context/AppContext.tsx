@@ -1,15 +1,22 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-interface ScaleContextType {
+interface AppContextType {
   scaleRatio: number;
+  section: string;
+  setSection: (section: string) => void;
 }
 
-const ScaleContext = createContext<ScaleContextType>({ scaleRatio: 1 });
+export const AppContext = createContext<AppContextType>({
+  scaleRatio: 1,
+  section: '',
+  setSection: () => {},
+});
 
-export const ScaleProvider: React.FC<{ children: React.ReactNode }> = ({
+export const AppContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [scaleRatio, setScaleRatio] = useState<number>(1);
+  const [section, setSection] = useState<string>('');
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,10 +34,10 @@ export const ScaleProvider: React.FC<{ children: React.ReactNode }> = ({
   }, []);
 
   return (
-    <ScaleContext.Provider value={{ scaleRatio }}>
+    <AppContext.Provider value={{ scaleRatio, section, setSection }}>
       {children}
-    </ScaleContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export const useScale = () => useContext(ScaleContext);
+export const useScale = () => useContext(AppContext);
