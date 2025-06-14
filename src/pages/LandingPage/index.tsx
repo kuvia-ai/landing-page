@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useScale } from '../../context/AppContext';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
@@ -10,10 +10,12 @@ import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import HamburgerMenu from '../../components/HamburgerMenu';
 import Section from '../../components/Section';
+import { AppContext } from '../../context/AppContext';
 
 import './index.scss';
 
 const LandingPage: React.FC = () => {
+  const { isMobile } = useContext(AppContext);
   const location = useLocation();
 
   const { scrollY } = useScroll();
@@ -38,7 +40,7 @@ const LandingPage: React.FC = () => {
     {
       id: 'what-we-do',
       component: <WhatWeDo />,
-      intersectionThreshold: 0.6,
+      intersectionThreshold: 0.7,
     },
     {
       id: 'why-kuvia',
@@ -64,7 +66,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="kuvia-landing-page">
-      <Section id="" intersectionThreshold={0.6}>
+      <Section id="" intersectionThreshold={0.2}>
         <MainContent />
       </Section>
       <div className="kuvia-landing-page-content">

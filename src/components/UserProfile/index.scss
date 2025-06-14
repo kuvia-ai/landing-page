@@ -107,3 +107,49 @@
 //     }
 //   }
 // }
+
+@media (max-width: 768px) {
+  .kuvia-user-profile-container {
+    width: 160px;
+    .kuvia-user-profile-image {
+      width: 130px;
+      height: 130px;
+    }
+
+    .kuvia-user-profile-content {
+      gap: 10px;
+
+      .kuvia-user-profile-title {
+        font-size: 16px;
+      }
+
+      .kuvia-user-profile-description {
+        font-size: 14px;
+      }
+
+      .kuvia-user-profile-linkedin {
+        gap: 8px;
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+
+        p {
+          color: #0a66c2;
+          font-size: 14px;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}

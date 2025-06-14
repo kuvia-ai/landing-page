@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import { useScale } from '../../../context/AppContext';
 import background from '../../../images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff59.png';
+import { AppContext } from '../../../context/AppContext';
 import './index.scss';
 
 const WhyKuvia: React.FC = () => {
+  const { isMobile } = useContext(AppContext);
+
   return (
     <div className="kuvia-why-kuvia">
       <div className="kuvia-why-kuvia-container">
@@ -24,29 +28,35 @@ const WhyKuvia: React.FC = () => {
         <div
           className="kuvia-why-kuvia-content-item"
           style={{
-            top: '175px',
-            left: '-90px',
+            top: `${!isMobile ? '175px' : '110px'}`,
+            left: `${!isMobile ? '-90px' : '-30px'}`,
           }}
         >
           Enhances accessibility
         </div>
         <div
           className="kuvia-why-kuvia-content-item"
-          style={{ top: '40px', left: '-30px' }}
+          style={{
+            top: `${!isMobile ? '40px' : '30px'}`,
+            left: `${!isMobile ? '-30px' : '-15px'}`,
+          }}
         >
           Reduces time to diagnosis
         </div>
         <div
           className="kuvia-why-kuvia-content-item"
-          style={{ top: '20px', right: '65px' }}
+          style={{
+            top: `${!isMobile ? '20px' : '30px'}`,
+            right: `${!isMobile ? '65px' : '30px'}`,
+          }}
         >
           Reduces costs
         </div>
         <div
           className="kuvia-why-kuvia-content-item"
           style={{
-            bottom: '60px',
-            right: '-130px',
+            bottom: `${!isMobile ? '60px' : '17px'}`,
+            right: `${!isMobile ? '-130px' : '-30px'}`,
           }}
         >
           Empowers clinical decision-making

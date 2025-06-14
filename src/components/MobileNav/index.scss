@@ -1,0 +1,14 @@
+.kuvia-mobile-nav {
+  display: flex;
+  flex-direction: column;
+
+  .kuvia-mobile-nav-item {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1 solid var(--secondary-dark);
+    margin-inline: auto;
+    padding-block: 12px;
+  }
+}

@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useScale } from '../../../context/AppContext';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import ContentSwitch from '../../../components/ContentSwitch';
 import background from '../../../images/8bdcd33d1e3faa0a0a26b63cc70e594ac8f472b0.png';
+import { AppContext } from '../../../context/AppContext';
 import './index.scss';
 
 const WhatWeDo: React.FC = () => {
+  const { isMobile } = useContext(AppContext);
   const { scrollY } = useScroll();
 
   const yWhatWeDoContent = useTransform(scrollY, [20, 700], [700, 0]);
@@ -63,13 +65,15 @@ const WhatWeDo: React.FC = () => {
         >
           <div className="kuvia-what-we-do-title">
             What
-            <br /> we do
+            {!isMobile ? <br /> : ''} we do
           </div>
           <p className="kuvia-what-we-do-description">
             At Kuvia, our mission is to harness the power
-            <br /> of artificial intelligence (AI) to transform cancer
-            <br /> diagnostics, <b>enabling faster and accessible</b>
-            <br />
+            {!isMobile ? <br /> : ''} of artificial intelligence (AI) to
+            transform cancer
+            {!isMobile ? <br /> : ''} diagnostics,{' '}
+            <b>enabling faster and accessible</b>
+            {!isMobile ? <br /> : ''}
             <b>biomarker detection</b> for better patient outcomes.
           </p>
         </motion.div>
