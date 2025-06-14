@@ -137,3 +137,22 @@
 //     }
 //   }
 // }
+
+@media (max-width: 768px) {
+  .kuvia-landing-page-main-content-container {
+    .kuvia-landing-page-main-content {
+      .kuvia-landing-body {
+        justify-content: center;
+
+        .kuvia-landing-body-content {
+          text-align: center;
+
+          h2 {
+            font-size: 30px;
+            margin-inline: auto;
+          }
+        }
+      }
+    }
+  }
+}

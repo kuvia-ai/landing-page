@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { AppContext } from '../../context/AppContext';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Navbar from '../../components/Navbar';
+import MobileNav from '../MobileNav';
 import './index.scss';
 
 const HamburgerMenu = () => {
+  const { isMobile } = useContext(AppContext);
   const [animate, setAnimate] = useState(false);
   const [expandHamburgerMenu, setExpandHamburgerMenu] = useState(false);
 
@@ -20,16 +23,34 @@ const HamburgerMenu = () => {
     }, 10); // small delay to allow class to reset
   };
 
+  // useEffect(() => {
+  //   if (expandHamburgerMenu) {
+  //     document.body.classList.add('no-scroll');
+  //   } else {
+  //     document.body.classList.remove('no-scroll');
+  //   }
+
+  //   // Cleanup on unmount
+  //   return () => {
+  //     document.body.classList.remove('no-scroll');
+  //   };
+  // }, [expandHamburgerMenu]);
+
   return (
     <motion.div
-      className={`kuvia-hamburger-menu ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`}
+      className={`kuvia-hamburger-menu ${
+        // isMobile &&
+        expandHamburgerMenu ? 'mobile' : ''
+      } ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`}
       style={{ opacity: opacityHamburgerMenu, position: 'sticky' }}
     >
-      <div
-        className={`kuvia-hamburger-menu-navbar ${expandHamburgerMenu ? 'expand' : 'collapse'}`}
-      >
-        <Navbar />
-      </div>
+      {/* {!isMobile && (
+        <div
+          className={`kuvia-hamburger-menu-navbar ${expandHamburgerMenu ? 'expand' : 'collapse'}`}
+        >
+          <Navbar />
+        </div>
+      )} */}
       <div
         className={`kuvia-hamburger-menu-button ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`}
         onClick={toggleMenu}
@@ -178,6 +199,7 @@ const HamburgerMenu = () => {
           </svg>
         )}
       </div>
+      {isMobile && <MobileNav />}
     </motion.div>
   );
 };

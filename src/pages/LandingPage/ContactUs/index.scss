@@ -29,6 +29,7 @@
       font-size: 24px;
       font-weight: 500;
       color: var(--tertiary-gray);
+      margin-inline: 10px;
     }
 
     .kuvia-aboutus-contact-form {
@@ -156,81 +157,67 @@
   }
 }
 
-// @media screen and (max-width: 1440px) {
-//   .kuvia-aboutus-contact {
-//     padding-top: 16px;
+@media screen and (max-width: 992px) {
+  .kuvia-aboutus-contact {
+    .kuvia-aboutus-contact-container {
+      h1 {
+        font-size: 42px;
+      }
 
-//     .kuvia-aboutus-contact-container {
-//       h1 {
-//         font-size: 56px;
-//         margin-bottom: 16px;
-//       }
+      p {
+        font-size: 20px;
+      }
 
-//       p {
-//         font-size: 26px;
-//       }
+      .kuvia-aboutus-contact-form {
+        .kuvia-aboutus-contact-form-content {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
 
-//       .kuvia-aboutus-contact-form {
-//         margin-block: 32px;
-//         margin-right: -43px;
+@media screen and (max-width: 768px) {
+  .kuvia-aboutus-contact {
+    .kuvia-aboutus-contact-container {
+      h1 {
+        font-size: 32px;
+      }
 
-//         .kuvia-aboutus-contact-form-content {
-//           width: 480px;
-//           padding: 16px 32px;
-//           border-radius: 16px;
-//           box-shadow: 4px 4px 16px 0px #00000012;
+      p {
+        font-size: 18px;
+      }
 
-//           form {
-//             gap: 16px;
+      .kuvia-aboutus-contact-form {
+        margin-bottom: 130px;
 
-//             label {
-//               font-size: 19px;
-//               margin-left: 8px;
-//             }
+        .kuvia-aboutus-contact-form-content {
+          width: 310px;
+          padding: 20px 20px;
 
-//             input,
-//             textarea {
-//               padding: 16px;
-//               border-radius: 8px;
-//               font-size: 16px;
-//               box-shadow: 4px 4px 16px 0px #00000012;
-//             }
+          form {
+            label {
+              font-size: 16px;
+            }
 
-//             button {
-//               padding-block: 10px;
-//               border-radius: 8px;
-//               font-size: 19px;
-//             }
-//           }
+            input,
+            textarea {
+              font-size: 14px;
+            }
 
-//           .kuvia-aboutus-contact-form-loading {
-//             gap: 48px;
-//             margin: 32px;
-//           }
+            button {
+              font-size: 16px;
+            }
+          }
+        }
 
-//           .kuvia-aboutus-contact-form-sent {
-//             gap: 32px;
-//             margin-block: 32px;
-
-//             h3 {
-//               font-size: 34px;
-//             }
-
-//             p {
-//               font-size: 22px;
-//             }
-//           }
-//         }
-
-//         .kuvia-aboutus-contact-socials {
-//           gap: 8px;
-//           margin-top: 80px;
-//           border-top-right-radius: 8px;
-//           border-bottom-right-radius: 8px;
-//           padding: 16px 8px;
-//           box-shadow: 4px 4px 16px 0px #00000012;
-//         }
-//       }
-//     }
-//   }
-// }
+        .kuvia-aboutus-contact-socials {
+          svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
+}

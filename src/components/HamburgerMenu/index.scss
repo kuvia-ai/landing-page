@@ -6,10 +6,25 @@
   gap: 20px;
   top: 30px;
   right: 60px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: -80px;
   margin-left: auto;
   z-index: 10000;
+
+  &.mobile {
+    position: fixed;
+    overflow: hidden;
+    height: 100dvh;
+    width: 100%;
+    flex-direction: column;
+    gap: unset;
+    background-color: white;
+    margin: 0;
+    scroll-behavior: d;
+    top: 0;
+    right: 0;
+    padding-top: 30px
+  }
 
   .kuvia-hamburger-menu-navbar {
     transition: width 0.5s ease-in-out;
