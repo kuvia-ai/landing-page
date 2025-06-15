@@ -23,34 +23,35 @@ const HamburgerMenu = () => {
     }, 10); // small delay to allow class to reset
   };
 
-  // useEffect(() => {
-  //   if (expandHamburgerMenu) {
-  //     document.body.classList.add('no-scroll');
-  //   } else {
-  //     document.body.classList.remove('no-scroll');
-  //   }
+  useEffect(() => {
+    if (expandHamburgerMenu) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
 
-  //   // Cleanup on unmount
-  //   return () => {
-  //     document.body.classList.remove('no-scroll');
-  //   };
-  // }, [expandHamburgerMenu]);
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [expandHamburgerMenu]);
 
   return (
     <motion.div
-      className={`kuvia-hamburger-menu ${
-        // isMobile &&
-        expandHamburgerMenu ? 'mobile' : ''
+      className={`kuvia-hamburger-menu ${isMobile ? 'mobile' : ''}${
+        expandHamburgerMenu ? '-expanded' : ''
       } ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`}
-      style={{ opacity: opacityHamburgerMenu, position: 'sticky' }}
+      style={
+        !isMobile ? { opacity: opacityHamburgerMenu, position: 'sticky' } : {}
+      }
     >
-      {/* {!isMobile && (
+      {!isMobile && (
         <div
           className={`kuvia-hamburger-menu-navbar ${expandHamburgerMenu ? 'expand' : 'collapse'}`}
         >
           <Navbar />
         </div>
-      )} */}
+      )}
       <div
         className={`kuvia-hamburger-menu-button ${!animate ? '' : expandHamburgerMenu ? 'spinLeft' : 'spinRight'}`}
         onClick={toggleMenu}
@@ -199,7 +200,9 @@ const HamburgerMenu = () => {
           </svg>
         )}
       </div>
-      {isMobile && <MobileNav />}
+      {isMobile && expandHamburgerMenu && (
+        <MobileNav onLinkClick={() => setExpandHamburgerMenu(false)} />
+      )}
     </motion.div>
   );
 };

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { useScale } from '../../../context/AppContext';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import ContentSwitch from '../../../components/ContentSwitch';
 import background from '../../../images/8bdcd33d1e3faa0a0a26b63cc70e594ac8f472b0.png';

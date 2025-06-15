@@ -74,16 +74,22 @@
 
 @media (max-width: 768px) {
   .kuvia-content-switch-container {
-    height: 380px;
+    height: fit-content;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    width: 400px;
+    margin-inline: 10px;
 
     .kuvia-content-switch-items {
       flex-direction: row;
+      width: 400px;
       gap: 0px;
+      margin-left: 0 !important;
     }
+
     .kuvia-content-switch-content {
-      width: 430px;
+      width: 400px;
+      height: 390px;
       border-radius: 20px;
       margin-left: -8px;
       padding: 35px 35px;

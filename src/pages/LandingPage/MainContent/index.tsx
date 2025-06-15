@@ -1,13 +1,11 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useScale } from '../../../context/AppContext';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import background from './background.mp4';
 import Header from './Header';
-import { AppContext } from '../../../context/AppContext';
 import './index.scss';
 
 const MainContent: React.FC = () => {
-  const { isMobile } = useContext(AppContext);
   const [isVideoPaused, setIsVideoPaused] = useState(false);
 
   const { scrollY } = useScroll();

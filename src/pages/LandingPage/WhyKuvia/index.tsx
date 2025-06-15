@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import { useScale } from '../../../context/AppContext';
 import background from '../../../images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff59.png';
 import { AppContext } from '../../../context/AppContext';
 import './index.scss';

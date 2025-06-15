@@ -49,8 +49,8 @@
 .kuvia-landing-page {
   display: flex;
   flex-direction: column;
+  position: static;
   flex: 1 1;
-  overflow-x: hidden;
 
   .kuvia-landing-page-content {
     position: static;
@@ -74,15 +74,3 @@
     z-index: 10000;
   }
 }
-
-// @media screen and (max-width: 1440px) {
-//   .kuvia-landing-page {
-//     .kuvia-back-to-top-button {
-//       bottom: 16px;
-//       right: 16px;
-//       width: 32px;
-//       height: 32px;
-//       margin-top: -32px;
-//     }
-//   }
-// }

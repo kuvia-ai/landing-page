@@ -1,19 +1,14 @@
-import React, { useRef, useState } from 'react';
-// import { useScale } from '../../../context/AppContext';
-// import { useScroll, useTransform } from "framer-motion";
+import React, { useRef, useState, useContext } from 'react';
 import emailjs from '@emailjs/browser';
 import { TailSpin } from 'react-loader-spinner';
+import { AppContext } from '../../../context/AppContext';
 import './index.scss';
 
 const ContactUs: React.FC = () => {
+  const { isMobile } = useContext(AppContext);
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
-  // const { scrollY } = useScroll();
-  // const { scaleRatio } = useScale();
-
-  // const yMainLandingContent = useTransform(scrollY, [7300 * scaleRatio, 7700 * scaleRatio], [700, 0]);
-  // const opacityMainLandingContent = useTransform(scrollY, [7500 * scaleRatio, 7700 * scaleRatio], [0, 1]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -89,8 +84,8 @@ const ContactUs: React.FC = () => {
             {isLoading && (
               <div className="kuvia-aboutus-contact-form-loading">
                 <TailSpin
-                  height="100"
-                  width="100"
+                  height={`${!isMobile ? '100' : '80'}`}
+                  width={`${!isMobile ? '100' : '80'}`}
                   color="#d6bad2"
                   ariaLabel="tail-spin-loading"
                   radius="4"

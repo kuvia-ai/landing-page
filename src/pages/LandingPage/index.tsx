@@ -66,11 +66,12 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="kuvia-landing-page">
+      {isMobile && <HamburgerMenu />}
       <Section id="" intersectionThreshold={0.2}>
         <MainContent />
       </Section>
       <div className="kuvia-landing-page-content">
-        <HamburgerMenu />
+        {!isMobile && <HamburgerMenu />}
         {pageSubsections.map((section) => (
           <Section
             key={section.id}

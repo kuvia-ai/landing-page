@@ -4,7 +4,7 @@
   width: fit-content;
   align-items: center;
   gap: 20px;
-  top: 30px;
+  top: 20px;
   right: 60px;
   margin-top: 30px;
   margin-bottom: -80px;
@@ -12,18 +12,38 @@
   z-index: 10000;
 
   &.mobile {
-    position: fixed;
-    overflow: hidden;
-    height: 100dvh;
-    width: 100%;
-    flex-direction: column;
-    gap: unset;
-    background-color: white;
-    margin: 0;
-    scroll-behavior: d;
-    top: 0;
-    right: 0;
-    padding-top: 30px
+    top: 25px;
+    margin-bottom: -65px;
+    margin-top: 25px;
+    right: 20px;
+
+    .kuvia-hamburger-menu-button {
+      width: 50px;
+      height: 45px;
+      border-radius: 10px;
+    }
+
+    &-expanded {
+      position: fixed;
+      overflow: hidden;
+      height: 100dvh;
+      width: 100%;
+      flex-direction: column;
+      gap: unset;
+      background-color: white;
+      margin: 0;
+      scroll-behavior: d;
+      top: 0;
+      right: 0;
+      padding-top: 26px;
+
+      .kuvia-hamburger-menu-button {
+        margin-left: auto;
+        margin-right: 15px;
+        background-color: white;
+        box-shadow: none;
+      }
+    }
   }
 
   .kuvia-hamburger-menu-navbar {
@@ -63,26 +83,3 @@
     }
   }
 }
-
-// @media screen and (max-width: 1440px) {
-//   .kuvia-hamburger-menu {
-//     gap: 16px;
-//     top: 24px;
-//     right: 48px;
-//     margin-top: 16px;
-//     margin-bottom: -64px;
-
-//     .kuvia-hamburger-menu-navbar {
-//       &.expand {
-//         width: 568px;
-//       }
-//     }
-
-//     .kuvia-hamburger-menu-button {
-//       width: 60px;
-//       height: 48px;
-//       border-radius: 16px;
-//       box-shadow: 4px 4px 16px 0px #00000012;
-//     }
-//   }
-// }
