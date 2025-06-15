@@ -24,7 +24,6 @@ export const AppContextProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      console.log('width', width)
       setScaleRatio(width <= 1440 ? 0.8 : 1);
       setIsMobile(width <= 768 ? true : false);
     };

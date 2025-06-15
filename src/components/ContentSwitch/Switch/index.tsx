@@ -16,7 +16,7 @@ const ContentSwitchItem = ({
       <div
         className={`kuvia-content-switch-item-content ${active ? 'active' : ''}`}
       >
-        <p>{title}</p>
+        {title}
       </div>
       {active && <div className="kuvia-content-switch-item-circle" />}
     </div>
