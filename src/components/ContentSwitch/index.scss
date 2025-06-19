@@ -75,16 +75,18 @@
 @media (max-width: 768px) {
   .kuvia-content-switch-container {
     height: fit-content;
-    width: 390px;
+    max-width: 400px;
     margin-inline: 10px;
-    
+
     .kuvia-content-switch-content {
-      height: 420px;
+      height: 450px;
+      width: 100%;
       padding: 35px 35px;
       margin-left: 0;
 
       .kuvia-content-switch-content-body {
         height: 100%;
+        width: 100%;
         gap: 20px;
 
         .kuvia-content-switch-content-title {
@@ -103,7 +105,7 @@
             background-color: white;
 
             &.active {
-              background-color: var(--secondary-dark);;
+              background-color: var(--secondary-dark);
             }
           }
         }
