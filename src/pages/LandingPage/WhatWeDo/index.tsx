@@ -64,15 +64,15 @@ const WhatWeDo: React.FC = () => {
         >
           <div className="kuvia-what-we-do-title">
             What
-            {!isMobile ? <br /> : ''} we do
+            {!isMobile ? <br /> : ' '} we do
           </div>
           <p className="kuvia-what-we-do-description">
             At Kuvia, our mission is to harness the power
-            {!isMobile ? <br /> : ''} of artificial intelligence (AI) to
+            {!isMobile ? <br /> : ' '} of artificial intelligence (AI) to
             transform cancer
-            {!isMobile ? <br /> : ''} diagnostics,{' '}
+            {!isMobile ? <br /> : ' '} diagnostics,{' '}
             <b>enabling faster and accessible</b>
-            {!isMobile ? <br /> : ''}
+            {!isMobile ? <br /> : ' '}
             <b>biomarker detection</b> for better patient outcomes.
           </p>
         </motion.div>
