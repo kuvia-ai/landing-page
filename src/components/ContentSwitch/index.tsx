@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import ContentSwitchItem from './Switch';
+import { AppContext } from '../../context/AppContext';
+import SliderControl from '../SliderControl';
 import './index.scss';
 
 interface ContentSwitchItemProps {
@@ -13,7 +15,9 @@ interface ContentSwitchProps {
 }
 
 const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
+  const { isMobile } = useContext(AppContext);
   const [activeItem, setActiveItem] = useState<number>(0);
+  const [resetInterval, setResetInterval] = useState<boolean>(false);
 
   const handleItemClick = (index: number) => {
     const switchContentBody = document.querySelector(
@@ -28,26 +32,49 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
     }
   };
 
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setActiveItem((prev) => (prev += 1));
+    }, 5000);
+
+    return () => {
+      clearInterval(slideInterval);
+      setResetInterval(false);
+    };
+  }, [resetInterval]);
+
   return (
     <div className="kuvia-content-switch-container">
-      <div className="kuvia-content-switch-items" style={style}>
-        {items.map((item, index) => (
-          <ContentSwitchItem
-            key={item.title}
-            title={item.title}
-            active={activeItem === index}
-            onClick={() => handleItemClick(index)}
-          />
-        ))}
-      </div>
+      {!isMobile && (
+        <div className="kuvia-content-switch-items" style={style}>
+          {items.map((item, index) => (
+            <ContentSwitchItem
+              key={item.title}
+              title={item.title}
+              active={activeItem === index}
+              onClick={() => handleItemClick(index)}
+            />
+          ))}
+        </div>
+      )}
       <div className="kuvia-content-switch-content">
         <div className="kuvia-content-switch-content-body">
           <div className="kuvia-content-switch-content-title">
-            {items[activeItem].title}
+            {items[activeItem % items.length].title}
           </div>
           <div className="kuvia-content-switch-content-description">
-            {items[activeItem].description}
+            {items[activeItem % items.length].description}
           </div>
+          {isMobile && (
+            <SliderControl
+              dimension={items.length}
+              activeItem={activeItem % items.length}
+              onClick={(item) => {
+                setActiveItem(item);
+                setResetInterval(true);
+              }}
+            />
+          )}
         </div>
       </div>
     </div>
