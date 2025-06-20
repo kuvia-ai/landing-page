@@ -33,14 +33,16 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
   };
 
   useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setActiveItem((prev) => (prev += 1));
-    }, 5000);
+    if (isMobile) {
+      const slideInterval = setInterval(() => {
+        setActiveItem((prev) => (prev += 1));
+      }, 5000);
 
-    return () => {
-      clearInterval(slideInterval);
-      setResetInterval(false);
-    };
+      return () => {
+        clearInterval(slideInterval);
+        setResetInterval(false);
+      };
+    }
   }, [resetInterval]);
 
   return (
