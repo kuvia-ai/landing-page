@@ -102,6 +102,33 @@
   }
 }
 
+@media (max-width: 1280px) {
+  .kuvia-landing-page-main-content-container {
+    .kuvia-landing-page-main-content {
+      .kuvia-header-logo {
+        margin-left: 40px;
+        margin-right: 10px;
+      }
+
+      .kuvia-header-right-content {
+        margin-right: 20px;
+      }
+
+      .kuvia-navbar {
+        gap: 40px;
+      }
+
+      .kuvia-landing-body {
+        .kuvia-landing-body-content {
+          h2 {
+            margin-left: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .kuvia-landing-page-main-content-container {
     .kuvia-landing-page-main-content {
