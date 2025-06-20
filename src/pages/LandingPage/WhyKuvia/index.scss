@@ -68,6 +68,7 @@
   .kuvia-why-kuvia-container {
     gap: 40px !important;
     width: 90% !important;
+    max-width: 900px;
 
     .kuvia-why-kuvia-title {
       font-size: 54px !important;
@@ -107,11 +108,23 @@
   }
 
   .kuvia-why-kuvia-content {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px !important;
+    height: 270px;
+    overflow: hidden;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-bottom: 10px;
     .kuvia-why-kuvia-content-background {
-      width: 350px !important;
+      position: absolute !important;
+      bottom: 0;
+      // width: min(90vw, 400px) !important;
+      height: 240px;
     }
 
     .kuvia-why-kuvia-content-item {
+      position: relative !important;
       font-size: 12px !important;
       padding: 12px 16px !important;
     }

@@ -320,7 +320,6 @@
       .kuvia-scalability-content {
         padding-inline: 20px !important;
         gap: 40px;
-        flex-direction: column;
 
         .kuvia-scalability-left-content {
           gap: 32px;
@@ -463,6 +462,8 @@
 
     .kuvia-scalability {
       .kuvia-scalability-content {
+        flex-direction: column;
+
         .kuvia-scalability-left-content {
           width: unset;
           max-width: 700px;
@@ -481,7 +482,7 @@
 
         .kuvia-scalability-right-content {
           img {
-            width: 300px;
+            width: min(80vw, 300px);
           }
         }
       }
