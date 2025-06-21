@@ -359,13 +359,18 @@
       .kuvia-how-it-works-cards-group {
         margin-right: 20px;
         margin-top: 50px;
-        padding: 20px;
+        padding-block: 20px;
+        padding-inline: 50px;
         gap: 50px;
 
-        .swiper-slide {
+        .swiper-slide-active {
           display: flex;
           justify-content: center;
-          margin-right: -30vw;
+        }
+
+        .swiper-slide-prev {
+          display: flex;
+          justify-content: flex-end;
         }
 
         .kuvia-slider-item {
