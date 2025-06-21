@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useScale } from '../../../context/AppContext';
+import React, { useState, useEffect, useContext } from 'react';
 import Button from '../../../components/Button';
 import IconCard from '../../../components/IconCard';
 import SliderControl from '../../../components/SliderControl';
+import SwiperSliderControl from '../../../components/SwiperSliderControl';
 import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel } from 'swiper/modules';
 import img1 from '../../../images/8b4853150a4a459c5c95b89dcd5bfec767f533e4.png';
 import img2 from '../../../images/d13bba79fb798511a556e2707d87d3e8348f6afd.jpg';
 import img3 from '../../../images/b46389d234f9188270b2d15e49ed87c9bd1479ac.png';
@@ -11,9 +13,13 @@ import img4 from '../../../images/524fcf1c3e0bd66f8f157db47552f93f8c477b3a.jpg';
 import img5 from '../../../images/334c8be3e0b1b66e94258d3aa5538b60a90ca373.png';
 import img6 from '../../../images/4a106794cb5068a86e57ab1796123d943532ef1f.png';
 import img7 from '../../../images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff54.png';
+import { AppContext } from '../../../context/AppContext';
 import './index.scss';
+import 'swiper/css';
+import 'swiper/css/mousewheel';
 
 const Product: React.FC = () => {
+  const { isMobile } = useContext(AppContext);
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const [resetInterval, setResetInterval] = useState<boolean>(false);
 
@@ -73,18 +79,48 @@ const Product: React.FC = () => {
     <div className="kuvia-product">
       <div className="kuvia-how-it-works-container">
         <div className="kuvia-how-it-works-title">How it works</div>
-        <div className="kuvia-how-it-works-cards-group">
-          {howItWorks.map((item, index) => (
-            <IconCard
-              icon={item.icon}
-              type="transparent"
-              title={item.title}
-              text={item.text}
-              displayBadge={true}
-              badgeCount={index + 1}
-            />
-          ))}
-        </div>
+        {!isMobile ? (
+          <div className="kuvia-how-it-works-cards-group">
+            {howItWorks.map((item, index) => (
+              <IconCard
+                icon={item.icon}
+                type="transparent"
+                title={item.title}
+                text={item.text}
+                displayBadge={true}
+                badgeCount={index + 1}
+              />
+            ))}
+          </div>
+        ) : (
+          <Swiper
+            modules={[Mousewheel]}
+            className="kuvia-how-it-works-cards-group"
+            slidesPerView={1}
+            mousewheel={{
+              forceToAxis: true,
+              thresholdDelta: 5,
+              sensitivity: 100,
+            }}
+          >
+            {howItWorks.map((item, index) => (
+              <SwiperSlide key={index}>
+                {({ isActive }) => (
+                  <IconCard
+                    icon={item.icon}
+                    type="transparent"
+                    title={item.title}
+                    text={item.text}
+                    displayBadge={true}
+                    badgeCount={index + 1}
+                    isActive={isActive}
+                  />
+                )}
+              </SwiperSlide>
+            ))}
+            <SwiperSliderControl dimension={howItWorks.length} />
+          </Swiper>
+        )}
       </div>
       <div className="kuvia-our-product">
         <div className="kuvia-our-product-left-content">

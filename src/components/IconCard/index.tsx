@@ -10,6 +10,7 @@ interface IconCardProps {
   badgeCount?: string | number;
   iconWidth?: string;
   iconHeight?: string;
+  isActive?: boolean;
 }
 
 const IconCard: React.FC<IconCardProps> = ({
@@ -21,9 +22,12 @@ const IconCard: React.FC<IconCardProps> = ({
   badgeCount,
   iconWidth,
   iconHeight,
+  isActive,
 }) => {
   return (
-    <div className={`kuvia-icon-card  kuvia-icon-card--${type}`}>
+    <div
+      className={`kuvia-icon-card  kuvia-icon-card--${type} ${isActive ? 'active' : ''}`}
+    >
       <div className="kuvia-icon-card-icon-container">
         <div className="kuvia-icon-card-icon">
           <img
