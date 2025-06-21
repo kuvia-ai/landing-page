@@ -15,7 +15,6 @@
     font-size: 26px;
     font-weight: 900;
     color: var(--secondary-dark);
-    width: auto;
 
     &.active {
       background-color: var(--secondary-dark);
@@ -48,42 +47,6 @@
     .kuvia-content-switch-item-circle {
       width: 35px;
       height: 30px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .kuvia-content-switch-item {
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-
-    .kuvia-content-switch-item-content {
-      height: 140px !important;
-      min-width: 125px;
-      max-width: 200px;
-      width: 125px !important;
-      border-radius: 20px;
-      padding: 18px 10px 0px 18px;
-      transition: width 0.3s ease-in-out;
-      font-size: 16px;
-      font-weight: 600;
-      overflow: hidden;
-      text-wrap: wrap;
-      text-overflow: ellipsis;
-      align-items: start;
-
-      &.active {
-        width: 150px !important;
-      }
-    }
-
-    .kuvia-content-switch-item-circle {
-      position: absolute;
-      bottom: -10px;
-      width: 30px;
-      height: 35px;
-      margin-top: -20px;
     }
   }
 }

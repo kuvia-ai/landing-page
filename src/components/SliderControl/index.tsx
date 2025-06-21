@@ -4,7 +4,7 @@ import './index.scss';
 interface SliderControlProps {
   dimension: number;
   activeItem: number;
-  onClick: () => void;
+  onClick: (val: number) => void;
 }
 
 const SliderControl: React.FC<SliderControlProps> = ({
@@ -17,7 +17,7 @@ const SliderControl: React.FC<SliderControlProps> = ({
       {[...Array(dimension)].map((_, index) => (
         <div
           className={`kuvia-slider-item ${activeItem === index ? 'active' : 'disabled'}`}
-          onClick={onClick}
+          onClick={() => onClick(index)}
         />
       ))}
     </div>

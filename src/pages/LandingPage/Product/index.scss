@@ -320,7 +320,6 @@
       .kuvia-scalability-content {
         padding-inline: 20px !important;
         gap: 40px;
-        flex-direction: column;
 
         .kuvia-scalability-left-content {
           gap: 32px;
@@ -359,8 +358,23 @@
 
       .kuvia-how-it-works-cards-group {
         margin-right: 20px;
-        margin-top: 30px;
-        justify-content: space-around;
+        margin-top: 50px;
+        padding: 20px;
+        gap: 50px;
+
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          margin-right: -30vw;
+        }
+
+        .kuvia-slider-item {
+          background-color: white;
+
+          &.active {
+            background-color: var(--secondary-dark);
+          }
+        }
 
         .kuvia-icon-card {
           width: 180px;
@@ -368,6 +382,7 @@
           padding-block: 20px;
           padding-inline: 15px;
           gap: 10px;
+          pointer-events: none !important;
 
           .kuvia-icon-card-icon {
             width: 60px;
@@ -376,6 +391,18 @@
 
           .kuvia-icon-card-content {
             font-size: 14px;
+          }
+
+          &.active {
+            scale: 1.2;
+            background-color: var(--secondary-color);
+            backdrop-filter: blur(30px);
+            box-shadow: 0px 1.82px 3.65px 0px #e5e5e529 inset;
+            z-index: 1000;
+          }
+
+          &:hover {
+            all: unset !important;
           }
         }
       }
@@ -463,6 +490,8 @@
 
     .kuvia-scalability {
       .kuvia-scalability-content {
+        flex-direction: column;
+
         .kuvia-scalability-left-content {
           width: unset;
           max-width: 700px;
@@ -481,7 +510,7 @@
 
         .kuvia-scalability-right-content {
           img {
-            width: 300px;
+            width: min(80vw, 300px);
           }
         }
       }

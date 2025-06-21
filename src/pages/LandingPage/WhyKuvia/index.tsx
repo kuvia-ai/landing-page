@@ -27,8 +27,9 @@ const WhyKuvia: React.FC = () => {
         <div
           className="kuvia-why-kuvia-content-item"
           style={{
-            top: `${!isMobile ? '175px' : '110px'}`,
-            left: `${!isMobile ? '-90px' : '-30px'}`,
+            top: `${!isMobile ? '175px' : ''}`,
+            left: `${!isMobile ? '-90px' : ''}`,
+            order: `${isMobile ? '2' : ''}`,
           }}
         >
           Enhances accessibility
@@ -36,8 +37,9 @@ const WhyKuvia: React.FC = () => {
         <div
           className="kuvia-why-kuvia-content-item"
           style={{
-            top: `${!isMobile ? '40px' : '30px'}`,
-            left: `${!isMobile ? '-30px' : '-15px'}`,
+            top: `${!isMobile ? '40px' : ''}`,
+            left: `${!isMobile ? '-30px' : ''}`,
+            order: `${isMobile ? '3' : ''}`,
           }}
         >
           Reduces time to diagnosis
@@ -45,8 +47,9 @@ const WhyKuvia: React.FC = () => {
         <div
           className="kuvia-why-kuvia-content-item"
           style={{
-            top: `${!isMobile ? '20px' : '30px'}`,
-            right: `${!isMobile ? '65px' : '30px'}`,
+            top: `${!isMobile ? '20px' : ''}`,
+            right: `${!isMobile ? '65px' : ''}`,
+            order: `${isMobile ? '1' : ''}`,
           }}
         >
           Reduces costs
@@ -54,8 +57,9 @@ const WhyKuvia: React.FC = () => {
         <div
           className="kuvia-why-kuvia-content-item"
           style={{
-            bottom: `${!isMobile ? '60px' : '17px'}`,
-            right: `${!isMobile ? '-130px' : '-30px'}`,
+            bottom: `${!isMobile ? '60px' : ''}`,
+            right: `${!isMobile ? '-130px' : ''}`,
+            order: `${isMobile ? '4' : ''}`,
           }}
         >
           Empowers clinical decision-making
