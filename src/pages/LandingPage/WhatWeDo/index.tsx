@@ -77,11 +77,11 @@ const WhatWeDo: React.FC = () => {
           </p>
         </motion.div>
         <div className="kuvia-what-we-do-content-switch-container">
-          <img
+          {!isMobile && <img
             src={background}
             alt="background"
             className="kuvia-what-we-do-content-switch-background"
-          />
+          />}
           <ContentSwitch items={items} style={{ marginLeft: 'auto' }} />
         </div>
       </motion.div>
