@@ -26,7 +26,7 @@ const MainContent: React.FC = () => {
 
   return (
     <div className="kuvia-landing-page-main-content-container">
-      <video autoPlay loop muted id="kuvia-landing-page-main-content-video">
+      <video autoPlay loop muted id="kuvia-landing-page-main-content-video" playsInline>
         <source src={background} type="video/mp4" />
       </video>
       <motion.div
