@@ -47,7 +47,7 @@ const MainContent: React.FC = () => {
           className="kuvia-landing-read-more"
           style={{ opacity: opacityReadMore }}
         >
-          <p>Read More!</p>
+          <p>Read More</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             shapeRendering="geometricPrecision"
