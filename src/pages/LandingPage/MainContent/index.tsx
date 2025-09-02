@@ -13,12 +13,12 @@ const MainContent: React.FC = () => {
 
   const yMainLandingContent = useTransform(
     scrollY,
-    [0, 500 * scaleRatio],
+    [300 * scaleRatio, 700 * scaleRatio],
     [0, -700]
   );
   const opacityMainLandingContent = useTransform(
     scrollY,
-    [300 * scaleRatio, 400 * scaleRatio],
+    [400 * scaleRatio, 500 * scaleRatio],
     [1, 0]
   );
 
