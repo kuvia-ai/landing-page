@@ -18,10 +18,10 @@ const ContactUs: React.FC = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID || '',
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || '',
+        process.env.VITE_EMAILJS_SERVICE_ID || '',
+        process.env.VITE_EMAILJS_TEMPLATE_ID || '',
         event.currentTarget,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY || ''
+        process.env.VITE_EMAILJS_PUBLIC_KEY || ''
       )
       .then((result) => {
         setIsSent(true);
@@ -109,10 +109,10 @@ const ContactUs: React.FC = () => {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="0.85"
-                      stroke-width="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeOpacity="0.85"
+                      strokeWidth="1.25"
                       d="M1.333 4.667l5.444 3.81c.44.309.66.463.9.523.212.052.434.052.646 0 .24-.06.46-.214.9-.523l5.444-3.81M4.533 13.333h6.934c1.12 0 1.68 0 2.108-.218a2 2 0 00.874-.874c.218-.428.218-.987.218-2.108V5.867c0-1.12 0-1.68-.218-2.108a2 2 0 00-.874-.874c-.428-.218-.988-.218-2.108-.218H4.533c-1.12 0-1.68 0-2.108.218a2 2 0 00-.874.874c-.218.428-.218.988-.218 2.108v4.266c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874c.428.218.988.218 2.108.218z"
                     ></path>
                   </svg>

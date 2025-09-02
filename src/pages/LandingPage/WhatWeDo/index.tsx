@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import ContentSwitch from '../../../components/ContentSwitch';
-import background from '../../../images/8bdcd33d1e3faa0a0a26b63cc70e594ac8f472b0.png';
+import background from '../../../assets/images/8bdcd33d1e3faa0a0a26b63cc70e594ac8f472b0.png';
 import { AppContext } from '../../../context/AppContext';
 import './index.scss';
 
