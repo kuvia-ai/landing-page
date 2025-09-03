@@ -50,11 +50,11 @@ const ContactUs: React.FC = () => {
   return (
     <div className="kuvia-aboutus-contact">
       <div className="kuvia-aboutus-contact-container">
-        <h1>Let's connect!</h1>
+        <h1>Get in Touch</h1>
         <p>
-          Whether you want to collaborate, join our mission, or simply learn
-          more -<br />
-          we'd love to hear from you
+          Have any questions or need more information about our services? <br />{' '}
+          Please fill out the form below, and we'll get back to you as soon as
+          possible.
         </p>
         <div className="kuvia-aboutus-contact-form">
           <div className="kuvia-aboutus-contact-form-content">
@@ -77,7 +77,11 @@ const ContactUs: React.FC = () => {
                   required
                 />
                 <label htmlFor="message">Message</label>
-                <textarea name="message" placeholder="Your message" required />
+                <textarea
+                  name="message"
+                  defaultValue="Hi! I would like to know more about …"
+                  required
+                />
                 <button type="submit">Send</button>
                 <div className="kuvia-aboutus-contact-socials">
                   <a
@@ -105,7 +109,7 @@ const ContactUs: React.FC = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 16 16"
-                    style={{marginTop: '-2px'}}
+                    style={{ marginTop: '-2px' }}
                   >
                     <path
                       stroke="currentColor"
