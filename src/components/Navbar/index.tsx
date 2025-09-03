@@ -21,25 +21,40 @@ const NavItem: React.FC<{
   );
 };
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  full?: boolean;
+}
+
+const Navbar = ({ full = false }: NavbarProps) => {
   const { section } = useContext(AppContext);
 
-  const navSections = ['what-we-do', 'why-kuvia', 'product', 'about-us'];
+  const navSections = [
+    'what-we-do',
+    'why-kuvia',
+    'product',
+    'about-us',
+    'contact-us',
+  ];
 
   return (
     <nav className="kuvia-navbar">
-      {navSections.map((navSection) => (
-        <NavItem
-          key={navSection}
-          section={section}
-          targetSection={navSection}
-          label={navSection
-            .split('-')
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ')}
-          to={`/#${navSection}`}
-        />
-      ))}
+      {navSections.map((navSection) => {
+        if (full === false && navSection === 'contact-us') {
+          return null;
+        }
+        return (
+          <NavItem
+            key={navSection}
+            section={section}
+            targetSection={navSection}
+            label={navSection
+              .split('-')
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ')}
+            to={`/#${navSection}`}
+          />
+        );
+      })}
     </nav>
   );
 };

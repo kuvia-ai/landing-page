@@ -49,7 +49,7 @@ const HamburgerMenu = () => {
         <div
           className={`kuvia-hamburger-menu-navbar ${expandHamburgerMenu ? 'expand' : 'collapse'}`}
         >
-          <Navbar />
+          <Navbar full />
         </div>
       )}
       <div

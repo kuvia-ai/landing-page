@@ -14,12 +14,14 @@ const Header: React.FC = () => {
       <Link to="/" className="kuvia-header-logo">
         <img src={kuviaLogo} alt="kuvia" />
       </Link>
-      {!isMobile && <div className="kuvia-header-right-content">
-        <Navbar />
-        <Link to="/#contact-us" className="kuvia-navbar-link">
-          <Button type="primary" text="Contact" bolded />
-        </Link>
-      </div>}
+      {!isMobile && (
+        <div className="kuvia-header-right-content">
+          <Navbar />
+          <Link to="/#contact-us" className="kuvia-navbar-link">
+            <Button type="primary" text="Contact Us" bolded />
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
