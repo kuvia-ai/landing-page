@@ -27,27 +27,27 @@ const Product: React.FC = () => {
     {
       icon: img1,
       title: 'Biopsy Collection',
-      text: 'Histological tissue sample is obtained from biopsy',
+      text: 'Histological tissue sample is obtained from biopsy.',
     },
     {
       icon: img2,
       title: 'Tissue Digitization',
-      text: 'The tissue slide is digitized into a Whole Slide Image (WSI)',
+      text: 'The tissue slide is digitized into a Whole Slide Image (WSI).',
     },
     {
       icon: img3,
       title: 'AI Analysis',
-      text: 'Advanced AI technology instantly analyzes the image',
+      text: 'Advanced AI technology instantly analyzes the image.',
     },
     {
       icon: img4,
       title: 'Instant Results',
-      text: 'Immediate biomarker status prediction',
+      text: 'Immediate biomarker status prediction.',
     },
     {
       icon: img5,
       title: 'Targeted Therapy',
-      text: 'Optimal treatment selection for patients',
+      text: 'Optimal treatment selection for patients.',
     },
   ];
 
@@ -55,12 +55,12 @@ const Product: React.FC = () => {
     <span>
       <b>Kuvia-MSI</b> is an AI-powered software for detecting{' '}
       <b>Microsatellite Instability (MSI)</b> in colorectal and endometrial
-      cancer
+      cancer.
     </span>,
     <span>
       MSI is a key biomarker across solid tumors, as its presence indicates that
       a patient is likely to benefit from immunotherapy. Detecting MSI can guide
-      access to life-extending treatments that would otherwise be missed
+      access to life-extending treatments that would otherwise be missed.
     </span>,
   ];
 
