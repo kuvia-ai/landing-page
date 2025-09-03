@@ -10,4 +10,10 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
+  assetsInclude: ['**/*.jpg', '**/*.png', '**/*.jpeg', '**/*.gif', '**/*.mp4'],
 });
