@@ -33,7 +33,6 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
   };
 
   useEffect(() => {
-    if (isMobile) {
       const slideInterval = setInterval(() => {
         setActiveItem((prev) => (prev += 1));
       }, 5000);
@@ -42,12 +41,11 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
         clearInterval(slideInterval);
         setResetInterval(false);
       };
-    }
-  }, [resetInterval, isMobile]);
+  }, [resetInterval]);
 
   return (
     <div className="kuvia-content-switch-container">
-      {!isMobile && (
+      {/* {!isMobile && (
         <div className="kuvia-content-switch-items" style={style}>
           {items.map((item, index) => (
             <ContentSwitchItem
@@ -58,16 +56,18 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
             />
           ))}
         </div>
-      )}
+      )} */}
       <div className="kuvia-content-switch-content">
         <div className="kuvia-content-switch-content-body">
-          <div className="kuvia-content-switch-content-title">
-            {items[activeItem % items.length].title}
-          </div>
+          {/* {isMobile && ( */}
+            <div className="kuvia-content-switch-content-title">
+              {items[activeItem % items.length].title}
+            </div>
+          {/* )} */}
           <div className="kuvia-content-switch-content-description">
             {items[activeItem % items.length].description}
           </div>
-          {isMobile && (
+          {/* {isMobile && ( */}
             <SliderControl
               dimension={items.length}
               activeItem={activeItem % items.length}
@@ -76,7 +76,7 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
                 setResetInterval(true);
               }}
             />
-          )}
+          {/* )} */}
         </div>
       </div>
     </div>

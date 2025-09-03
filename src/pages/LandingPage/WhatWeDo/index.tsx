@@ -53,19 +53,16 @@ const WhatWeDo: React.FC = () => {
   ];
 
   return (
-    <div className="kuvia-what-we-do-content">
+    <div className="kuvia-what-we-do-container">
       <motion.div
-        className="kuvia-what-we-do-container"
+        className="kuvia-what-we-do-content"
         style={{ y: yWhatWeDoContent }}
       >
         <motion.div
           className="kuvia-what-we-do-title-container"
           style={{ opacity: opacityWhatWeDoContent }}
         >
-          <div className="kuvia-what-we-do-title">
-            What
-            {!isMobile ? <br /> : ' '} we do
-          </div>
+          <div className="kuvia-what-we-do-title">What we do</div>
           <p className="kuvia-what-we-do-description">
             At Kuvia, our mission is to harness the power
             {!isMobile ? <br /> : ' '} of artificial intelligence (AI) to
@@ -76,15 +73,21 @@ const WhatWeDo: React.FC = () => {
             <b>biomarker detection</b> for better patient outcomes.
           </p>
         </motion.div>
-        <div className="kuvia-what-we-do-content-switch-container">
-          {!isMobile && <img
-            src={background}
-            alt="background"
-            className="kuvia-what-we-do-content-switch-background"
-          />}
+        <motion.div
+          className="kuvia-what-we-do-content-switch-container"
+          style={{ opacity: opacityWhatWeDoContent }}
+        >
           <ContentSwitch items={items} style={{ marginLeft: 'auto' }} />
-        </div>
+        </motion.div>
       </motion.div>
+      {!isMobile && (
+        <motion.img
+          src={background}
+          alt="background"
+          className="kuvia-what-we-do-content-switch-background"
+          style={{ opacity: opacityWhatWeDoContent }}
+        />
+      )}
     </div>
   );
 };
