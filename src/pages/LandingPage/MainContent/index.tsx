@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useScale } from '../../../context/AppContext';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import background from './background.mp4';
+import background from '../../../assets/background.mp4';
+import compressedBackground from '../../../assets/background.webm';
+import videoPoster from '../../../assets/images/mainPageVideoPoster.png';
 import Header from './Header';
 import './index.scss';
 
@@ -26,7 +28,22 @@ const MainContent: React.FC = () => {
 
   return (
     <div className="kuvia-landing-page-main-content-container">
-      <video autoPlay loop muted id="kuvia-landing-page-main-content-video" playsInline>
+      <video
+        autoPlay
+        loop
+        muted
+        id="kuvia-landing-page-main-content-video"
+        playsInline
+        preload="auto"
+        poster={videoPoster}
+        onLoadedData={(e) => {
+          const video = e.currentTarget;
+          video.play().catch((error) => {
+            console.log('Autoplay failed:', error);
+          });
+        }}
+      >
+        <source src={compressedBackground} type="video/webm" />
         <source src={background} type="video/mp4" />
       </video>
       <motion.div
