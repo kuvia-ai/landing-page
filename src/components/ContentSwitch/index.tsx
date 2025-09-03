@@ -43,7 +43,7 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
         setResetInterval(false);
       };
     }
-  }, [resetInterval]);
+  }, [resetInterval, isMobile]);
 
   return (
     <div className="kuvia-content-switch-container">
@@ -53,7 +53,7 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
             <ContentSwitchItem
               key={item.title}
               title={item.title}
-              active={activeItem === index}
+              active={activeItem % items.length === index}
               onClick={() => handleItemClick(index)}
             />
           ))}
