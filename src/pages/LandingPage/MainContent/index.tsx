@@ -26,6 +26,13 @@ const MainContent: React.FC = () => {
 
   const opacityReadMore = useTransform(scrollY, [0, 500], [1, 0]);
 
+  const onReadMoreClick = () => {
+    const whatWeDoSection = document.getElementById('what-we-do');
+    if (whatWeDoSection) {
+      whatWeDoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="kuvia-landing-page-main-content-container">
       <video
@@ -48,7 +55,11 @@ const MainContent: React.FC = () => {
       </video>
       <motion.div
         className="kuvia-landing-page-main-content"
-        style={{ y: yMainLandingContent, opacity: opacityMainLandingContent }}
+        style={{
+          y: yMainLandingContent,
+          opacity: opacityMainLandingContent,
+          cursor: 'pointer',
+        }}
       >
         <Header />
         <div className="kuvia-landing-body">
@@ -63,6 +74,7 @@ const MainContent: React.FC = () => {
         <motion.div
           className="kuvia-landing-read-more"
           style={{ opacity: opacityReadMore }}
+          onClick={onReadMoreClick}
         >
           <p>Read More</p>
           <svg
