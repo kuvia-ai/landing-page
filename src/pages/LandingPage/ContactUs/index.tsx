@@ -39,7 +39,7 @@ const ContactUs: React.FC = () => {
   };
 
   const handleMailClick = () => {
-    const to = 'info@kuvia.com';
+    const to = 'info@kuvia.ai';
     const subject = encodeURIComponent('Hello from...');
     const body = encodeURIComponent('I wanted to reach out about...');
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
