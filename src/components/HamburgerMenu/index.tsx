@@ -24,7 +24,7 @@ const HamburgerMenu = () => {
   };
 
   useEffect(() => {
-    if (expandHamburgerMenu) {
+    if (expandHamburgerMenu && isMobile) {
       document.body.classList.add('no-scroll');
     } else {
       document.body.classList.remove('no-scroll');
@@ -49,7 +49,7 @@ const HamburgerMenu = () => {
         <div
           className={`kuvia-hamburger-menu-navbar ${expandHamburgerMenu ? 'expand' : 'collapse'}`}
         >
-          <Navbar />
+          <Navbar full />
         </div>
       )}
       <div
@@ -71,11 +71,11 @@ const HamburgerMenu = () => {
               strokeMiterlimit: '2',
             }}
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
               <g transform="matrix(1,0,0,1,-1024,-192)">
@@ -185,11 +185,11 @@ const HamburgerMenu = () => {
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
               <path

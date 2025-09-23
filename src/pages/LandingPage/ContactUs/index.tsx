@@ -18,10 +18,10 @@ const ContactUs: React.FC = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID || '',
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || '',
+        process.env.VITE_EMAILJS_SERVICE_ID || '',
+        process.env.VITE_EMAILJS_TEMPLATE_ID || '',
         event.currentTarget,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY || ''
+        process.env.VITE_EMAILJS_PUBLIC_KEY || ''
       )
       .then((result) => {
         setIsSent(true);
@@ -39,7 +39,7 @@ const ContactUs: React.FC = () => {
   };
 
   const handleMailClick = () => {
-    const to = 'info@kuvia.com';
+    const to = 'info@kuvia.ai';
     const subject = encodeURIComponent('Hello from...');
     const body = encodeURIComponent('I wanted to reach out about...');
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
@@ -50,11 +50,11 @@ const ContactUs: React.FC = () => {
   return (
     <div className="kuvia-aboutus-contact">
       <div className="kuvia-aboutus-contact-container">
-        <h1>Let's connect!</h1>
+        <h1>Get in Touch</h1>
         <p>
-          Whether you want to collaborate, join our mission, or simply learn
-          more -<br />
-          we'd love to hear from you
+          Have any questions or need more information about our services? <br />{' '}
+          Please fill out the form below, and we'll get back to you as soon as
+          possible.
         </p>
         <div className="kuvia-aboutus-contact-form">
           <div className="kuvia-aboutus-contact-form-content">
@@ -77,7 +77,11 @@ const ContactUs: React.FC = () => {
                   required
                 />
                 <label htmlFor="message">Message</label>
-                <textarea name="message" placeholder="Your message" required />
+                <textarea
+                  name="message"
+                  defaultValue="Hi! I would like to know more about …"
+                  required
+                />
                 <button type="submit">Send</button>
                 <div className="kuvia-aboutus-contact-socials">
                   <a
@@ -105,14 +109,14 @@ const ContactUs: React.FC = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 16 16"
-                    style={{marginTop: '-2px'}}
+                    style={{ marginTop: '-2px' }}
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="0.85"
-                      stroke-width="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeOpacity="0.85"
+                      strokeWidth="1.25"
                       d="M1.333 4.667l5.444 3.81c.44.309.66.463.9.523.212.052.434.052.646 0 .24-.06.46-.214.9-.523l5.444-3.81M4.533 13.333h6.934c1.12 0 1.68 0 2.108-.218a2 2 0 00.874-.874c.218-.428.218-.987.218-2.108V5.867c0-1.12 0-1.68-.218-2.108a2 2 0 00-.874-.874c-.428-.218-.988-.218-2.108-.218H4.533c-1.12 0-1.68 0-2.108.218a2 2 0 00-.874.874c-.218.428-.218.988-.218 2.108v4.266c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874c.428.218.988.218 2.108.218z"
                     ></path>
                   </svg>

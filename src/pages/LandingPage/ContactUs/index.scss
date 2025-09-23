@@ -31,6 +31,7 @@
       font-weight: 500;
       color: var(--tertiary-gray);
       margin-inline: 10px;
+      line-height: 32px;
     }
 
     .kuvia-aboutus-contact-form {
@@ -162,6 +163,7 @@
 
       p {
         font-size: 20px;
+        line-height: 26px;
       }
 
       .kuvia-aboutus-contact-form {
@@ -201,6 +203,7 @@
 
       p {
         font-size: 18px;
+        line-height: 24px;
       }
 
       .kuvia-aboutus-contact-form {
@@ -212,7 +215,6 @@
           padding: 20px 20px;
 
           form {
-
             label {
               font-size: 16px;
             }

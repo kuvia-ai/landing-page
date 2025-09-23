@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel } from 'swiper/modules';
-import pressReleaseData from '../../../assets/pressReleasesData.json';
-import scientificPublicationData from '../../../assets/scientificPublicationsData.json';
+import {
+  pressReleasesSource,
+  scientificPublicationsSource,
+} from '../../../constants/sourceData';
 import UserProfile from '../../../components/UserProfile';
-import andreProfileImg from '../../../images/andre-profile.jpg';
-import oliProfileImg from '../../../images/oli-profile.png';
-import anaProfileImg from '../../../images/ana-profile.jpg';
-import martinaProfileImg from '../../../images/martina-profile.jpg';
+import andreProfileImg from '../../../assets/images/andre-profile.jpg';
+import anaProfileImg from '../../../assets/images/ana-profile.jpg';
+import martinaProfileImg from '../../../assets/images/martina-profile.jpg';
 
 import './index.scss';
 import 'swiper/css';
@@ -25,13 +26,13 @@ const AboutUs: React.FC = () => {
     'press-release' | 'scientific-publications'
   >('press-release');
 
-  const pressReleases = pressReleaseData.sort((a, b) => {
+  const pressReleases = pressReleasesSource.sort((a, b) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
     return dateB.getTime() - dateA.getTime();
   });
 
-  const scientificPublications = scientificPublicationData.sort((a, b) => {
+  const scientificPublications = scientificPublicationsSource.sort((a, b) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
     return dateB.getTime() - dateA.getTime();
@@ -56,12 +57,6 @@ const AboutUs: React.FC = () => {
       userName: 'Andrea Erbetti',
       userDescription: 'COO & Co-Founder',
       userProfileLink: 'https://www.linkedin.com/in/andrea-erbetti-856165248/',
-    },
-    {
-      userImg: oliProfileImg,
-      userName: 'Olivia Sanguinetti',
-      userDescription: 'AI Specialist & Co-Founder',
-      userProfileLink: 'https://www.linkedin.com/in/oliviasanguinetti/',
     },
   ];
 
@@ -109,7 +104,7 @@ const AboutUs: React.FC = () => {
                 window.open(press.URL, '_blank');
               }}
             >
-              <img src={require(`../../../${press.img}`)} alt={press.img} />
+              <img src={press.img} alt={press.img} />
               <div className="kuvia-info-card-content">
                 <div>
                   <span className="kuvia-info-card-content-tag">

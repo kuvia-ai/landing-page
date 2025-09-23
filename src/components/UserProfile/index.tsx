@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkedinIcon from '../../icons/linkedinIcon.png';
+import LinkedinIcon from '../../assets/icons/linkedinIcon.png';
 import './index.scss';
 
 interface UserProfileProps {

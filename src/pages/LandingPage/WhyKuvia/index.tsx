@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import background from '../../../images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff59.png';
+import background from '../../../assets/images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff59.png';
 import { AppContext } from '../../../context/AppContext';
 import './index.scss';
 
@@ -15,7 +15,7 @@ const WhyKuvia: React.FC = () => {
           detect biomarkers directly from digitized tissue images{' '}
           <b>in just 5 seconds</b>. While designed for scalability worldwide,
           Kuvia is actively driving this transformation in Latin America, making
-          precision medicine <b>faster</b> and more <b>accessible</b>
+          precision medicine <b>faster</b> and more <b>accessible</b>.
         </p>
       </div>
       <div className="kuvia-why-kuvia-content">

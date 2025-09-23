@@ -11,7 +11,8 @@
 
   .kuvia-content-switch-content {
     width: 520px;
-    background-color: rgba(255, 255, 255, 0.35);
+    height: 450px;
+    background-color: rgba(245, 216, 230, 0.6);
     backdrop-filter: blur(100px);
     box-shadow: 0px 2px 4px 0px rgba(229, 229, 229, 0.16);
     border-radius: 20px;
@@ -21,20 +22,33 @@
     .kuvia-content-switch-content-body {
       display: flex;
       flex-direction: column;
-      overflow-y: auto;
+      height: 100%;
       gap: 20px;
 
       .kuvia-content-switch-content-title {
-        font-size: 26px;
+        font-size: 32px;
         font-weight: 900;
         color: var(--secondary-dark);
       }
 
       .kuvia-content-switch-content-description {
+        overflow-y: auto;
         font-size: 18px;
         font-weight: 400;
         color: var(--primary-gray);
         line-height: 1.5;
+      }
+
+      .kuvia-slider-control {
+        align-self: center;
+        margin-top: auto;
+        .kuvia-slider-item {
+          background-color: white;
+
+          &.active {
+            background-color: var(--secondary-dark);
+          }
+        }
       }
     }
   }
@@ -52,16 +66,16 @@
       .kuvia-content-switch-content-body {
         display: flex;
         flex-direction: column;
-        overflow-y: auto;
         gap: 20px;
 
         .kuvia-content-switch-content-title {
-          font-size: 24px;
+          font-size: 28px;
           font-weight: 900;
           color: var(--secondary-dark);
         }
 
         .kuvia-content-switch-content-description {
+          overflow-y: auto;
           font-size: 16px;
           font-weight: 400;
           color: var(--primary-gray);
@@ -79,11 +93,10 @@
     margin-inline: 20px;
 
     .kuvia-content-switch-content {
-      height: 450px;
       width: 100%;
       padding: 35px 35px;
+      padding-bottom: 20px;
       margin-left: 0;
-      background-color: var(--tertiary-color);
 
       .kuvia-content-switch-content-body {
         height: 100%;
@@ -97,18 +110,6 @@
         .kuvia-content-switch-content-description {
           font-size: 16px;
           font-weight: 400;
-        }
-
-        .kuvia-slider-control {
-          align-self: center;
-          margin-top: auto;
-          .kuvia-slider-item {
-            background-color: white;
-
-            &.active {
-              background-color: var(--secondary-dark);
-            }
-          }
         }
       }
     }

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import ContentSwitch from '../../../components/ContentSwitch';
-import background from '../../../images/8bdcd33d1e3faa0a0a26b63cc70e594ac8f472b0.png';
+import background from '../../../assets/images/8bdcd33d1e3faa0a0a26b63cc70e594ac8f472b0.png';
 import { AppContext } from '../../../context/AppContext';
 import './index.scss';
 
@@ -9,8 +9,8 @@ const WhatWeDo: React.FC = () => {
   const { isMobile } = useContext(AppContext);
   const { scrollY } = useScroll();
 
-  const yWhatWeDoContent = useTransform(scrollY, [20, 700], [700, 0]);
-  const opacityWhatWeDoContent = useTransform(scrollY, [400, 500], [0, 1]);
+  const yWhatWeDoContent = useTransform(scrollY, [20, 400], [500, 0]);
+  const opacityWhatWeDoContent = useTransform(scrollY, [300, 500], [0, 1]);
 
   const items = [
     {
@@ -53,38 +53,38 @@ const WhatWeDo: React.FC = () => {
   ];
 
   return (
-    <div className="kuvia-what-we-do-content">
+    <div className="kuvia-what-we-do-container">
       <motion.div
-        className="kuvia-what-we-do-container"
+        className="kuvia-what-we-do-content"
         style={{ y: yWhatWeDoContent }}
       >
         <motion.div
           className="kuvia-what-we-do-title-container"
           style={{ opacity: opacityWhatWeDoContent }}
         >
-          <div className="kuvia-what-we-do-title">
-            What
-            {!isMobile ? <br /> : ' '} we do
-          </div>
+          <div className="kuvia-what-we-do-title">What we do</div>
           <p className="kuvia-what-we-do-description">
-            At Kuvia, our mission is to harness the power
-            {!isMobile ? <br /> : ' '} of artificial intelligence (AI) to
-            transform cancer
-            {!isMobile ? <br /> : ' '} diagnostics,{' '}
-            <b>enabling faster and accessible</b>
-            {!isMobile ? <br /> : ' '}
-            <b>biomarker detection</b> for better patient outcomes.
+            At Kuvia, our mission is to harness the power of artificial
+            intelligence (AI) to transform cancer diagnostics,{' '}
+            <b>enabling faster and accessible</b> <b>biomarker detection</b> for
+            better patient outcomes.
           </p>
         </motion.div>
-        <div className="kuvia-what-we-do-content-switch-container">
-          {!isMobile && <img
-            src={background}
-            alt="background"
-            className="kuvia-what-we-do-content-switch-background"
-          />}
+        <motion.div
+          className="kuvia-what-we-do-content-switch-container"
+          style={{ opacity: opacityWhatWeDoContent }}
+        >
           <ContentSwitch items={items} style={{ marginLeft: 'auto' }} />
-        </div>
+        </motion.div>
       </motion.div>
+      {!isMobile && (
+        <motion.img
+          src={background}
+          alt="background"
+          className="kuvia-what-we-do-content-switch-background"
+          style={{ opacity: opacityWhatWeDoContent }}
+        />
+      )}
     </div>
   );
 };

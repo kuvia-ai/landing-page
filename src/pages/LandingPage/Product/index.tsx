@@ -6,13 +6,13 @@ import SwiperSliderControl from '../../../components/SwiperSliderControl';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel } from 'swiper/modules';
-import img1 from '../../../images/8b4853150a4a459c5c95b89dcd5bfec767f533e4.png';
-import img2 from '../../../images/d13bba79fb798511a556e2707d87d3e8348f6afd.jpg';
-import img3 from '../../../images/b46389d234f9188270b2d15e49ed87c9bd1479ac.png';
-import img4 from '../../../images/524fcf1c3e0bd66f8f157db47552f93f8c477b3a.jpg';
-import img5 from '../../../images/334c8be3e0b1b66e94258d3aa5538b60a90ca373.png';
-import img6 from '../../../images/4a106794cb5068a86e57ab1796123d943532ef1f.png';
-import img7 from '../../../images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff54.png';
+import img1 from '../../../assets/images/8b4853150a4a459c5c95b89dcd5bfec767f533e4.png';
+import img2 from '../../../assets/images/d13bba79fb798511a556e2707d87d3e8348f6afd.jpg';
+import img3 from '../../../assets/images/b46389d234f9188270b2d15e49ed87c9bd1479ac.png';
+import img4 from '../../../assets/images/524fcf1c3e0bd66f8f157db47552f93f8c477b3a.jpg';
+import img5 from '../../../assets/images/334c8be3e0b1b66e94258d3aa5538b60a90ca373.png';
+import img6 from '../../../assets/images/4a106794cb5068a86e57ab1796123d943532ef1f.png';
+import img7 from '../../../assets/images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff54.png';
 import { AppContext } from '../../../context/AppContext';
 import './index.scss';
 import 'swiper/css';
@@ -27,27 +27,27 @@ const Product: React.FC = () => {
     {
       icon: img1,
       title: 'Biopsy Collection',
-      text: 'Histological tissue sample is obtained from biopsy',
+      text: 'Histological tissue sample is obtained from biopsy.',
     },
     {
       icon: img2,
       title: 'Tissue Digitization',
-      text: 'The tissue slide is digitized into a Whole Slide Image (WSI)',
+      text: 'The tissue slide is digitized into a Whole Slide Image (WSI).',
     },
     {
       icon: img3,
       title: 'AI Analysis',
-      text: 'Advanced AI technology instantly analyzes the image',
+      text: 'Advanced AI technology instantly analyzes the image.',
     },
     {
       icon: img4,
       title: 'Instant Results',
-      text: 'Immediate biomarker status prediction',
+      text: 'Immediate biomarker status prediction.',
     },
     {
       icon: img5,
       title: 'Targeted Therapy',
-      text: 'Optimal treatment selection for patients',
+      text: 'Optimal treatment selection for patients.',
     },
   ];
 
@@ -55,12 +55,12 @@ const Product: React.FC = () => {
     <span>
       <b>Kuvia-MSI</b> is an AI-powered software for detecting{' '}
       <b>Microsatellite Instability (MSI)</b> in colorectal and endometrial
-      cancer
+      cancer.
     </span>,
     <span>
       MSI is a key biomarker across solid tumors, as its presence indicates that
       a patient is likely to benefit from immunotherapy. Detecting MSI can guide
-      access to life-extending treatments that would otherwise be missed
+      access to life-extending treatments that would otherwise be missed.
     </span>,
   ];
 
@@ -83,6 +83,7 @@ const Product: React.FC = () => {
           <div className="kuvia-how-it-works-cards-group">
             {howItWorks.map((item, index) => (
               <IconCard
+                key={index}
                 icon={item.icon}
                 type="transparent"
                 title={item.title}

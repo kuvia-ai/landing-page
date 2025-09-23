@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import searchIcon from '../../icons/lupa.png';
-import xIcon from '../../icons/x.png';
+import searchIcon from '../../assets/icons/lupa.png';
+import xIcon from '../../assets/icons/x.png';
 import './index.scss';
 
 interface PatientOption {

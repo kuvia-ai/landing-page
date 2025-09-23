@@ -16,6 +16,7 @@ const SliderControl: React.FC<SliderControlProps> = ({
     <div className="kuvia-slider-control">
       {[...Array(dimension)].map((_, index) => (
         <div
+          key={index}
           className={`kuvia-slider-item ${activeItem === index ? 'active' : 'disabled'}`}
           onClick={() => onClick(index)}
         />

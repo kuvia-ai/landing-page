@@ -3,15 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
 import ProcessingLoader from '../../components/ProcessingLoader';
 import SearchPatient from '../../components/SearchPacient';
-import KuvIAIcon from '../../icons/KuvIAIcon';
-import imgColon1 from '../../images/colon1.png';
-import imgColonHeatmap1 from '../../images/colon-heatmap1.jpg';
-import imgColon2 from '../../images/colon2.jpg';
-import imgColonHeatmap2 from '../../images/colon-heatmap2.jpg';
-import imgColon3 from '../../images/colon3.png';
-import imgColonHeatmap3 from '../../images/colon-heatmap3.jpg';
-import imgColon4 from '../../images/colon4.png';
-import imgColonHeatmap4 from '../../images/colon-heatmap4.jpg';
+import KuvIAIcon from '../../assets/icons/KuvIAIcon';
+import imgColon1 from '../../assets/images/colon1.png';
+import imgColonHeatmap1 from '../../assets/images/colon-heatmap1.jpg';
+import imgColon2 from '../../assets/images/colon2.jpg';
+import imgColonHeatmap2 from '../../assets/images/colon-heatmap2.jpg';
+import imgColon3 from '../../assets/images/colon3.png';
+import imgColonHeatmap3 from '../../assets/images/colon-heatmap3.jpg';
+import imgColon4 from '../../assets/images/colon4.png';
+import imgColonHeatmap4 from '../../assets/images/colon-heatmap4.jpg';
 import './index.scss';
 
 interface PatientData {

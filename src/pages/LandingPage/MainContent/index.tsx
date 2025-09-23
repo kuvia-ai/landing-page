@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useScale } from '../../../context/AppContext';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import background from './background.mp4';
+import background from '../../../assets/background.mp4';
+import compressedBackground from '../../../assets/background.webm';
+import videoPoster from '../../../assets/images/mainPageVideoPoster.png';
 import Header from './Header';
 import './index.scss';
 
@@ -13,25 +15,51 @@ const MainContent: React.FC = () => {
 
   const yMainLandingContent = useTransform(
     scrollY,
-    [0, 500 * scaleRatio],
+    [300 * scaleRatio, 700 * scaleRatio],
     [0, -700]
   );
   const opacityMainLandingContent = useTransform(
     scrollY,
-    [300 * scaleRatio, 400 * scaleRatio],
+    [400 * scaleRatio, 500 * scaleRatio],
     [1, 0]
   );
 
   const opacityReadMore = useTransform(scrollY, [0, 500], [1, 0]);
 
+  const onReadMoreClick = () => {
+    const whatWeDoSection = document.getElementById('what-we-do');
+    if (whatWeDoSection) {
+      whatWeDoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="kuvia-landing-page-main-content-container">
-      <video autoPlay loop muted id="kuvia-landing-page-main-content-video" playsInline>
+      <video
+        autoPlay
+        loop
+        muted
+        id="kuvia-landing-page-main-content-video"
+        playsInline
+        preload="auto"
+        poster={videoPoster}
+        onLoadedData={(e) => {
+          const video = e.currentTarget;
+          video.play().catch((error) => {
+            console.log('Autoplay failed:', error);
+          });
+        }}
+      >
+        <source src={compressedBackground} type="video/webm" />
         <source src={background} type="video/mp4" />
       </video>
       <motion.div
         className="kuvia-landing-page-main-content"
-        style={{ y: yMainLandingContent, opacity: opacityMainLandingContent }}
+        style={{
+          y: yMainLandingContent,
+          opacity: opacityMainLandingContent,
+          cursor: 'pointer',
+        }}
       >
         <Header />
         <div className="kuvia-landing-body">
@@ -46,6 +74,7 @@ const MainContent: React.FC = () => {
         <motion.div
           className="kuvia-landing-read-more"
           style={{ opacity: opacityReadMore }}
+          onClick={onReadMoreClick}
         >
           <p>Read More</p>
           <svg
@@ -86,11 +115,11 @@ const MainContent: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="#000000"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
                 <title>ionicons-v5-c</title>
