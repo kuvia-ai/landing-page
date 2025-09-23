@@ -33,50 +33,34 @@ const ContentSwitch = ({ items, style }: ContentSwitchProps) => {
   };
 
   useEffect(() => {
-      const slideInterval = setInterval(() => {
-        setActiveItem((prev) => (prev += 1));
-      }, 5000);
+    const slideInterval = setInterval(() => {
+      setActiveItem((prev) => (prev += 1));
+    }, 10000);
 
-      return () => {
-        clearInterval(slideInterval);
-        setResetInterval(false);
-      };
+    return () => {
+      clearInterval(slideInterval);
+      setResetInterval(false);
+    };
   }, [resetInterval]);
 
   return (
     <div className="kuvia-content-switch-container">
-      {/* {!isMobile && (
-        <div className="kuvia-content-switch-items" style={style}>
-          {items.map((item, index) => (
-            <ContentSwitchItem
-              key={item.title}
-              title={item.title}
-              active={activeItem % items.length === index}
-              onClick={() => handleItemClick(index)}
-            />
-          ))}
-        </div>
-      )} */}
       <div className="kuvia-content-switch-content">
         <div className="kuvia-content-switch-content-body">
-          {/* {isMobile && ( */}
-            <div className="kuvia-content-switch-content-title">
-              {items[activeItem % items.length].title}
-            </div>
-          {/* )} */}
+          <div className="kuvia-content-switch-content-title">
+            {items[activeItem % items.length].title}
+          </div>
           <div className="kuvia-content-switch-content-description">
             {items[activeItem % items.length].description}
           </div>
-          {/* {isMobile && ( */}
-            <SliderControl
-              dimension={items.length}
-              activeItem={activeItem % items.length}
-              onClick={(item) => {
-                setActiveItem(item);
-                setResetInterval(true);
-              }}
-            />
-          {/* )} */}
+          <SliderControl
+            dimension={items.length}
+            activeItem={activeItem % items.length}
+            onClick={(item) => {
+              setActiveItem(item);
+              setResetInterval(true);
+            }}
+          />
         </div>
       </div>
     </div>
