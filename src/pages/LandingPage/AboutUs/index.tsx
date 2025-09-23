@@ -7,7 +7,6 @@ import {
 } from '../../../constants/sourceData';
 import UserProfile from '../../../components/UserProfile';
 import andreProfileImg from '../../../assets/images/andre-profile.jpg';
-import oliProfileImg from '../../../assets/images/oli-profile.png';
 import anaProfileImg from '../../../assets/images/ana-profile.jpg';
 import martinaProfileImg from '../../../assets/images/martina-profile.jpg';
 
@@ -58,12 +57,6 @@ const AboutUs: React.FC = () => {
       userName: 'Andrea Erbetti',
       userDescription: 'COO & Co-Founder',
       userProfileLink: 'https://www.linkedin.com/in/andrea-erbetti-856165248/',
-    },
-    {
-      userImg: oliProfileImg,
-      userName: 'Olivia Sanguinetti',
-      userDescription: 'AI Specialist & Co-Founder',
-      userProfileLink: 'https://www.linkedin.com/in/oliviasanguinetti/',
     },
   ];
 
