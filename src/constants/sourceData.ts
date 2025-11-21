@@ -1,7 +1,8 @@
-import pressImg1 from '../assets/images/e33c3ba23323b4fad42c9e2726cc07f38ec5d81d.jpg';
-import pressImg2 from '../assets/images/0e9aa12e9f38f3ebbb6f41317a812a34fe946213.jpg';
-import PressImg3 from '../assets/images/652fb481de72c17a14d83bfce284dfe829acc935.jpg';
-import pressImg4 from '../assets/images/c131932a4931fd1cf8d64fa47ffaa21f54971857.png';
+import pressImg1 from '../assets/images/pressImg1.jpg';
+import pressImg2 from '../assets/images/pressImg2.jpg';
+import pressImg3 from '../assets/images/pressImg3.jpg';
+import pressImg4 from '../assets/images/pressImg4.png';
+import pressImg5 from '../assets/images/pressImg5.jpg';
 
 import scientificImg1 from '../assets/images/2e9c4157bd5f05b1906594dfc9191c10d27b3c79.jpg';
 
@@ -27,7 +28,7 @@ export const pressReleasesSource = [
       'Red Bull Basement 2024: Kuvia Revolutionizes Healthcare with AI and Travels to Tokyo to Represent Argentina.',
     URL: 'https://www.infobae.com/malditos-nerds/2024/11/19/red-bull-basement-2024-dos-argentinas-revolucionan-la-salud-con-ia-y-viajan-a-tokio-para-representar-al-pais/',
     date: 'November 19, 2024',
-    img: PressImg3,
+    img: pressImg3,
     type: 'Press Release',
   },
   {
@@ -36,6 +37,14 @@ export const pressReleasesSource = [
     URL: 'https://radiocut.fm/audiocut/estudiantes-del-itba-crean-algoritmo-deteccion-temprana-cancer-colon/',
     date: 'December 13, 2024',
     img: pressImg4,
+    type: 'Press Release',
+  },
+  {
+    description:
+      'Transformar Salud 2025: Celebrating Our Award Showcasing the Scalability of Our AI Tool to Detect BRAF in Pediatric Tumors, in Collaboration with Roche and Fundación Garrahan.',
+    URL: 'https://www.transformarsaludfundaciongarrahan.org/ganadores2025-2026',
+    date: 'September 12, 2025',
+    img: pressImg5,
     type: 'Press Release',
   },
 ];
