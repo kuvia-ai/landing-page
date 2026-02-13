@@ -6,9 +6,8 @@ import {
   scientificPublicationsSource,
 } from '../../../constants/sourceData';
 import UserProfile from '../../../components/UserProfile';
-import andreProfileImg from '../../../assets/images/andre-profile.jpg';
-import anaProfileImg from '../../../assets/images/ana-profile.jpg';
-import martinaProfileImg from '../../../assets/images/martina-profile.jpg';
+import anaProfileImg from '../../../assets/images/profiles-images/ana-profile.jpg';
+import martinaProfileImg from '../../../assets/images/profiles-images/martina-profile.jpg';
 
 import './index.scss';
 import 'swiper/css';
@@ -51,12 +50,6 @@ const AboutUs: React.FC = () => {
       userDescription: 'CTO & Co-Founder',
       userProfileLink:
         'https://www.linkedin.com/in/martina-belluomini-1b7708240/',
-    },
-    {
-      userImg: andreProfileImg,
-      userName: 'Andrea Erbetti',
-      userDescription: 'COO & Co-Founder',
-      userProfileLink: 'https://www.linkedin.com/in/andrea-erbetti-856165248/',
     },
   ];
 
