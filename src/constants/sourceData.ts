@@ -1,10 +1,10 @@
-import pressImg1 from '../assets/images/pressImg1.jpg';
-import pressImg2 from '../assets/images/pressImg2.jpg';
-import pressImg3 from '../assets/images/pressImg3.jpg';
-import pressImg4 from '../assets/images/pressImg4.png';
-import pressImg5 from '../assets/images/pressImg5.jpg';
+import pressImg1 from '../assets/images/press-images/pressImg1.jpg';
+import pressImg2 from '../assets/images/press-images/pressImg2.jpg';
+import pressImg3 from '../assets/images/press-images/pressImg3.jpg';
+import pressImg4 from '../assets/images/press-images/pressImg4.png';
+import pressImg5 from '../assets/images/press-images/pressImg5.jpg';
 
-import scientificImg1 from '../assets/images/2e9c4157bd5f05b1906594dfc9191c10d27b3c79.jpg';
+import scientificImg1 from '../assets/images/press-images/2e9c4157bd5f05b1906594dfc9191c10d27b3c79.jpg';
 
 export const pressReleasesSource = [
   {

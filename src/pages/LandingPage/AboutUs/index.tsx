@@ -6,9 +6,10 @@ import {
   scientificPublicationsSource,
 } from '../../../constants/sourceData';
 import UserProfile from '../../../components/UserProfile';
-import andreProfileImg from '../../../assets/images/andre-profile.jpg';
-import anaProfileImg from '../../../assets/images/ana-profile.jpg';
-import martinaProfileImg from '../../../assets/images/martina-profile.jpg';
+import anaProfileImg from '../../../assets/images/profiles-images/ana-profile.jpg';
+import martinaProfileImg from '../../../assets/images/profiles-images/martina-profile.jpg';
+import manuelProfileImg from '../../../assets/images/profiles-images/manuel-profile.jpg';
+import adrianProfileImg from '../../../assets/images/profiles-images/adrian-profile.jpg';
 
 import './index.scss';
 import 'swiper/css';
@@ -53,10 +54,17 @@ const AboutUs: React.FC = () => {
         'https://www.linkedin.com/in/martina-belluomini-1b7708240/',
     },
     {
-      userImg: andreProfileImg,
-      userName: 'Andrea Erbetti',
-      userDescription: 'COO & Co-Founder',
-      userProfileLink: 'https://www.linkedin.com/in/andrea-erbetti-856165248/',
+      userImg: manuelProfileImg,
+      userName: 'Manuel Smolkin',
+      userDescription: 'Head of Clinical Strategy',
+      userProfileLink: 'https://www.linkedin.com/in/manuelsmolkin/',
+    },
+    {
+      userImg: adrianProfileImg,
+      userName: 'Adrian Federico Perez',
+      userDescription: 'Senior AI Engineer',
+      userProfileLink:
+        'https://www.linkedin.com/in/adrian-federico-perez-6849b529',
     },
   ];
 
