@@ -13,7 +13,7 @@ const WhyKuvia: React.FC = () => {
         <p className="kuvia-why-kuvia-description">
           Kuvia is helping lead a new wave of healthtech innovation, using AI to
           detect biomarkers directly from digitized tissue images{' '}
-          <b>in just 5 seconds</b>. While designed for scalability worldwide,
+          <b>in just 5 minutes</b>. While designed for scalability worldwide,
           Kuvia is actively driving this transformation in Latin America, making
           precision medicine <b>faster</b> and more <b>accessible</b>.
         </p>
