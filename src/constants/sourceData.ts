@@ -1,8 +1,8 @@
-import pressImg1 from '../assets/images/press-images/pressImg1.jpg';
-import pressImg2 from '../assets/images/press-images/pressImg2.jpg';
-import pressImg3 from '../assets/images/press-images/pressImg3.jpg';
-import pressImg4 from '../assets/images/press-images/pressImg4.png';
-import pressImg5 from '../assets/images/press-images/pressImg5.jpg';
+import press_image_360dx from '../assets/images/press-images/press-image-360dx.jpg';
+import press_image_harvard_hackathon from '../assets/images/press-images/press-image-harvard-hackathon.jpg';
+import press_image_red_bull_basement from '../assets/images/press-images/press-image-red-bull-basement.jpg';
+import press_image_cnn_press_arg from '../assets/images/press-images/press-image-cnn-press-arg.png';
+import press_image_transformar_salud from '../assets/images/press-images/press-image-transformar-salud.jpg';
 import press_image_talentoargen from '../assets/images/press-images/press-image-talentoargen.jpg';
 import press_image_tn_arg from '../assets/images/press-images/press-image-tn-arg.jpeg';
 import press_image_amz_on_air from '../assets/images/press-images/press-image-amz-on-air.jpeg';
@@ -15,7 +15,7 @@ export const pressReleasesSource = [
       'Argentinian Group Uses AI-Based Digital Pathology Model to Classify Microsatellite Instability.',
     URL: 'https://www.360dx.com/cancer/argentinian-group-uses-ai-based-digital-pathology-model-classify-microsatellite-instability',
     date: 'June 4, 2024',
-    img: pressImg1,
+    img: press_image_360dx,
     type: 'Press Release',
   },
   {
@@ -23,7 +23,7 @@ export const pressReleasesSource = [
       'Kuvia: The Argentine Winners of the Harvard International Competition, Driving Health Innovation using AI.',
     URL: 'https://www.infobae.com/salud/2025/04/16/quienes-son-los-ganadores-argentinos-del-desafio-internacional-de-harvard-que-impulsa-la-innovacion-en-ia-para-la-salud/',
     date: 'April 16, 2025',
-    img: pressImg2,
+    img: press_image_harvard_hackathon,
     type: 'Press Release',
   },
   {
@@ -31,7 +31,7 @@ export const pressReleasesSource = [
       'Red Bull Basement 2024: Kuvia Revolutionizes Healthcare with AI and Travels to Tokyo to Represent Argentina.',
     URL: 'https://www.infobae.com/malditos-nerds/2024/11/19/red-bull-basement-2024-dos-argentinas-revolucionan-la-salud-con-ia-y-viajan-a-tokio-para-representar-al-pais/',
     date: 'November 19, 2024',
-    img: pressImg3,
+    img: press_image_red_bull_basement,
     type: 'Press Release',
   },
   {
@@ -39,7 +39,7 @@ export const pressReleasesSource = [
       'Kuvia on CNN Radio Argentina: Sharing Our Vision for AI-Driven Healthcare Innovation.',
     URL: 'https://radiocut.fm/audiocut/estudiantes-del-itba-crean-algoritmo-deteccion-temprana-cancer-colon/',
     date: 'December 13, 2024',
-    img: pressImg4,
+    img: press_image_cnn_press_arg,
     type: 'Press Release',
   },
   {
