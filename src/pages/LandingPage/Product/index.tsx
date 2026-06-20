@@ -13,6 +13,8 @@ import img4 from '../../../assets/images/524fcf1c3e0bd66f8f157db47552f93f8c477b3
 import img5 from '../../../assets/images/334c8be3e0b1b66e94258d3aa5538b60a90ca373.png';
 import img6 from '../../../assets/images/4a106794cb5068a86e57ab1796123d943532ef1f.png';
 import img7 from '../../../assets/images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff54.png';
+import brafImg from '../../../assets/images/braf-histology.jpg';
+import transformarSaludLogo from '../../../assets/images/transformar-salud-flyer.jpeg';
 import { AppContext } from '../../../context/AppContext';
 import './index.scss';
 import 'swiper/css';
@@ -189,6 +191,60 @@ const Product: React.FC = () => {
                 <p>
                   Endometrial cancer is the sixth most common cancer among women
                   worldwide, with over 420,000 new cases reported in 2022.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="kuvia-our-product reversed">
+        <div className="kuvia-our-product-left-content">
+          <div>
+            <p className="kuvia-our-product-left-content-title">
+              Collab with
+              <br />
+              Hospital Garrahan
+            </p>
+            <p className="kuvia-our-product-left-content-body">
+              <span>
+                Together with Hospital Garrahan, we were awarded the{' '}
+                <b>Transformar Salud</b> initiative to develop AI for detecting
+                the <b>BRAF V600E mutation</b> in pediatric cancers.
+              </span>
+              <br />
+              <br />
+              <span>
+                By bringing molecular profiling into routine pathology, we aim
+                to accelerate diagnosis and improve treatment selection for
+                pediatric patients.
+              </span>
+            </p>
+          </div>
+          <div className="kuvia-our-product-partner-logo">
+            <img src={transformarSaludLogo} alt="Transformar Salud" />
+          </div>
+        </div>
+        <div className="kuvia-our-product-right-content">
+          <p className="kuvia-our-product-right-content-title">&nbsp;</p>
+          <div className="kuvia-our-product-right-content-body">
+            <img src={brafImg} alt="BRAF detection" />
+            <div className="kuvia-our-product-tags-container">
+              <div className="kuvia-our-product-right-content-tag left-align">
+                <h1>AI for Multiple Indications</h1>
+                <p>
+                  Our BRAF V600E AI model is being developed for central nervous
+                  system tumors, histiocytosis, thyroid cancer, and melanocytic
+                  lesions, where this biomarker plays a critical role in
+                  treatment selection and disease management.
+                </p>
+              </div>
+              <div className="kuvia-our-product-right-content-tag right-align">
+                <h1>BRAF V600E Rates</h1>
+                <p>
+                  Approximately 50–60% of pediatric low-grade gliomas, 40–60% of
+                  Langerhans cell histiocytosis, 40–60% of papillary thyroid
+                  carcinomas, and 40–50% of melanocytic lesions harbor the BRAF
+                  V600E mutation.
                 </p>
               </div>
             </div>

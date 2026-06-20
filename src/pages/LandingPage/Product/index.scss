@@ -147,6 +147,58 @@
     }
   }
 
+  .kuvia-our-product.reversed {
+    flex-direction: row-reverse;
+
+    .kuvia-our-product-left-content {
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .kuvia-our-product-left-content-title {
+      font-size: 48px;
+    }
+
+    .kuvia-our-product-left-content-body {
+      padding-top: 24px;
+    }
+
+    .kuvia-our-product-partner-logo {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding-right: 50px;
+      margin-top: -15px;
+
+      img {
+        width: 140px;
+        object-fit: contain;
+      }
+    }
+
+    .kuvia-our-product-right-content-body img {
+      object-fit: cover;
+    }
+
+    .kuvia-our-product-tags-container {
+      justify-content: space-evenly;
+    }
+
+    .kuvia-our-product-right-content-tag {
+      width: 320px;
+
+      &.left-align {
+        align-self: flex-start;
+        margin-left: 0;
+      }
+
+      &.right-align {
+        align-self: flex-end;
+        margin-right: 0;
+      }
+    }
+  }
+
   .kuvia-scalability {
     display: flex;
     height: 100dvh;
