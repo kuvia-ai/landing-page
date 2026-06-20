@@ -6,13 +6,43 @@ import press_image_transformar_salud from '../assets/images/press-images/press-i
 import press_image_talentoargen from '../assets/images/press-images/press-image-talentoargen.jpg';
 import press_image_tn_arg from '../assets/images/press-images/press-image-tn-arg.jpeg';
 import press_image_amz_on_air from '../assets/images/press-images/press-image-amz-on-air.jpeg';
+import press_image_ministerio from '../assets/images/press-images/press-image-ministerio.jpeg';
+import press_image_endeavor from '../assets/images/press-images/press-image-endeavor.jpeg';
+import press_image_clarin_posadas from '../assets/images/press-images/press-image-clarin-posadas.jpeg';
 
-import scientificImg1 from '../assets/images/press-images/2e9c4157bd5f05b1906594dfc9191c10d27b3c79.jpg';
+import scientificImg1 from '../assets/images/press-images/scientific-asco.jpeg';
 
-export const pressReleasesSource = [
+import award_redbull from '../assets/images/awards-images/award-redbull.jpeg';
+import award_swiss_medical from '../assets/images/awards-images/award-swiss-medical.jpeg';
+import award_harvard from '../assets/images/awards-images/award-harvard.png';
+import award_transformar_salud from '../assets/images/awards-images/award-transformar-salud.jpeg';
+import award_vercel from '../assets/images/awards-images/award-vercel.jpeg';
+import award_nvidia from '../assets/images/awards-images/award-nvidia.jpeg';
+import award_aws_pitch from '../assets/images/awards-images/award-aws-pitch.jpeg';
+import award_ministerio from '../assets/images/awards-images/award-ministerio.png';
+
+interface PressItem {
+  description: string;
+  URL: string;
+  date: string;
+  img: string;
+  type: string;
+  imagePosition?: string;
+}
+
+interface AwardItem {
+  title: string;
+  text: string;
+  img: string;
+  imagePosition?: string;
+  imageFit?: string;
+  imageScale?: number;
+}
+
+export const pressReleasesSource: PressItem[] = [
   {
     description:
-      'Argentinian Group Uses AI-Based Digital Pathology Model to Classify Microsatellite Instability.',
+      'Argentinian group uses AI-based digital pathology model to classify microsatellite instability.',
     URL: 'https://www.360dx.com/cancer/argentinian-group-uses-ai-based-digital-pathology-model-classify-microsatellite-instability',
     date: 'June 4, 2024',
     img: press_image_360dx,
@@ -20,7 +50,7 @@ export const pressReleasesSource = [
   },
   {
     description:
-      'Kuvia: The Argentine Winners of the Harvard International Competition, Driving Health Innovation using AI.',
+      'Kuvia: the Argentine winners of the Harvard international competition, driving health innovation using AI.',
     URL: 'https://www.infobae.com/salud/2025/04/16/quienes-son-los-ganadores-argentinos-del-desafio-internacional-de-harvard-que-impulsa-la-innovacion-en-ia-para-la-salud/',
     date: 'April 16, 2025',
     img: press_image_harvard_hackathon,
@@ -28,7 +58,7 @@ export const pressReleasesSource = [
   },
   {
     description:
-      'Red Bull Basement 2024: Kuvia Revolutionizes Healthcare with AI and Travels to Tokyo to Represent Argentina.',
+      'Red Bull Basement 2024: Kuvia revolutionizes healthcare with AI and travels to Tokyo to represent Argentina.',
     URL: 'https://www.infobae.com/malditos-nerds/2024/11/19/red-bull-basement-2024-dos-argentinas-revolucionan-la-salud-con-ia-y-viajan-a-tokio-para-representar-al-pais/',
     date: 'November 19, 2024',
     img: press_image_red_bull_basement,
@@ -36,7 +66,7 @@ export const pressReleasesSource = [
   },
   {
     description:
-      'Kuvia on CNN Radio Argentina: Sharing Our Vision for AI-Driven Healthcare Innovation.',
+      'Kuvia on CNN Radio Argentina: sharing our vision for AI-driven healthcare innovation.',
     URL: 'https://radiocut.fm/audiocut/estudiantes-del-itba-crean-algoritmo-deteccion-temprana-cancer-colon/',
     date: 'December 13, 2024',
     img: press_image_cnn_press_arg,
@@ -44,41 +74,115 @@ export const pressReleasesSource = [
   },
   {
     description:
-      'Transformar Salud 2025: Celebrating Our Award Showcasing the Scalability of Our AI Tool to Detect BRAF in Pediatric Tumors, in Collaboration with Roche and Fundación Garrahan.',
+      'Transformar Salud 2025: celebrating our award showcasing the scalability of our AI tool to detect BRAF in pediatric tumors, in collaboration with Roche and Fundación Garrahan.',
     URL: 'https://www.transformarsaludfundaciongarrahan.org/ganadores2025-2026',
     date: 'September 12, 2025',
     img: press_image_transformar_salud,
     type: 'Press Release',
   },
   {
-    description: 'Kuvia Featured by Talento Argentino Showcasing Our Mission to Accelerate Cancer Diagnostics Through Artificial Intelligence.',
+    description: 'Kuvia featured by Talento Argentino showcasing our mission to accelerate cancer diagnostics through artificial intelligence.',
     URL: 'https://x.com/Talentoargen/status/2052801011857699299?s=20',
     date: 'May 8, 2026',
     img: press_image_talentoargen,
     type: 'Press Release',
   },
   {
-    description: 'Kuvia Featured on TN Showcasing How AI Can Accelerate Cancer Biomarker Detection and Expand Access to Precision Diagnostics.',
+    description: 'Kuvia featured on TN showcasing how AI can accelerate cancer biomarker detection and expand access to precision diagnostics.',
     URL: 'https://drive.google.com/file/d/1VRrOIi9CA92nLcVn-LZ7aktBIfETJFL9/view?usp=sharing',
     date: 'May 17, 2026',
     img: press_image_tn_arg,
     type: 'Press Release',
   },
   {
-    description: 'Kuvia on the AWS On Air Podcast Sharing Our Experience Developing and Deploying AI Solutions for Cancer Diagnostics.',
+    description: 'Kuvia on the AWS On Air podcast sharing our experience developing and deploying AI solutions for cancer diagnostics.',
     URL: 'https://www.twitch.tv/videos/2767220737?filter=all&sort=time',
     date: 'May 8, 2026',
     img: press_image_amz_on_air,
     type: 'Press Release',
+  },
+  {
+    description:
+      'Kuvia’s founders Ana Gorodisch and Martina Belluomini were honored by Argentina’s Ministry of Health with an innovation in healthcare award, recognizing their work expanding access to precision oncology through artificial intelligence.',
+    URL: 'https://x.com/mariolugones_ar/status/2062306176453284196?s=46',
+    date: 'June 3, 2026',
+    img: press_image_ministerio,
+    type: 'Press Release',
+    imagePosition: '50% 20%',
+  },
+  {
+    description:
+      'Kuvia’s CEO Ana Gorodisch took the stage at Endeavor Experience Buenos Aires, sharing the company’s journey and mission to expand access to precision cancer diagnostics through artificial intelligence.',
+    URL: 'https://www.youtube.com/watch?v=SLwtRnciEh8',
+    date: 'June 11, 2026',
+    img: press_image_endeavor,
+    type: 'Press Release',
+  },
+  {
+    description:
+      'In Clarín, Kuvia shared its vision for AI in oncology and its collaboration with Hospital Posadas to advance precision cancer diagnostics in Argentina.',
+    URL: 'https://www.kiosco.clarin.com/zonal-oeste/20260618',
+    date: 'June 18, 2026',
+    img: press_image_clarin_posadas,
+    type: 'Press Release',
+    imagePosition: 'top',
   }
 ];
 
-export const scientificPublicationsSource = [
+export const scientificPublicationsSource: PressItem[] = [
   {
-    description: 'Kuvia Presents Their Work at ASCO 2024 Poster Session.',
+    description: 'Kuvia presents their work at ASCO 2024 poster session.',
     URL: 'https://doi.org/10.1200/JCO.2024.42.16_suppl.11152',
     date: 'May 29, 2024',
     img: scientificImg1,
     type: 'Scientific Publication',
+    imagePosition: '50% 70%',
+  },
+];
+
+export const awardsRecognitionsSource: AwardItem[] = [
+  {
+    title: 'Innovation in Healthcare Award',
+    text: 'Kuvia was awarded the Innovation in Healthcare Award by Argentina’s Ministry of Health.',
+    img: award_ministerio,
+  },
+  {
+    title: 'AWS AI Pitch Competition',
+    text: 'Kuvia got 2nd place at the AWS AI pitch competition at NVIDIA GTC 2026.',
+    img: award_aws_pitch,
+    imagePosition: '50% 75%',
+  },
+  {
+    title: 'NVIDIA Inception Program',
+    text: 'Kuvia is a member of NVIDIA Inception.',
+    img: award_nvidia,
+  },
+  {
+    title: 'Vercel AI Accelerator',
+    text: 'Kuvia was selected to join the Vercel AI Accelerator 2026.',
+    img: award_vercel,
+    imagePosition: '50% 25%',
+  },
+  {
+    title: 'Transformar Salud',
+    text: 'In collaboration with Hospital Garrahan we were awarded the 2025 Transformar Salud initiative.',
+    img: award_transformar_salud,
+    imageFit: 'contain',
+    imageScale: 0.7,
+  },
+  {
+    title: 'Harvard Health System Innovation Lab',
+    text: 'Selected as a Top Pick in the Harvard HSIL Venture Building Program.',
+    img: award_harvard,
+  },
+  {
+    title: 'Hackathon Swiss Medical',
+    text: 'Winners of the Swiss Medical Hackathon 2025.',
+    img: award_swiss_medical,
+  },
+  {
+    title: 'Red Bull Basement',
+    text: 'National winners of Red Bull Basement Argentina 2024 and global finalists in Tokyo, Japan.',
+    img: award_redbull,
   },
 ];
