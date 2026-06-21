@@ -574,3 +574,22 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .kuvia-product {
+    .kuvia-our-product.reversed {
+      flex-direction: column;
+
+      .kuvia-our-product-left-content {
+        height: auto;
+      }
+
+      .kuvia-our-product-partner-logo {
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}

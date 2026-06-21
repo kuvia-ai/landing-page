@@ -201,7 +201,7 @@ const Product: React.FC = () => {
         <div className="kuvia-our-product-left-content">
           <div>
             <p className="kuvia-our-product-left-content-title">
-              Collab with
+              Collaboration with
               <br />
               Hospital Garrahan
             </p>
