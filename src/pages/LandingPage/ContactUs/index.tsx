@@ -2,10 +2,12 @@ import React, { useRef, useState, useContext } from 'react';
 import emailjs from '@emailjs/browser';
 import { TailSpin } from 'react-loader-spinner';
 import { AppContext } from '../../../context/AppContext';
+import { useLanguage } from '../../../context/LanguageContext';
 import './index.scss';
 
 const ContactUs: React.FC = () => {
   const { isMobile } = useContext(AppContext);
+  const { t } = useLanguage();
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
@@ -28,7 +30,7 @@ const ContactUs: React.FC = () => {
       })
       .catch((error) => {
         console.log(error.text);
-        alert('Failed to send message, please try again later.');
+        alert(t('contact.error') as string);
       })
       .finally(() => {
         setIsLoading(false);
@@ -50,39 +52,35 @@ const ContactUs: React.FC = () => {
   return (
     <div className="kuvia-aboutus-contact">
       <div className="kuvia-aboutus-contact-container">
-        <h1>Get in Touch</h1>
-        <p>
-          Have any questions or need more information about our services? <br />{' '}
-          Please fill out the form below, and we'll get back to you as soon as
-          possible.
-        </p>
+        <h1>{t('contact.title')}</h1>
+        <p>{t('contact.description')}</p>
         <div className="kuvia-aboutus-contact-form">
           <div className="kuvia-aboutus-contact-form-content">
             {!isLoading && !isSent && (
               <form ref={formRef} onSubmit={handleSubmit}>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">{t('contact.name')}</label>
                 <input
                   type="text"
                   name="name"
                   id="name"
-                  placeholder="Your name"
+                  placeholder={t('contact.namePlaceholder') as string}
                   required
                 />
-                <label htmlFor="emailFrom">Email</label>
+                <label htmlFor="emailFrom">{t('contact.email')}</label>
                 <input
                   type="email"
                   name="email_from"
                   id="emailFrom"
-                  placeholder="Your email"
+                  placeholder={t('contact.emailPlaceholder') as string}
                   required
                 />
-                <label htmlFor="message">Message</label>
+                <label htmlFor="message">{t('contact.message')}</label>
                 <textarea
                   name="message"
-                  defaultValue="Hi! I would like to know more about …"
+                  defaultValue={t('contact.messageDefault') as string}
                   required
                 />
-                <button type="submit">Send</button>
+                <button type="submit">{t('contact.send')}</button>
                 <div className="kuvia-aboutus-contact-socials">
                   <a
                     href="https://www.linkedin.com/company/kuvia-ai/posts/?feedView=all"
@@ -135,7 +133,7 @@ const ContactUs: React.FC = () => {
                   wrapperClass=""
                   visible={true}
                 />
-                <p>Sending...</p>
+                <p>{t('contact.sending')}</p>
               </div>
             )}
             {!isLoading && isSent && (
@@ -178,11 +176,8 @@ const ContactUs: React.FC = () => {
                     </g>
                   </g>
                 </svg>
-                <h3>Message sent successfully!</h3>
-                <p>
-                  Thanks for getting in touch! We’ve received your message and
-                  will get back to you as soon as we can.
-                </p>
+                <h3>{t('contact.sentTitle')}</h3>
+                <p>{t('contact.sentBody')}</p>
               </div>
             )}
           </div>

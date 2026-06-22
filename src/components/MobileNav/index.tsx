@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
+import LanguageToggle from '../LanguageToggle';
 import './index.scss';
 
 interface MobileNavProps {
@@ -6,6 +8,8 @@ interface MobileNavProps {
 }
 
 const MobileNav = ({ onLinkClick }: MobileNavProps) => {
+  const { t } = useLanguage();
+
   const navSections = [
     'what-we-do',
     'why-kuvia',
@@ -18,16 +22,16 @@ const MobileNav = ({ onLinkClick }: MobileNavProps) => {
     <div className="kuvia-mobile-nav">
       {navSections.map((section) => {
         return (
-          <div className="kuvia-mobile-nav-item">
+          <div className="kuvia-mobile-nav-item" key={section}>
             <Link to={`#${section}`} onClick={onLinkClick}>
-              {section
-                .split('-')
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(' ')}
+              {t(`nav.${section}`)}
             </Link>
           </div>
         );
       })}
+      <div className="kuvia-mobile-nav-language">
+        <LanguageToggle />
+      </div>
     </div>
   );
 };

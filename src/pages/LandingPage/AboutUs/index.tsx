@@ -7,6 +7,7 @@ import {
   awardsRecognitionsSource,
 } from '../../../constants/sourceData';
 import UserProfile from '../../../components/UserProfile';
+import { useLanguage } from '../../../context/LanguageContext';
 import anaProfileImg from '../../../assets/images/profiles-images/ana-profile.jpg';
 import martinaProfileImg from '../../../assets/images/profiles-images/martina-profile.jpg';
 import adrianProfileImg from '../../../assets/images/profiles-images/adrian-profile.jpg';
@@ -23,6 +24,7 @@ interface UserProfile {
 }
 
 const AboutUs: React.FC = () => {
+  const { t, language } = useLanguage();
   const [pressSelection, setPressSelection] = useState<
     'press-release' | 'scientific-publications' | 'awards-recognitions'
   >('press-release');
@@ -48,20 +50,20 @@ const AboutUs: React.FC = () => {
     {
       userImg: anaProfileImg,
       userName: 'Ana Gorodisch',
-      userDescription: 'CEO & Co-Founder',
+      userDescription: t('role.ceo') as string,
       userProfileLink: 'https://www.linkedin.com/in/anagorodisch/',
     },
     {
       userImg: martinaProfileImg,
       userName: 'Martina Belluomini',
-      userDescription: 'CTO & Co-Founder',
+      userDescription: t('role.cto') as string,
       userProfileLink:
         'https://www.linkedin.com/in/martina-belluomini-1b7708240/',
     },
     {
       userImg: adrianProfileImg,
       userName: 'Adrian Federico Perez',
-      userDescription: 'Senior AI Engineer',
+      userDescription: t('role.aiEngineer') as string,
       userProfileLink:
         'https://www.linkedin.com/in/adrian-federico-perez-6849b529',
     },
@@ -70,7 +72,7 @@ const AboutUs: React.FC = () => {
   return (
     <div className="kuvia-aboutus">
       <div className="kuvia-aboutus-press">
-        <h1>Newsroom</h1>
+        <h1>{t('aboutUs.newsroom')}</h1>
         <div className="kuvia-aboutus-toggles">
           <button
             className={`${pressSelection === 'press-release' ? 'active' : 'inactive'}`}
@@ -78,7 +80,7 @@ const AboutUs: React.FC = () => {
               setPressSelection('press-release');
             }}
           >
-            Press Release
+            {t('aboutUs.pressRelease')}
           </button>
           <button
             className={`${pressSelection === 'scientific-publications' ? 'active' : 'inactive'}`}
@@ -86,7 +88,7 @@ const AboutUs: React.FC = () => {
               setPressSelection('scientific-publications');
             }}
           >
-            Scientific Publications
+            {t('aboutUs.scientificPublications')}
           </button>
           <button
             className={`${pressSelection === 'awards-recognitions' ? 'active' : 'inactive'}`}
@@ -94,7 +96,7 @@ const AboutUs: React.FC = () => {
               setPressSelection('awards-recognitions');
             }}
           >
-            Awards & Recognitions
+            {t('aboutUs.awards')}
           </button>
         </div>
         <Swiper
@@ -113,7 +115,7 @@ const AboutUs: React.FC = () => {
                 <SwiperSlide key={index} className="kuvia-info-card">
                   <img
                     src={award.img}
-                    alt={award.title}
+                    alt={award.title[language]}
                     style={{
                       objectPosition: award.imagePosition,
                       objectFit: award.imageFit as React.CSSProperties['objectFit'],
@@ -125,10 +127,10 @@ const AboutUs: React.FC = () => {
                   <div className="kuvia-info-card-content">
                     <div>
                       <p className="kuvia-info-card-content-title">
-                        {award.title}
+                        {award.title[language]}
                       </p>
                       <p className="kuvia-info-card-content-description">
-                        {award.text}
+                        {award.text[language]}
                       </p>
                     </div>
                   </div>
@@ -150,10 +152,12 @@ const AboutUs: React.FC = () => {
                   <div className="kuvia-info-card-content">
                     <div>
                       <span className="kuvia-info-card-content-tag">
-                        {press.type}
+                        {press.type === 'Scientific Publication'
+                          ? t('tag.scientificPublication')
+                          : t('tag.pressRelease')}
                       </span>
                       <p className="kuvia-info-card-content-description">
-                        {press.description}
+                        {press.description[language]}
                       </p>
                     </div>
                     <p className="kuvia-info-card-content-date">{press.date}</p>
@@ -163,7 +167,7 @@ const AboutUs: React.FC = () => {
         </Swiper>
       </div>
       <div className="kuvia-aboutus-team">
-        <h1>Team</h1>
+        <h1>{t('aboutUs.team')}</h1>
         <div className="kuvia-aboutus-team-profile-group">
           {usersProfiles.map((profile) => (
             <UserProfile

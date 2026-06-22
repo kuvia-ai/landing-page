@@ -16,55 +16,46 @@ import img7 from '../../../assets/images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff5
 import brafImg from '../../../assets/images/braf-histology.jpg';
 import transformarSaludLogo from '../../../assets/images/transformar-salud-flyer.jpeg';
 import { AppContext } from '../../../context/AppContext';
+import { useLanguage } from '../../../context/LanguageContext';
 import './index.scss';
 import 'swiper/css';
 import 'swiper/css/mousewheel';
 
 const Product: React.FC = () => {
   const { isMobile } = useContext(AppContext);
+  const { t } = useLanguage();
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const [resetInterval, setResetInterval] = useState<boolean>(false);
 
   const howItWorks = [
     {
       icon: img1,
-      title: 'Biopsy Collection',
-      text: 'Histological tissue sample is obtained from biopsy.',
+      title: t('product.step1.title') as string,
+      text: t('product.step1.text') as string,
     },
     {
       icon: img2,
-      title: 'Tissue Digitization',
-      text: 'The tissue slide is digitized into a Whole Slide Image (WSI).',
+      title: t('product.step2.title') as string,
+      text: t('product.step2.text') as string,
     },
     {
       icon: img3,
-      title: 'AI Analysis',
-      text: 'Advanced AI technology instantly analyzes the image.',
+      title: t('product.step3.title') as string,
+      text: t('product.step3.text') as string,
     },
     {
       icon: img4,
-      title: 'Instant Results',
-      text: 'Immediate biomarker status prediction.',
+      title: t('product.step4.title') as string,
+      text: t('product.step4.text') as string,
     },
     {
       icon: img5,
-      title: 'Targeted Therapy',
-      text: 'Optimal treatment selection for patients.',
+      title: t('product.step5.title') as string,
+      text: t('product.step5.text') as string,
     },
   ];
 
-  const sliderItems = [
-    <span>
-      <b>Kuvia-MSI</b> is an AI-powered software for detecting{' '}
-      <b>Microsatellite Instability (MSI)</b> in colorectal and endometrial
-      cancer.
-    </span>,
-    <span>
-      MSI is a key biomarker across solid tumors, as its presence indicates that
-      a patient is likely to benefit from immunotherapy. Detecting MSI can guide
-      access to life-extending treatments that would otherwise be missed.
-    </span>,
-  ];
+  const sliderItems = [t('product.slide1'), t('product.slide2')];
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
@@ -80,7 +71,9 @@ const Product: React.FC = () => {
   return (
     <div className="kuvia-product">
       <div className="kuvia-how-it-works-container">
-        <div className="kuvia-how-it-works-title">How it works</div>
+        <div className="kuvia-how-it-works-title">
+          {t('product.howItWorks')}
+        </div>
         {!isMobile ? (
           <div className="kuvia-how-it-works-cards-group">
             {howItWorks.map((item, index) => (
@@ -129,9 +122,7 @@ const Product: React.FC = () => {
         <div className="kuvia-our-product-left-content">
           <div>
             <p className="kuvia-our-product-left-content-title">
-              Our
-              <br />
-              Product
+              {t('product.ourProduct')}
             </p>
             <p className="kuvia-our-product-left-content-body">
               {sliderItems[activeSlide % sliderItems.length]}
@@ -148,14 +139,14 @@ const Product: React.FC = () => {
             />
             <p className="kuvia-our-product-left-content-footer-text">
               {activeSlide % sliderItems.length === 0
-                ? 'How it works'
-                : 'Our product'}
+                ? t('product.howItWorks')
+                : t('product.footer.ourProduct')}
             </p>
           </div>
         </div>
         <div className="kuvia-our-product-right-content">
           <p className="kuvia-our-product-right-content-title">
-            Clinical context for MSI
+            {t('product.clinicalContext')}
           </p>
           <div className="kuvia-our-product-right-content-body">
             <img src={img6} alt={img6} />
@@ -164,34 +155,22 @@ const Product: React.FC = () => {
                 className="kuvia-our-product-right-content-tag left-align"
                 style={{ left: '-70px' }}
               >
-                <h1>#2 & #3</h1>
-                <p>
-                  In 2023, colorectal cancer was the world’s second leading
-                  cause of cancer-related deaths and the third most frequently
-                  diagnosed cancer.
-                </p>
+                <h1>{t('product.tag1.title')}</h1>
+                <p>{t('product.tag1.text')}</p>
               </div>
               <div
                 className="kuvia-our-product-right-content-tag right-align"
                 style={{ right: '-80px' }}
               >
-                <h1>MSI Rates</h1>
-                <p>
-                  Approximately 10–15% of colorectal cancers, and 20% to 30% of
-                  endometrial carcinomas exhibit high microsatellite instability
-                  (MSI-H) or are mismatch repair deficient (dMMR), with higher
-                  rates observed in early-stage tumors.
-                </p>
+                <h1>{t('product.tag2.title')}</h1>
+                <p>{t('product.tag2.text')}</p>
               </div>
               <div
                 className="kuvia-our-product-right-content-tag"
                 style={{ left: '105px' }}
               >
-                <h1>#6</h1>
-                <p>
-                  Endometrial cancer is the sixth most common cancer among women
-                  worldwide, with over 420,000 new cases reported in 2022.
-                </p>
+                <h1>{t('product.tag3.title')}</h1>
+                <p>{t('product.tag3.text')}</p>
               </div>
             </div>
           </div>
@@ -201,23 +180,10 @@ const Product: React.FC = () => {
         <div className="kuvia-our-product-left-content">
           <div>
             <p className="kuvia-our-product-left-content-title">
-              Collaboration with
-              <br />
-              Hospital Garrahan
+              {t('product.braf.title')}
             </p>
             <p className="kuvia-our-product-left-content-body">
-              <span>
-                Together with Hospital Garrahan, we were awarded the{' '}
-                <b>Transformar Salud</b> initiative to develop AI for detecting
-                the <b>BRAF V600E mutation</b> in pediatric cancers.
-              </span>
-              <br />
-              <br />
-              <span>
-                By bringing molecular profiling into routine pathology, we aim
-                to accelerate diagnosis and improve treatment selection for
-                pediatric patients.
-              </span>
+              {t('product.braf.body')}
             </p>
           </div>
           <div className="kuvia-our-product-partner-logo">
@@ -230,22 +196,12 @@ const Product: React.FC = () => {
             <img src={brafImg} alt="BRAF detection" />
             <div className="kuvia-our-product-tags-container">
               <div className="kuvia-our-product-right-content-tag left-align">
-                <h1>AI for Multiple Indications</h1>
-                <p>
-                  Our BRAF V600E AI model is being developed for central nervous
-                  system tumors, histiocytosis, thyroid cancer, and melanocytic
-                  lesions, where this biomarker plays a critical role in
-                  treatment selection and disease management.
-                </p>
+                <h1>{t('product.braf.tag1.title')}</h1>
+                <p>{t('product.braf.tag1.text')}</p>
               </div>
               <div className="kuvia-our-product-right-content-tag right-align">
-                <h1>BRAF V600E Rates</h1>
-                <p>
-                  Approximately 50–60% of pediatric low-grade gliomas, 40–60% of
-                  Langerhans cell histiocytosis, 40–60% of papillary thyroid
-                  carcinomas, and 40–50% of melanocytic lesions harbor the BRAF
-                  V600E mutation.
-                </p>
+                <h1>{t('product.braf.tag2.title')}</h1>
+                <p>{t('product.braf.tag2.text')}</p>
               </div>
             </div>
           </div>
@@ -254,14 +210,11 @@ const Product: React.FC = () => {
       <div className="kuvia-scalability">
         <div className="kuvia-scalability-content">
           <div className="kuvia-scalability-left-content">
-            <h1 className="kuvia-scalability-title">Scalability</h1>
+            <h1 className="kuvia-scalability-title">
+              {t('product.scalability.title')}
+            </h1>
             <p className="kuvia-scalability-body">
-              We have developed a <b>scalable AI architecture</b> with the
-              potential to be applied across a wide range of biomarkers and
-              cancer types. Our current efforts are focused on expanding the
-              platform beyond MSI, aiming to enable broader applications in
-              precision medicine and accelerate access to personalized
-              treatments.
+              {t('product.scalability.body')}
             </p>
           </div>
           <div className="kuvia-scalability-right-content">
@@ -269,7 +222,7 @@ const Product: React.FC = () => {
             <Link to="/#contact-us" className="kuvia-navbar-link">
               <Button
                 type="tertiary"
-                text="More info"
+                text={t('button.moreInfo') as string}
                 style={{ fontWeight: '900', paddingInline: '60px' }}
               />
             </Link>

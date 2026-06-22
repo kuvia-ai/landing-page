@@ -1,21 +1,19 @@
 import { useContext } from 'react';
 import background from '../../../assets/images/6012c80a2e35a4a3dd4a0954cfdbb5309736ff59.png';
 import { AppContext } from '../../../context/AppContext';
+import { useLanguage } from '../../../context/LanguageContext';
 import './index.scss';
 
 const WhyKuvia: React.FC = () => {
   const { isMobile } = useContext(AppContext);
+  const { t } = useLanguage();
 
   return (
     <div className="kuvia-why-kuvia">
       <div className="kuvia-why-kuvia-container">
-        <div className="kuvia-why-kuvia-title">Why Kuvia?</div>
+        <div className="kuvia-why-kuvia-title">{t('whyKuvia.title')}</div>
         <p className="kuvia-why-kuvia-description">
-          Kuvia is helping lead a new wave of healthtech innovation, using AI to
-          detect biomarkers directly from digitized tissue images{' '}
-          <b>in just 5 minutes</b>. While designed for scalability worldwide,
-          Kuvia is actively driving this transformation in Latin America, making
-          precision medicine <b>faster</b> and more <b>accessible</b>.
+          {t('whyKuvia.description')}
         </p>
       </div>
       <div className="kuvia-why-kuvia-content">
@@ -32,7 +30,7 @@ const WhyKuvia: React.FC = () => {
             order: `${isMobile ? '2' : ''}`,
           }}
         >
-          Enhances accessibility
+          {t('whyKuvia.item1')}
         </div>
         <div
           className="kuvia-why-kuvia-content-item"
@@ -42,7 +40,7 @@ const WhyKuvia: React.FC = () => {
             order: `${isMobile ? '3' : ''}`,
           }}
         >
-          Reduces time to diagnosis
+          {t('whyKuvia.item2')}
         </div>
         <div
           className="kuvia-why-kuvia-content-item"
@@ -52,7 +50,7 @@ const WhyKuvia: React.FC = () => {
             order: `${isMobile ? '1' : ''}`,
           }}
         >
-          Reduces costs
+          {t('whyKuvia.item3')}
         </div>
         <div
           className="kuvia-why-kuvia-content-item"
@@ -62,7 +60,7 @@ const WhyKuvia: React.FC = () => {
             order: `${isMobile ? '4' : ''}`,
           }}
         >
-          Empowers clinical decision-making
+          {t('whyKuvia.item4')}
         </div>
       </div>
     </div>

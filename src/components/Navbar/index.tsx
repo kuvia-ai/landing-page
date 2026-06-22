@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AppContext } from '../../context/AppContext';
+import { useLanguage } from '../../context/LanguageContext';
 import './index.scss';
 
 const NavItem: React.FC<{
@@ -27,6 +28,7 @@ interface NavbarProps {
 
 const Navbar = ({ full = false }: NavbarProps) => {
   const { section } = useContext(AppContext);
+  const { t } = useLanguage();
 
   const navSections = [
     'what-we-do',
@@ -47,10 +49,7 @@ const Navbar = ({ full = false }: NavbarProps) => {
             key={navSection}
             section={section}
             targetSection={navSection}
-            label={navSection
-              .split('-')
-              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(' ')}
+            label={t(`nav.${navSection}`) as string}
             to={`/#${navSection}`}
           />
         );
