@@ -3,11 +3,14 @@ import kuviaLogo from '../../../../assets/icons/kuvia.png';
 import { Link } from 'react-router-dom';
 import Navbar from '../../../../components/Navbar';
 import Button from '../../../../components/Button';
+import LanguageToggle from '../../../../components/LanguageToggle';
 import { AppContext } from '../../../../context/AppContext';
+import { useLanguage } from '../../../../context/LanguageContext';
 import './index.scss';
 
 const Header: React.FC = () => {
   const { isMobile } = useContext(AppContext);
+  const { t } = useLanguage();
 
   return (
     <div className="kuvia-header">
@@ -18,8 +21,13 @@ const Header: React.FC = () => {
         <div className="kuvia-header-right-content">
           <Navbar />
           <Link to="/#contact-us" className="kuvia-navbar-link">
-            <Button type="primary" text="Contact Us" bolded />
+            <Button
+              type="primary"
+              text={t('button.contactUs') as string}
+              bolded
+            />
           </Link>
+          <LanguageToggle />
         </div>
       )}
     </div>

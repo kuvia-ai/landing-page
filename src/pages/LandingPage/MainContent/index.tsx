@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useScale } from '../../../context/AppContext';
+import { useLanguage } from '../../../context/LanguageContext';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import background from '../../../assets/background.mp4';
 import compressedBackground from '../../../assets/background.webm';
@@ -12,6 +13,7 @@ const MainContent: React.FC = () => {
 
   const { scrollY } = useScroll();
   const { scaleRatio } = useScale();
+  const { t } = useLanguage();
 
   const yMainLandingContent = useTransform(
     scrollY,
@@ -64,11 +66,7 @@ const MainContent: React.FC = () => {
         <Header />
         <div className="kuvia-landing-body">
           <div className="kuvia-landing-body-content">
-            <h2>
-              Redefining diagnostics,
-              <br /> unlocking precision
-              <br /> medicine with AI
-            </h2>
+            <h2>{t('hero.title')}</h2>
           </div>
         </div>
         <motion.div
@@ -76,7 +74,7 @@ const MainContent: React.FC = () => {
           style={{ opacity: opacityReadMore }}
           onClick={onReadMoreClick}
         >
-          <p>Read More</p>
+          <p>{t('hero.readMore')}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             shapeRendering="geometricPrecision"
