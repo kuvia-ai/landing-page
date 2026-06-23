@@ -232,9 +232,9 @@ export const translations: Record<Language, Dict> = {
     // Hero
     'hero.title': (
       <>
-        Redefiniendo el diagnóstico,
-        <br /> abriendo la medicina
-        <br /> de precisión con IA
+        Transformando el diagnóstico,
+        <br /> aumentando el acceso a la
+        <br /> medicina de precisión con IA
       </>
     ),
     'hero.readMore': 'Leer más',
@@ -243,46 +243,50 @@ export const translations: Record<Language, Dict> = {
     'whatWeDo.title': 'Qué hacemos',
     'whatWeDo.description': (
       <>
-        En Kuvia, nuestra misión es aprovechar el poder de la inteligencia
-        artificial (IA) para transformar el diagnóstico del cáncer,{' '}
+        En Kuvia, nuestra misión es utilizar el poder de la inteligencia
+        artificial (IA) para transformar los diagnósticos oncológicos,{' '}
         <b>permitiendo una detección de biomarcadores más rápida y accesible</b>{' '}
-        para mejores resultados en los pacientes.
+        para mejorar las decisiones terapéuticas y los resultados clínicos de
+        los pacientes.
       </>
     ),
-    'whatWeDo.item1.title': '¿Por qué importa la detección de biomarcadores?',
+    'whatWeDo.item1.title': 'La importancia de la detección de biomarcadores',
     'whatWeDo.item1.desc': (
       <p>
-        Cuando a un paciente se le diagnostica cáncer, identificar marcadores
-        biológicos específicos en el tumor permite a los médicos categorizar la
-        enfermedad con mayor precisión y asignar a cada paciente los
-        tratamientos dirigidos más efectivos. Este paso, conocido como detección
-        de biomarcadores, es esencial, ya que los pacientes pueden beneficiarse
-        de terapias que aumentan significativamente sus posibilidades de
-        supervivencia.
+        Cuando a un paciente se le diagnostica cáncer, la identificación de
+        biomarcadores específicos en el tumor permite a los médicos caracterizar
+        la enfermedad con mayor precisión y seleccionar los tratamientos
+        dirigidos más adecuados para cada caso. Este proceso, conocido como
+        detección de biomarcadores, es fundamental, ya que permite que los
+        pacientes accedan a terapias que pueden mejorar significativamente su
+        respuesta al tratamiento y sus probabilidades de supervivencia.
       </p>
     ),
     'whatWeDo.item2.title':
-      '¿Cuáles son los desafíos de la detección de biomarcadores actual?',
+      '¿Cuáles son los desafíos actuales en la detección de biomarcadores?',
     'whatWeDo.item2.desc': (
       <p>
-        Los métodos de análisis actuales son <b>lentos</b>, <b>costosos</b> y
-        están fuera del alcance de muchas clínicas por la necesidad de
-        infraestructura especializada, lo que resulta en una{' '}
-        <b>baja accesibilidad</b>, especialmente en regiones desatendidas.
+        Los métodos de análisis actuales suelen ser <b>lentos</b>,{' '}
+        <b>costosos</b> y requieren infraestructura especializada, lo que limita
+        su disponibilidad en muchas instituciones de salud. Como consecuencia,
+        el acceso a diagnósticos de precisión sigue siendo <b>desigual</b>,
+        especialmente en regiones desatendidas.
       </p>
     ),
-    'whatWeDo.item3.title': '¿Cuáles son los efectos del acceso limitado?',
+    'whatWeDo.item3.title': '¿Cuáles son las consecuencias del acceso limitado?',
     'whatWeDo.item3.desc': (
       <p>
         <b>
-          Diagnósticos demorados. Tratamientos subóptimos. Desenlaces evitables.
+          Diagnósticos tardíos. Tratamientos menos precisos. Oportunidades
+          terapéuticas perdidas. Resultados clínicos que podrían mejorar.
         </b>
         <br />
-        <br /> Sin acceso a tiempo a los análisis de biomarcadores, los
-        pacientes suelen recibir tratamientos estándar que pueden no alinearse
-        con la biología de su tumor. Este enfoque único para todos reduce las
-        probabilidades de éxito del tratamiento y, en última instancia, puede
-        afectar la supervivencia.
+        <br /> Sin un acceso oportuno a las pruebas de biomarcadores, muchos
+        pacientes reciben tratamientos estándar que pueden no ajustarse a las
+        características biológicas de su tumor. Este enfoque generalizado puede
+        reducir la efectividad del tratamiento y limitar las oportunidades de
+        acceder a terapias más precisas, con un impacto potencial en la
+        evolución y la supervivencia de los pacientes.
       </p>
     ),
 
@@ -290,12 +294,13 @@ export const translations: Record<Language, Dict> = {
     'whyKuvia.title': '¿Por qué Kuvia?',
     'whyKuvia.description': (
       <>
-        Kuvia está ayudando a liderar una nueva ola de innovación en healthtech,
-        usando IA para detectar biomarcadores directamente desde imágenes
-        digitalizadas de tejido <b>en solo 5 minutos</b>. Diseñada para escalar
-        a nivel mundial, Kuvia impulsa activamente esta transformación en
-        América Latina, haciendo que la medicina de precisión sea{' '}
-        <b>más rápida</b> y <b>accesible</b>.
+        Kuvia está liderando una nueva generación de innovación en salud,
+        utilizando inteligencia artificial para detectar biomarcadores
+        directamente a partir de imágenes digitalizadas de tejido{' '}
+        <b>en tan solo 5 minutos</b>. Diseñada para escalar a nivel global,
+        Kuvia impulsa esta transformación desde América Latina, haciendo que la
+        medicina de precisión sea <b>más rápida, accesible y equitativa</b> para
+        pacientes de todo el mundo.
       </>
     ),
     'whyKuvia.item1': 'Mejora la accesibilidad',
@@ -304,21 +309,20 @@ export const translations: Record<Language, Dict> = {
     'whyKuvia.item4': 'Potencia la toma de decisiones clínicas',
 
     // Product - how it works
-    'product.howItWorks': 'Cómo funciona',
+    'product.howItWorks': '¿Cómo funciona?',
     'product.step1.title': 'Toma de biopsia',
-    'product.step1.text':
-      'Se obtiene una muestra de tejido histológico a partir de una biopsia.',
+    'product.step1.text': 'Se obtiene una muestra de tejido mediante una biopsia.',
     'product.step2.title': 'Digitalización del tejido',
     'product.step2.text':
-      'El preparado de tejido se digitaliza en una imagen de portaobjetos completo (WSI).',
+      'El preparado histológico se digitaliza como una imagen de portaobjetos completo (WSI).',
     'product.step3.title': 'Análisis con IA',
-    'product.step3.text':
-      'Tecnología de IA avanzada analiza la imagen al instante.',
+    'product.step3.text': 'Nuestra tecnología de IA analiza la imagen en minutos.',
     'product.step4.title': 'Resultados instantáneos',
-    'product.step4.text': 'Predicción inmediata del estado del biomarcador.',
+    'product.step4.text':
+      'Se predice el estado del biomarcador de forma rápida y precisa.',
     'product.step5.title': 'Terapia dirigida',
     'product.step5.text':
-      'Selección del tratamiento óptimo para los pacientes.',
+      'El resultado contribuye a seleccionar el tratamiento más adecuado para cada paciente.',
 
     // Product - our product
     'product.ourProduct': (
@@ -331,23 +335,26 @@ export const translations: Record<Language, Dict> = {
     'product.footer.ourProduct': 'Nuestro producto',
     'product.slide1': (
       <span>
-        <b>Kuvia-MSI</b> es un software impulsado por IA para detectar{' '}
-        <b>inestabilidad de microsatélites (MSI)</b> en cáncer colorrectal y de
-        endometrio.
+        <b>Kuvia-MSI</b> es un software impulsado por inteligencia artificial
+        diseñado para detectar la <b>inestabilidad microsatelital (MSI)</b> en
+        cáncer colorrectal y cáncer de endometrio.
       </span>
     ),
     'product.slide2': (
       <span>
-        La MSI es un biomarcador clave en tumores sólidos, ya que su presencia
-        indica que un paciente probablemente se beneficie de la inmunoterapia.
-        Detectar la MSI puede guiar el acceso a tratamientos que prolongan la
-        vida y que de otro modo se pasarían por alto.
+        La inestabilidad microsatelital es un biomarcador fundamental en
+        oncología, ya que permite identificar a los pacientes con mayor
+        probabilidad de beneficiarse de
+        tratamientos de inmunoterapia. Su detección temprana y precisa puede
+        orientar decisiones terapéuticas clave, facilitando el acceso a
+        tratamientos que mejoran los resultados clínicos y la supervivencia de
+        los pacientes.
       </span>
     ),
-    'product.clinicalContext': 'Contexto clínico de la MSI',
+    'product.clinicalContext': 'Contexto clínico de MSI',
     'product.tag1.title': '#2 & #3',
     'product.tag1.text':
-      'En 2023, el cáncer colorrectal fue la segunda causa de muertes relacionadas con el cáncer en el mundo y el tercer cáncer más diagnosticado.',
+      'En 2023, el cáncer colorrectal fue la segunda causa de muerte por cáncer a nivel mundial y el tercer tipo de cáncer más diagnosticado.',
     'product.tag2.title': 'Tasas de MSI',
     'product.tag2.text':
       'Aproximadamente el 10–15% de los cánceres colorrectales y el 20% a 30% de los carcinomas de endometrio presentan alta inestabilidad de microsatélites (MSI-H) o deficiencia en la reparación de errores de apareamiento (dMMR), con tasas más altas en tumores en etapa temprana.',
@@ -358,7 +365,7 @@ export const translations: Record<Language, Dict> = {
     // Product - BRAF / Garrahan
     'product.braf.title': (
       <>
-        Colaboración con
+        Colaboración con el
         <br />
         Hospital Garrahan
       </>
@@ -366,22 +373,22 @@ export const translations: Record<Language, Dict> = {
     'product.braf.body': (
       <>
         <span>
-          Junto al Hospital Garrahan, fuimos premiados en la iniciativa{' '}
-          <b>Transformar Salud</b> para desarrollar IA que detecte la{' '}
-          <b>mutación BRAF V600E</b> en cánceres pediátricos.
+          Junto con el Hospital Garrahan, fuimos seleccionados y premiados en la
+          iniciativa <b>Transformar Salud</b> para desarrollar una herramienta
+          de inteligencia artificial capaz de detectar la{' '}
+          <b>mutación BRAF V600E</b> en tumores pediátricos.
         </span>
         <br />
-        <br />
         <span>
-          Al incorporar el perfilado molecular a la patología de rutina,
-          buscamos acelerar el diagnóstico y mejorar la selección de
-          tratamientos para pacientes pediátricos.
+          Al integrar el perfilado molecular en la práctica rutinaria de la
+          anatomía patológica, buscamos acelerar el diagnóstico y optimizar la
+          selección de tratamientos para pacientes pediátricos.
         </span>
       </>
     ),
     'product.braf.tag1.title': 'IA para múltiples indicaciones',
     'product.braf.tag1.text':
-      'Nuestro modelo de IA para BRAF V600E se está desarrollando para tumores del sistema nervioso central, histiocitosis, cáncer de tiroides y lesiones melanocíticas, donde este biomarcador cumple un rol clave en la selección del tratamiento y el manejo de la enfermedad.',
+      'Nuestro modelo de inteligencia artificial para la detección de la mutación BRAF V600E está siendo desarrollado para tumores del sistema nervioso central, histiocitosis, cáncer de tiroides y lesiones melanocíticas, donde este biomarcador desempeña un papel fundamental en la selección del tratamiento y el manejo clínico de la enfermedad.',
     'product.braf.tag2.title': 'Tasas de BRAF V600E',
     'product.braf.tag2.text':
       'Aproximadamente el 50–60% de los gliomas pediátricos de bajo grado, el 40–60% de las histiocitosis de células de Langerhans, el 40–60% de los carcinomas papilares de tiroides y el 40–50% de las lesiones melanocíticas presentan la mutación BRAF V600E.',
@@ -390,12 +397,11 @@ export const translations: Record<Language, Dict> = {
     'product.scalability.title': 'Escalabilidad',
     'product.scalability.body': (
       <>
-        Desarrollamos una <b>arquitectura de IA escalable</b> con el potencial
-        de aplicarse a una amplia gama de biomarcadores y tipos de cáncer.
-        Nuestros esfuerzos actuales se centran en expandir la plataforma más
-        allá de la MSI, con el objetivo de habilitar aplicaciones más amplias en
-        medicina de precisión y acelerar el acceso a tratamientos
-        personalizados.
+        Nuestra <b>arquitectura de inteligencia artificial</b> está diseñada
+        para escalar a múltiples biomarcadores y distintos tipos de cáncer. Más
+        allá de MSI, estamos ampliando nuestra plataforma para impulsar
+        nuevas aplicaciones en medicina de precisión y hacer que los
+        tratamientos personalizados sean más accesibles a nivel global.
       </>
     ),
 
@@ -415,9 +421,9 @@ export const translations: Record<Language, Dict> = {
     'contact.title': 'Ponete en contacto',
     'contact.description': (
       <>
-        ¿Tenés alguna pregunta o necesitás más información sobre nuestros
-        servicios? <br /> Completá el formulario y te responderemos lo antes
-        posible.
+        ¿Tenés alguna pregunta o querés conocer más sobre nuestra tecnología y
+        nuestros servicios? <br /> Completá el formulario y nos pondremos en
+        contacto con vos a la brevedad.
       </>
     ),
     'contact.name': 'Nombre',
