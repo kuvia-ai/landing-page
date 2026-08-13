@@ -119,7 +119,7 @@ export const pressReleasesSource: PressItem[] = [
       en: 'Kuvia on the AWS On Air podcast sharing our experience developing and deploying AI solutions for cancer diagnostics.',
       es: 'Kuvia participó en el podcast AWS On Air, donde compartió su experiencia desarrollando e implementando soluciones de inteligencia artificial para el diagnóstico del cáncer.',
     },
-    URL: 'https://www.twitch.tv/videos/2767220737?filter=all&sort=time',
+    URL: 'https://www.youtube.com/watch?v=fumCByEvgn0&t=34s',
     date: 'May 8, 2026',
     img: press_image_amz_on_air,
     type: 'Press Release',
